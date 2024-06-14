@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<head>
+    <title>dice</title>
+</head>
+<body>
+    <div style="display:flex;justify-content:space-around">
+        <button>减缓</button>
+        <button>暂停</button>
+        <button>加快</button>
+     
+    </div>
+    <div class="box">
+        <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>+</li>
+        <li>-</li>
+        </ul>
+    </div>    
+    <script>
+
+    </script>
+      
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        transform: perspective(1000px);
+        transform-style: preserve-3d;
+    }
+    button{
+    background: linear-gradient(135deg, #3592EE 0%, #7AABFF 100%);
+    border-radius: 4px 4px 4px 4px;
+    width: 100px;
+    height: 42px;
+    left: 180px;
+    font-weight: 400;
+    font-size: 18px;
+    color: #FFFFFF;
+    line-height: 0px;
+    text-shadow: 0px 1px 1px rgb(0 0 0 / 20%);
+    font-style: normal;
+    text-transform: none;
+    }
+    .box ul {
+        transform-style: preserve-3d;
+        animation-duration: 12s;
+        animation-timing-function: linear;
+        animation-delay: 0s;
+        animation-iteration-count: infinite;
+        animation-direction: normal;
+        animation-fill-mode: backwards;
+        animation-name: go;
+        transform: rotateY(45deg) rotateX(45deg) rotateZ(45deg);
+    }
+    
+    
+    ul, li {
+        list-style: none;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-align: center;
+        line-height: 200px;
+        font-size: 70px;
+        
+    }
+
+    .box {
+       
+        width: 200px;
+        height: 200px;
+        position: relative;
+        margin: 200px auto;
+        transform-style: preserve-3d;
+    }
+
+
+    ul li {
+        color: #ffffff;
+        border-radius: 30px;
+        font-weight: 700;
+
+
+    }
+    /* 六个面颜色以及位置 */
+    ul li:nth-child(1) {
+        transform: rotate3d(0, 0, 0, 0deg) translateZ(100px);
+        background-color: orange;
+    }
+
+    ul li:nth-child(2) {
+        transform: rotateY(-90deg) translateZ(-100px);
+        background-color: rgba(0, 255, 0, 0.8);
+    }
+
+    ul li:nth-child(3) {
+        transform: rotate3d(0, 0, 0, 0deg) translateZ(-100px);
+        background-color: rgba(0, 0, 255, 0.8);
+    }
+
+    ul li:nth-child(4) {
+        transform: rotateY(90deg) translateZ(-100px);
+        background-color: rgba(123, 13, 123, 0.8);
+    }
+
+    ul li:nth-child(5) {
+        transform: rotateX(-90deg) translateZ(100px);
+        background-color: rgba(23, 130, 225, 0.8);
+    }
+
+    ul li:nth-child(6) {
+        transform: rotateX(-90deg) translateZ(-100px);
+        background-color: rgba(252, 0, 123, 0.8);
+    }
+    /* 轨道，类似行星旋转 */
+    ul li:nth-child(7) {
+        transform: rotateX(-90deg) translateZ(0px);
+        
+        border:5px solid #2c3e50;
+        width:150%;
+        height:150%;
+        top:-25%;
+        left:-25%;
+        border-radius:50%;
+    }
+    ul li:nth-child(8) {
+        transform: rotateX(180deg) translateZ(0px);
+    
+        border:5px solid #2c3e50;
+        width:150%;
+        height:150%;
+        top:-25%;
+        left:-25%;
+        border-radius:50%;
+    }
+    @keyframes go {
+        0% {
+            transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+        }
+        100% {
+            transform: rotateX(720deg) rotateY(720deg) rotateZ(720deg);
+        }
+    }
+    </style>
+    <script>
+        
+            
+        var btn=document.getElementsByTagName('button')
+        var uls=document.getElementsByTagName('ul')
+        var total=uls.length
+        btn[0].addEventListener('click',function(){
+            for(var i=0;i<total;i++)
+                {
+                    var number=window.getComputedStyle(uls[i]).animationDuration
+                    var string="animation-duration:"+parseFloat(number)*2+"s"
+
+                    uls[i].style.cssText=string
+                }
+                console.log("当前转速:"+window.getComputedStyle(uls[0]).animationDuration)
+        }) 
+        btn[1].addEventListener('click',function(){
+            if(btn[1].innerHTML=='暂停')
+            {
+                btn[1].innerHTML='继续'
+                for(var i=0;i<total;i++)
+                {
+                    uls[i].style.cssText="animation-play-state:paused"
+                }
+            }
+            else
+            {
+                btn[1].innerHTML='暂停'
+                for(var i=0;i<total;i++)
+                {
+                    uls[i].style.cssText="animation-play-state:running"
+                }
+            }  
+            console.log("当前转速:"+window.getComputedStyle(uls[0]).animationDuration) 
+        })
+
+          
+        btn[2].addEventListener('click',function(){
+            
+            for(var i=0;i<total;i++)
+                {
+                    var number=window.getComputedStyle(uls[i]).animationDuration
+                    var string="animation-duration:"+parseFloat(number)/2+"s"
+                    uls[i].style.cssText=string
+                }
+                console.log("当前转速:"+window.getComputedStyle(uls[0]).animationDuration)
+        })
+        
+    </script>
+</body>
