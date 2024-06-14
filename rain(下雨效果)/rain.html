@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>下雨效果</title>
+    </head>
+    <body>
+        <div id="rain">
+           <!-- 测试用  
+            <div class="round"></div>
+            <div class="raindrop"></div> -->
+            
+        </div>
+        
+    </body>
+    <style>
+    /* 雨滴CSS */
+    #rain
+    {
+        position: absolute;
+        width:100%;
+        height:100%;
+        background: linear-gradient(#333,#999 ,#1f4794);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        overflow:hidden;
+    }
+    .raindrop{
+        position:absolute;
+        width:5px;
+        height:5px;
+        background: radial-gradient(#8fd4fc, #52b1f2, #0599fc);
+        transform:rotateY(45deg);
+        animation:drop 0.3s infinite;
+    }
+    @keyframes drop{
+        0%{
+            top:0%;
+        }
+        10%{
+            top:10%;
+        }
+        20%{
+            top:20%;
+        }
+        30%{
+            top:30%;
+        }
+        40%{
+            top:40%;
+        }
+        50%{
+            top:50%;
+        }
+        60%{
+            top:60%;
+        }
+        70%{
+            top:70%;
+        }
+        80%{
+            top:80%;
+        }
+        90%{
+            top:85%;
+        }
+        100%{
+            top:90%;
+        }
+    }
+    /* 波纹效果 */
+    .round{
+        position: absolute;
+        width:100px;
+        height:100px;
+        border:2px solid #8fd4fc;
+        transform:rotateX(72deg);
+        border-radius:50%;
+        animation:round 0.5s infinite;
+    }
+    @keyframes round{
+        0%{
+            width:14px;
+            height:14px;
+        }
+        10%{
+            width: 16px;
+            height:16px;
+        }
+        20%{
+            width:18px;
+            height:18px;
+        }
+        40%{
+            width:20px;
+            height:20px;
+        }
+        50%{
+            width:22px;
+            height:22px;
+        }
+        60%{
+            width:24px;
+            height:24px;
+        }
+        70%{
+            width:26px;
+            height:26px;
+        }
+        80%{
+            width:28px;
+            height:28px;
+        }
+        90%{
+            width: 30px;
+            height:30px;
+        }
+        100%{
+            width:32px;
+            height:32px;
+        }
+
+    }
+  
+    </style>
+    <script>
+        
+            
+            function dropRain()
+            {
+                let tops=Math.random()*window.innerHeight+500;
+                let lefts=Math.random()*window.innerWidth;
+                let rain=document.getElementById("rain")
+                /* 插入雨滴的html */
+                let el=document.createElement('div')
+                el.style.top=tops+'px'
+                el.style.left=lefts+'px'
+                el.className='raindrop'
+                /* 插入波纹的html */
+                let el2=document.createElement('div')
+                el2.style.top=(Math.random()*(100-60)+60)+'%'
+                el2.style.left=lefts+'px'
+              
+                el2.className='round'
+               /*  console.log(tops,lefts) */
+                rain.appendChild(el)
+                /*定时删除雨滴与波纹  */
+                setTimeout(()=>{
+                    rain.removeChild(el) 
+                    rain.appendChild(el2)
+                    setTimeout(()=>{
+                        rain.removeChild(el2)
+                    },1000)
+                },1000)
+              
+            }    
+        /* 计时器每隔一段时间添加 */  
+        setInterval(dropRain,100)
+     
+    </script>
+
+</html>
