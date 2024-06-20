@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<head>
+
+</head>
+<body>
+    <dv class="background">
+        <!-- 左边数字栏 -->
+        <div class="Title">1</div>
+        <div class="top">           
+            <!-- 圆圈 -->
+            <div class="round roundT"></div>
+            <!-- 展示区域:用overflow:hidden规定框架 -->
+            <div class="sandPosT">
+                <div class="sandT"></div>
+            </div>
+        </div>
+        <!-- 沙粒-->
+        <div class="drops">
+        </div>
+        <div class="bottom">
+            <div class="round roundB"></div>
+            <div class="sandPosB">
+                <div class="sandB"></div>
+            </div>
+        </div>
+    </div>
+    <style>
+        body{
+            width:100%;
+            height:100%;
+            background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
+            background-size: cover; /* 确保背景图片覆盖整个容器 */
+            background-repeat: no-repeat; /* 不重复背景图片 */
+            background-attachment: fixed; /* 背景图片固定，不随滚动条滚动 */
+           
+        }
+        .background{
+            transform-style:preserve-3d;
+        }
+        .top{
+            transform-style:preserve-3d;
+        }
+        .bottom{
+            transform-style:preserve-3d;
+        }
+        .round{
+            position:absolute;
+            width:400px;
+            height:400px;
+            border-radius:50%;
+            background-color:white;
+            transform:rotateX(80deg);
+            
+        }
+        .dropsand{
+            position:absolute;
+            width:3px;
+            height:3px;
+            background-color:#ffc107;
+            border-radius:50%;
+            left:63%;
+            top:507px;
+            animation:dropsand 1s infinite;
+            z-index:1;
+        }
+        @keyframes dropsand{
+            0%{
+                top:500px;
+            }
+            100%{
+                top:800px;
+            }
+        }
+        .roundB{
+            top:600px;
+            left:50%;
+        }
+        .roundT{
+            top:0px;
+            left:50%;
+            background-color:#ffc107;
+        }
+       @keyframes down{
+        0%{
+            transform:rotateY(0deg)
+        }
+        100%{
+            transform:rotateY(360deg)
+        }
+      }
+      .sandPosT{
+        position:absolute;
+        width:400px;
+        height:300px;
+        top:200px;
+        left:50%;
+        overflow:hidden;
+        background-color:white;
+        clip-path:polygon(0% 0%,100% 0%,50% 100%);
+      }
+      .sandT{
+        position:absolute;
+        background:#ffc107;
+        width:400px;
+        height:300px;
+        animation:50s drop 10s 1 ease-in forwards;
+       
+      }
+      @keyframes drop
+      {
+        0%{
+            top:0px;
+        }
+        100%{
+            top:300px;
+        }
+      }
+      .sandPosB{
+        position:absolute;
+        width:400px;
+        height:300px;
+        top:500px;
+        left:50%;
+        overflow:hidden;
+        background-color:white;
+        clip-path:polygon(50% 0%,0% 100%,100% 100%);
+            
+      }
+      .sandB{
+        position:absolute;
+        background:#ffc107;
+        width:400px;
+        height:300px;
+        top:300px;
+
+        z-index:2;
+       
+        animation:50s up 10s 1 ease-in forwards;
+      }
+      @keyframes up
+      {
+        0%{
+            top:300px;
+        }
+        100%{
+            top:0px;
+        }
+      }
+      .Title{
+        position:absolute;
+        left:300px;
+        top:300px;
+        font-size:256px;
+        color:white;
+      }
+    </style>
+    <script>
+        /* 数字定时器修改 */
+        function Title()
+        {
+            let number=1;
+            let bg=setInterval(function(){
+                let title=document.getElementsByClassName("Title");
+            
+                title[0].innerText=number;
+                number++;
+                console.log(number);
+                if(number==61)
+                {
+                clearInterval(bg);
+                }      
+            },1000);
+          
+        }
+        /* 圆形变色 */
+        function bg()
+        {
+            setTimeout(function(){
+                let bt=document.getElementsByClassName("roundT");
+                let bb=document.getElementsByClassName("roundB");
+                bt[0].style.backgroundColor="white";
+                bb[0].style.backgroundColor="#ffc107";
+            },10000)
+        }
+        /* 沙子动画 */
+        function sandAdd()
+        {
+            let sandbox=document.getElementsByClassName("drops");
+        
+           
+            for(let i=1;i<=10;i++)
+            {
+                console.log(i)
+                let sandrop=document.createElement("div");
+                sandrop.className='dropsand';
+                sandbox[0].appendChild(sandrop);
+                sandrop.style.animationDelay=(i*0.1+'s');
+                
+            }
+            setTimeout(function(){
+       
+                for(let i=1;i<=10;i++)
+                {
+                    let sandrop=document.getElementsByClassName('dropsand');
+                    sandbox[0].removeChild(sandrop[0]);
+                }
+            },60000); 
+                
+        }
+        Title()
+        bg()
+        sandAdd()
+    </script>
+</body>
