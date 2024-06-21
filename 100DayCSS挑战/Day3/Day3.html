@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<head>
+    
+</head>
+<body>
+    <div class="frame">
+        <div class="center">
+            <div class="background">
+                <div class="sunplace">
+                    <div class="sun"></div>
+                </div>
+                <div class="Pyleft"></div>
+                <div class="PyRight"></div>
+                <div class="floor"></div>
+                <div class="shadow"></div>
+            </div>
+        </div>
+      </div>
+    <style>
+        .frame {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 400px;
+        height: 400px;
+        
+        margin-top: -200px;
+        margin-left: -200px;
+        border-radius: 2px;
+            box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+            overflow: hidden;
+        background: black;
+        color: #333;
+            font-family: 'Open Sans', Helvetica, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            
+        }
+        .center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+       
+        }
+        .background{
+            position:absolute;
+            top:-100px;
+            left:-100px;
+            width:200px;
+            height:200px;
+            background-color:#c2e9fb;
+            border-radius:50%;
+            overflow:hidden;
+            animation:bg 4s infinite;
+        
+        }
+        .sunplace{
+            position:absolute;
+            width:240px;
+            height:240px;
+            animation: sun 4s infinite;
+        }
+        .sun{
+            position:absolute;
+            width:30px;
+            height:30px;
+            background-color:yellow;
+            border-radius:50%;
+            top:100px;
+            left:0px;
+            
+        }
+        .floor{
+            position:absolute;
+            width:300px;
+            height:300px;
+            top:150px;
+            background-color:#F0DE75;
+        }
+        @keyframes sun{
+            0%{
+               transform:rotate(0deg);
+            }
+            30%{
+                transform:rotate(48deg);
+            }
+            100%{
+               transform:rotate(180deg);
+            }
+        }
+        .Pyleft{
+            position:absolute;
+            top:92px;
+            left:60px;
+            width:50px;
+            height:60px;
+            background-color:white;
+            clip-path:polygon(0% 100%,80% 0%,100% 100%);
+            animation:Pyleft 4s infinite;
+        }
+        @keyframes Pyleft{
+            0% {
+                background:  #F4F4F4;
+            }
+            50% {
+                background: #DDDADA;
+            }
+            100% {
+                background: #272C34;
+            }
+        }
+        @keyframes Pyright{
+            0% {
+                background: #272C34;
+            }
+            80% {
+                background: #DDDADA;
+            }
+            100% {
+                background: #F4F4F4;
+            }
+        }
+        .PyRight{
+            position:absolute;
+            top:92px;
+            left:100px;
+            width:60px;
+            height:60px;
+            background-color:white;
+            clip-path:polygon(0% 0%,18% 100%,100% 100%);
+            animation:Pyright 4s infinite;
+        }
+        .shadow{
+            position:absolute;
+            top:88px;
+            left:40px;
+            width:130px;
+            height:160px;
+            background: rgba(0,0,0,0.2);
+            transform:rotateX(78deg);
+            animation:shadow 4s infinite;
+           
+        }
+        @keyframes shadow{
+            0%{
+              
+                clip-path:polygon(15% 0%,90% 0%,100% 100%);
+            }
+            30%{
+                clip-path:polygon(15% 0%,90% 0%,65% 70%);
+            }
+            100%{
+             
+                clip-path:polygon(15% 0%,90% 0%,0% 100%);
+            }
+        }
+        @keyframes bg{
+            0% {
+                background: #272C34;
+              
+            }
+                
+            30% {
+                background: #7DDFFC;
+            }
+                
+            70% {
+                background: #7DDFFC;
+                opacity:1;            
+            }
+
+            100% {
+                background: #272C34;
+                opacity:0;
+            }
+        }
+
+    </style>
+    <script>
+        
+    </script>
+</body>

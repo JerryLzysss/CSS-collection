@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<head>
+    <div class="frame">
+        <div class="center">
+					<!-- 1字体 -->
+                  <div class="One-1"></div>
+                  <div class="One-2"></div>
+				  <!-- 两个0 -->
+                  <div class="Zero-1"></div>
+                  <div class="Zero-2"></div>
+				  <!-- 下面的字体 -->
+                  <div class="Day">Days</div>
+                  <div class="Challenge">css challenge</div>
+        </div>
+      </div>
+</head>
+<body>
+    <style>
+/* frame与center为模板 */
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #fff;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background-image: linear-gradient(225deg,#30cfd0 0%, #330867 100%);
+	background-size:cover;
+	background-repeat: no-repeat; 
+	background-attachment: fixed;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+	 
+}
+ 
+.One-1{
+	position:absolute;
+	width:60px;
+	height:20px;
+	top:-120px;
+	left:-150px;
+	background-color:white;
+	transform:rotate(135deg);
+	opacity:0.8;
+	z-index:1;
+}
+.One-2{
+	position:absolute;
+	width:120px;
+	height:25px;
+	top:-90px;
+	left:-155px;
+	background-color:white;
+	transform:rotate(90deg);
+		
+}
+.Zero-1{
+	position:absolute;
+	width:50px;
+	height:50px;
+	top:-130px;
+	left:-80px;
+  
+	border:30px solid white;
+	border-radius: 50%;
+}
+.Zero-2{
+	position:absolute;
+    width:50px;
+	height:50px;
+	top:-130px;
+	left:32px;
+	
+	border:30px solid white;
+	border-radius: 50%;
+}
+.Day{
+	position:absolute;
+	top:-30px;
+	left:-135px;
+	font-size:110px;
+	color:white;
+	text-transform:uppercase;
+}
+.Challenge{
+	position:absolute;
+	top:80px;
+	left:-130px;
+	width:400px;
+	font-size:35px;
+	color:white;
+	text-transform:uppercase;
+}
+    </style>
+    <script>
+     </script>   
+</body>

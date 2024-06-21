@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+    <div class="frame">
+        <div class="center">
+            <div class="first line"></div>
+            <div class="second line"></div>
+            <div class="third line"></div>
+        </div>
+      </div>
+    <style>
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #fff;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background-color:#84fab0;
+	transform-style:preserve-3d;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.line{
+	position:absolute;
+	background-color:white;
+	width:100px;
+	height:10px;
+	border-radius:10px;
+	box-shadow: 0 2px 10px 0 rgba(0,0,0,0.3);
+}
+.first{
+    top:-40px;
+	left:-50px;
+
+   
+}
+.second{
+    top:-10px;
+	left:-50px;
+    
+}
+.third{
+	top:20px;
+	left:-50px;
+    
+}
+@keyframes F{
+    0%{
+        transform:translateY(0px) rotate(0deg);
+    }
+    50%{
+        transform:translateY(30px) rotate(0deg);
+    }
+    100%{
+        transform:translateY(30px) rotate(135deg);
+    }
+}
+@keyframes FB{
+    0%{
+        transform:translateY(30px) rotate(135deg);
+    }
+    50%{
+        transform:translateY(30px) rotate(0deg);
+    }
+    100%{
+        transform:translateY(0px) rotate(0deg);
+    }
+}
+@keyframes S{
+    0%{
+        transform:scale(1);
+    }
+    100%{
+        transform:scale(0);
+    }
+}
+@keyframes SB{
+    0%{
+        transform:scale(0);
+    }
+    100%{
+        transform:scale(1);
+    }
+}
+@keyframes T{
+    0%{
+        transform:translateY(0px) rotate(0deg);
+    }
+    50%{
+        transform:translateY(-30px) rotate(0deg);
+    }
+    100%{
+        transform:translateY(-30px) rotate(45deg);
+    }
+}
+@keyframes TB{
+    0%{
+        transform:translateY(-30px) rotate(45deg);
+    }
+    50%{
+        transform:translateY(-30px) rotate(0deg);
+    }
+    100%{
+        transform:translateY(0px) rotate(0deg);
+    }
+}
+    </style>
+    <script>
+        let b=document.getElementsByClassName("line")
+        let status=0;
+        for(let i=0;i<b.length;i++){
+            b[i].addEventListener("click",function(){
+                console.log(status)
+                
+                if(status==0)
+                {
+                b[0].style.cssText='animation:F 1s 1 forwards'
+                b[1].style.cssText='animation:S 1s 1 forwards'
+                b[2].style.cssText='animation:T 1s 1 forwards'
+                status=1
+                /*console.log(b[0].style.top) 
+                console.log(window.getComputedStyle(b[0]).top) */
+                }
+                else
+                {
+                b[0].style.cssText='animation:FB 1s 1 forwards'
+                b[1].style.cssText='animation:SB 1s 1 forwards'
+                b[2].style.cssText='animation:TB 1s 1 forwards'
+                status=0
+                }
+            })
+           
+        }
+       
+    </script>
+    
+</body>
