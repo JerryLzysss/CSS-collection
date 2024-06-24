@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<html>
+<head>
+    <title>TEST</title>
+    <body>
+        <div class="frame">
+            <div class="container">
+                <div class="text">HOVER</div>
+                <div class="text-vignette"><p>HOVER</p></div>
+                <div class="circle"></div>
+            </div>
+    
+        </div>
+
+        </body>
+  <style>
+    :root {
+  --my-height: 2px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+    box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+    overflow: hidden;
+  background: #2C3E50;
+  color: #333;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  width: 400px;
+  height: 400px;
+  position: relative;
+}
+
+.circle {
+  position: absolute;
+  top: 0%;
+  width: 400px;
+  height: 200px;
+  background: rgba(230,126,34,.9);
+  /* filter: blur(5px); */
+  font-size: 50px;
+  color: white;
+  z-index: 3;
+}
+
+.text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 50px;
+  font-weight: bold;
+  z-index: 1;
+  width: 180px;
+  height: 40px;
+  padding: 0;
+  line-height: 40px;
+  
+
+  /* filter: blur(5px); */
+}
+
+
+
+.text-vignette {
+  position: absolute;
+  top: 45%;
+  left: 27%;
+  /* transform: translate(-50%, -50%); */
+  color: white;
+  font-size: 50px;
+  font-weight: bold;
+  /* background: red; */
+  background: transparent;
+  z-index: 2;
+  width: 180px;
+  height: 40px;
+  padding: 0;
+  line-height: 40px;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  backdrop-filter: blur(5px);
+  filter: blur(5px);
+}
+
+
+
+/* .add-blur {
+  animation: add-blur 1s forwards;
+}
+
+@keyframes add-blur {
+  0%{
+    backdrop-filter: blur(0px);
+  }
+  100%{
+    backdrop-filter: blur(10px);
+  }
+} */
+
+
+
+
+
+
+  
+    </style>
+
+<script>
+const container = document.querySelector('.container')
+        const circle = document.querySelector('.circle')
+        const text = document.querySelector('.text')
+        const textVignette = document.querySelector('.text-vignette')
+      
+
+        container.onmousemove = (e) => {
+        
+            let left = e.offsetX;
+            let top = e.offsetY;
+
+           
+    
+
+            circle.style.height = top + "px"
+       
+            if (top >= 176) {
+                for (let i = 176; i <= 216; i++) {
+                    if(i == top){
+                        let j = i - 176
+                        // text.style.setProperty('--my-height', )
+                        
+                        textVignette.style.height = j + 'px'
+                    }
+                }
+                
+            } else {
+                console.log('g')
+            }
+     
+        }
+  </script>
+</head>
+
+
+</html>

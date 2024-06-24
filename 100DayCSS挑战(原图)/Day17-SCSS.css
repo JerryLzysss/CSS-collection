@@ -1,0 +1,58 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #fff;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: repeating-linear-gradient(45deg, transparent 0 15px, #353535 16px 19px);
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 260px;
+  width: 260px;
+  background: #353535;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 8px 10px 15px 0 rgba(0, 0, 0, 0.3);
+}
+
+svg {
+  height: 180px;
+  width: 180px;
+}
+svg path {
+  transition: all 0.5s ease;
+}
+svg #t1 {
+  fill: #aaa;
+}
+svg #t2 {
+  fill: #ccc;
+}
+svg #t3 {
+  fill: #eee;
+}
+svg:hover #t1 {
+  fill: #eee;
+}
+svg:hover #t2 {
+  fill: #aaa;
+}
+svg:hover #t3 {
+  fill: #ccc;
+}

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<html>
+<head>
+    <title>TEST</title>
+    <Body>
+        <html lang="en">
+            <head>
+            </head>
+            <body>
+                <div class="frame">
+                    <div class="center">
+                          <div class="timer">
+                              <span class="fourth">0</span>
+                              <span class="third">0</span>
+                              <span class="second">0</span>
+                              <span class="first">0</span>
+                          </div>
+                          <div class="startBtn"></div>
+                          <div class="stopBtn show"></div>
+                    </div>
+                  </div>
+            </body>
+            </html>
+      </html>
+     
+    <style>
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #313C46;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+	color:white;
+}
+
+.timer{
+	background:white;
+	color:#478BB8;
+	padding:10px 5px;
+	font-size:30px;
+	border-radius:3px;
+	box-shadow: 2px 4px 8px 0 rgba(0,0,0,0.3);
+}
+
+.stopBtn{
+	position:absolute;left:42px;top:70px;
+	width:16px;height:20px;
+	border-left:5px solid #fff;
+	border-right:5px solid #fff;
+	opacity:0;
+	transition:all 0.2s ease-in-out;
+	transform:scale(0);
+	cursor:"pointer"
+}
+
+.startBtn{
+	width: 0;
+	height: 0;
+	border-top: 10px solid transparent;
+	border-left: 10px solid #fff;
+	border-bottom: 10px solid transparent;
+	position:absolute;left:42px;top:70px;
+	transition:all 0.2s ease-in-out;
+	opacity:0;
+	transform:scale(0);
+	cursor:"pointer"
+}
+
+.show{
+		opacity:1;
+	transform:scale(1);
+	z-index:5;
+}
+
+
+
+
+
+</style>
+<script>
+  
+  const fourth=document.getElementsByClassName("fourth")
+const third=document.getElementsByClassName("third")
+const second=document.getElementsByClassName("second")
+const first=document.getElementsByClassName("first")
+
+const start=document.getElementsByClassName("startBtn")[0]
+const stop=document.getElementsByClassName("stopBtn")[0]
+
+let interval;
+
+function timer(){
+	
+	let fo=Number(fourth[0].innerHTML)+1
+	let t=Number(third[0].innerHTML)+1
+	let s=Number(second[0].innerHTML)+1
+	let fi=Number(first[0].innerHTML)+1
+	console.log(fo)
+	
+	if(fi<10){
+		first[0].innerHTML=fi
+	}else{
+		first[0].innerHTML=0
+		if(s<10){
+			second[0].innerHTML=s
+		}else{
+			second[0].innerHTML=0
+			if(t<10){
+				third[0].innerHTML=t
+			}else{
+				if(fo<10){
+					fourth[0].innerHTML=fo
+				}
+				else{
+					fourth[0].innerHTML=0
+					clearInterval(x)
+				}
+			}
+		}
+	}
+}
+
+x=setInterval(timer,1000)
+
+start.addEventListener("click",()=>{
+	start.classList.remove("show")
+	stop.classList.add("show")
+	
+	x=setInterval(timer,1000)
+})
+
+stop.addEventListener("click",()=>{
+	stop.classList.remove("show")
+	start.classList.add("show")
+	
+	clearInterval(x)
+})
+
+
+</script>
+</body>
+</head>
+
+
+</html>

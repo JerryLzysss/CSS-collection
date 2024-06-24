@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<html>
+<head>
+    <title>TEST</title>
+    <body>
+        <div class="frame">
+            <div class="lock-head">
+                <div class="inner"></div>
+            </div>
+            <div class="lock-body">
+                <svg class="circle" width="150" height="150" xmlns="http://w3c.org/2000/svg">
+                    <circle cx="75" cy="75" r="75" fill="black"></circle>
+                    <g id="item">
+                    <line x1="75" y1="5" x2="75" y2="20" stroke="#fff" stroke-width="2" stroke-linecap="round"></line>
+                    <line x1="75" y1="5" x2="75" y2="15" stroke="#ccc" stroke-width="2" stroke-linecap="round" transform="rotate(-9, 75, 75)"></line>
+                    <line x1="75" y1="5" x2="75" y2="15" stroke="#ccc" stroke-width="2" stroke-linecap="round" transform="rotate(-18, 75, 75)"></line>
+                    <line x1="75" y1="5" x2="75" y2="15" stroke="#ccc" stroke-width="2" stroke-linecap="round" transform="rotate(-27, 75, 75)"></line>
+                        <line x1="75" y1="5" x2="75" y2="15" stroke="#ccc" stroke-width="2" stroke-linecap="round" transform="rotate(-36, 75, 75)"></line>
+                    
+                        </g>
+                        
+                    <use xlink:href="#item" transform="rotate(-45, 75, 75)"></use>
+                    <text x=71 y="36" stroke="#fff" font-size="12px">
+                            0
+                        </text>
+                        <text x=71 y="36" transform="rotate(45, 75, 75)" stroke="#fff" font-size="12px">
+                            5
+                        </text>
+                    <text x=68 y="36" transform="rotate(90, 75, 75)" stroke="#fff" font-size="12px">
+                            10
+                        </text>
+                    <text x=68 y="36" transform="rotate(135, 75, 75)" stroke="#fff" font-size="12px">
+                            15
+                        </text>
+                    <text x=68 y="36" transform="rotate(180, 75, 75)" stroke="#fff" font-size="12px">
+                            20
+                        </text>
+                    <text x=68 y="36" transform="rotate(225, 75, 75)" stroke="#fff" font-size="12px">
+                            25
+                        </text>
+                    <text x=68 y="36" transform="rotate(270, 75, 75)" stroke="#fff" font-size="12px">
+                            30
+                        </text>
+                    <text x=68 y="36" transform="rotate(315, 75, 75)" stroke="#fff" font-size="12px">
+                            35
+                        </text>
+                
+            
+                    
+                
+                        <use xlink:href="#item" transform="rotate(-90, 75, 75)"></use>
+                        <use xlink:href="#item" transform="rotate(-135, 75, 75)"></use>
+                        <use xlink:href="#item" transform="rotate(-180, 75, 75)"></use>
+                        <use xlink:href="#item" transform="rotate(45, 75, 75)"></use>
+                        <use xlink:href="#item" transform="rotate(90, 75, 75)"></use>
+                    <use xlink:href="#item" transform="rotate(135, 75, 75)"></use>
+                        
+                </svg>
+            <div class="mid"></div>
+            </div>				
+    
+    </div>
+  </body>
+    <style>
+  
+
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 6px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #F57E15;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.lock-head {
+	width: 120px;
+	height: 200px;
+	background: #D1DDE5;
+	border-radius: 9999px;
+	box-shadow: inset -4px 0px 0 rgb(0 0 0 / 30%),inset 4px 6px 0px rgb(255 255 255 /90%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: 80px;
+}
+.inner {
+	width: 100px;
+	height: 180px;
+	border-radius: 9999px;
+	background: #F57E15;
+	box-shadow:  -4px -2px 0 rgb(0 0 0 / 30%), 4px 6px 0px rgb(255 255 255 /90%);
+	
+}
+
+.lock-body {
+	width: 160px;
+	height: 160px;
+	background: #D1DDE5;
+	border-radius: 50%;
+	position: absolute;
+	top: 160px;
+	box-shadow: 2px 4px 10px 0px  rgba(0,0,0, 0.3), inset -1px -2px 0 0 rgb(0 0 0 / 40%), inset 4px 4px 0 0 rgb(255 255 255 / 90%);
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	
+}
+.lock-body {
+	cursor: pointer;
+
+}
+.circle {
+		transition: 1.5s transform ease-in-out;
+}
+.lock-body:hover {
+	.circle {
+		transform: translate3d(0, 0,0) rotate(360deg);
+	}
+}
+.circle {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	background: black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.item {
+	// transform: translateY(-40px)
+}
+
+.linel {
+	width: 2px;
+	height: 130px;
+	background: #fff;
+	clip-path:  circle(40%);
+}
+// .lines {
+// 	transform: rotate(15deg);
+// 	transform-origin: 50% 50%;
+// }
+
+
+.mid {
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	background: #D1DDE5;
+	border-radius: 50%;
+	box-shadow: inset 3px 3px 0 0 rgb(255 255 255 / 80%), inset -2px -2px 0 0 rgb(0 0 0 /20%)
+}
+  </style>
+<script>
+
+  </script>
+</head>
+
+
+</html>

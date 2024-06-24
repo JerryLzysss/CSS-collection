@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<html>
+<head>
+    <title>TEST</title>
+    <div class="frame">
+        
+    </div>
+    <style>
+/* // delete the following line if no text is used */
+/* // edit the line if you wanna use other fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+/* // use only the available space inside the 400x400 frame */
+
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #fff;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+    display: grid;                  /*for grid display*/
+    grid-template-columns: repeat(20, 1fr); /*repeat function utilizes all space to create 20 columns*/
+    grid-template-rows: repeat(20, 1fr);
+}
+
+.pixel{
+    width: 20px;
+    height: 20px;
+    border: rgb(209, 97, 72) solid 0.5px;
+    background-color: rgb(255, 47, 0);
+    cursor: pointer;
+}
+.pixel:hover{
+    background-color: rgb(219, 84, 54);
+}
+
+.pixel.active{
+    background-color: #fff;
+    border-color: #fff;
+}
+    </style>
+    <script>
+        const container = document.querySelector('.frame')
+
+        for(let i=1;i <= 400;i++){
+            addEle(i);
+        }
+
+
+
+        const px = document.querySelectorAll('.pixel')
+        px.forEach(e => {
+            e.addEventListener('click', ()=>{
+                e.classList.toggle('active')
+            })
+        });
+
+        function addEle(i) {
+            const pixel = document.createElement('div')
+            container.appendChild(pixel)
+            pixel.className = 'pixel'
+            
+            //to create space invader logo
+            if(i == 130 || i == 131 || i == 149 || i == 150 || i == 151 || i == 152 || i == 168 || i == 169 || i == 170 || i == 171 || i == 172 || i == 173 || i == 187 || i == 188 || i == 190 || i == 191 || i == 193 || i == 194 || i == 207 || i == 208 || i == 209 || i == 210 || i == 211 || i == 212 || i == 213 || i == 214 || i == 229 || i == 232 || i == 248 || i == 250 || i == 251 || i == 253 || i == 267 || i == 269 || i == 272 || i == 274){
+                pixel.classList.add('active')
+            }
+        }
+      </script>
+</head>
+
+
+</html>

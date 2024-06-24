@@ -1,0 +1,1521 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  color: inherit;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: block;
+}
+
+img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#app {
+  width: 100%;
+  height: 400px;
+  max-width: 400px;
+  background-color: #27ae60;
+  border-radius: 8px;
+  position: relative;
+}
+
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+}
+.box .dot {
+  width: 1px;
+  height: 50%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transform-origin: bottom center;
+}
+.box .dot::after {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%) scale(0);
+}
+.box.b1 {
+  width: 81px;
+  height: 81px;
+}
+.box.b1 .dot.d1 {
+  transform: translateX(-50%) rotate(20deg);
+}
+.box.b1 .dot.d2 {
+  transform: translateX(-50%) rotate(40deg);
+}
+.box.b1 .dot.d3 {
+  transform: translateX(-50%) rotate(60deg);
+}
+.box.b1 .dot.d4 {
+  transform: translateX(-50%) rotate(80deg);
+}
+.box.b1 .dot.d5 {
+  transform: translateX(-50%) rotate(100deg);
+}
+.box.b1 .dot.d6 {
+  transform: translateX(-50%) rotate(120deg);
+}
+.box.b1 .dot.d7 {
+  transform: translateX(-50%) rotate(140deg);
+}
+.box.b1 .dot.d8 {
+  transform: translateX(-50%) rotate(160deg);
+}
+.box.b1 .dot.d9 {
+  transform: translateX(-50%) rotate(180deg);
+}
+.box.b1 .dot.d10 {
+  transform: translateX(-50%) rotate(200deg);
+}
+.box.b1 .dot.d11 {
+  transform: translateX(-50%) rotate(220deg);
+}
+.box.b1 .dot.d12 {
+  transform: translateX(-50%) rotate(240deg);
+}
+.box.b1 .dot.d13 {
+  transform: translateX(-50%) rotate(260deg);
+}
+.box.b1 .dot.d14 {
+  transform: translateX(-50%) rotate(280deg);
+}
+.box.b1 .dot.d15 {
+  transform: translateX(-50%) rotate(300deg);
+}
+.box.b1 .dot.d16 {
+  transform: translateX(-50%) rotate(320deg);
+}
+.box.b1 .dot.d17 {
+  transform: translateX(-50%) rotate(340deg);
+}
+.box.b1 .dot.d18 {
+  transform: translateX(-50%) rotate(360deg);
+}
+.box.b1 .dot::after {
+  animation: wave 1.5s linear infinite alternate;
+  animation-delay: 0.2s;
+}
+.box.b2 {
+  width: 102px;
+  height: 102px;
+}
+.box.b2 .dot.d1 {
+  transform: translateX(-50%) rotate(15deg);
+}
+.box.b2 .dot.d2 {
+  transform: translateX(-50%) rotate(30deg);
+}
+.box.b2 .dot.d3 {
+  transform: translateX(-50%) rotate(45deg);
+}
+.box.b2 .dot.d4 {
+  transform: translateX(-50%) rotate(60deg);
+}
+.box.b2 .dot.d5 {
+  transform: translateX(-50%) rotate(75deg);
+}
+.box.b2 .dot.d6 {
+  transform: translateX(-50%) rotate(90deg);
+}
+.box.b2 .dot.d7 {
+  transform: translateX(-50%) rotate(105deg);
+}
+.box.b2 .dot.d8 {
+  transform: translateX(-50%) rotate(120deg);
+}
+.box.b2 .dot.d9 {
+  transform: translateX(-50%) rotate(135deg);
+}
+.box.b2 .dot.d10 {
+  transform: translateX(-50%) rotate(150deg);
+}
+.box.b2 .dot.d11 {
+  transform: translateX(-50%) rotate(165deg);
+}
+.box.b2 .dot.d12 {
+  transform: translateX(-50%) rotate(180deg);
+}
+.box.b2 .dot.d13 {
+  transform: translateX(-50%) rotate(195deg);
+}
+.box.b2 .dot.d14 {
+  transform: translateX(-50%) rotate(210deg);
+}
+.box.b2 .dot.d15 {
+  transform: translateX(-50%) rotate(225deg);
+}
+.box.b2 .dot.d16 {
+  transform: translateX(-50%) rotate(240deg);
+}
+.box.b2 .dot.d17 {
+  transform: translateX(-50%) rotate(255deg);
+}
+.box.b2 .dot.d18 {
+  transform: translateX(-50%) rotate(270deg);
+}
+.box.b2 .dot.d19 {
+  transform: translateX(-50%) rotate(285deg);
+}
+.box.b2 .dot.d20 {
+  transform: translateX(-50%) rotate(300deg);
+}
+.box.b2 .dot.d21 {
+  transform: translateX(-50%) rotate(315deg);
+}
+.box.b2 .dot.d22 {
+  transform: translateX(-50%) rotate(330deg);
+}
+.box.b2 .dot.d23 {
+  transform: translateX(-50%) rotate(345deg);
+}
+.box.b2 .dot.d24 {
+  transform: translateX(-50%) rotate(360deg);
+}
+.box.b2 .dot::after {
+  animation: wave 1.5s linear infinite alternate;
+  animation-delay: 0.4s;
+}
+.box.b3 {
+  width: 123px;
+  height: 123px;
+}
+.box.b3 .dot.d1 {
+  transform: translateX(-50%) rotate(12deg);
+}
+.box.b3 .dot.d2 {
+  transform: translateX(-50%) rotate(24deg);
+}
+.box.b3 .dot.d3 {
+  transform: translateX(-50%) rotate(36deg);
+}
+.box.b3 .dot.d4 {
+  transform: translateX(-50%) rotate(48deg);
+}
+.box.b3 .dot.d5 {
+  transform: translateX(-50%) rotate(60deg);
+}
+.box.b3 .dot.d6 {
+  transform: translateX(-50%) rotate(72deg);
+}
+.box.b3 .dot.d7 {
+  transform: translateX(-50%) rotate(84deg);
+}
+.box.b3 .dot.d8 {
+  transform: translateX(-50%) rotate(96deg);
+}
+.box.b3 .dot.d9 {
+  transform: translateX(-50%) rotate(108deg);
+}
+.box.b3 .dot.d10 {
+  transform: translateX(-50%) rotate(120deg);
+}
+.box.b3 .dot.d11 {
+  transform: translateX(-50%) rotate(132deg);
+}
+.box.b3 .dot.d12 {
+  transform: translateX(-50%) rotate(144deg);
+}
+.box.b3 .dot.d13 {
+  transform: translateX(-50%) rotate(156deg);
+}
+.box.b3 .dot.d14 {
+  transform: translateX(-50%) rotate(168deg);
+}
+.box.b3 .dot.d15 {
+  transform: translateX(-50%) rotate(180deg);
+}
+.box.b3 .dot.d16 {
+  transform: translateX(-50%) rotate(192deg);
+}
+.box.b3 .dot.d17 {
+  transform: translateX(-50%) rotate(204deg);
+}
+.box.b3 .dot.d18 {
+  transform: translateX(-50%) rotate(216deg);
+}
+.box.b3 .dot.d19 {
+  transform: translateX(-50%) rotate(228deg);
+}
+.box.b3 .dot.d20 {
+  transform: translateX(-50%) rotate(240deg);
+}
+.box.b3 .dot.d21 {
+  transform: translateX(-50%) rotate(252deg);
+}
+.box.b3 .dot.d22 {
+  transform: translateX(-50%) rotate(264deg);
+}
+.box.b3 .dot.d23 {
+  transform: translateX(-50%) rotate(276deg);
+}
+.box.b3 .dot.d24 {
+  transform: translateX(-50%) rotate(288deg);
+}
+.box.b3 .dot.d25 {
+  transform: translateX(-50%) rotate(300deg);
+}
+.box.b3 .dot.d26 {
+  transform: translateX(-50%) rotate(312deg);
+}
+.box.b3 .dot.d27 {
+  transform: translateX(-50%) rotate(324deg);
+}
+.box.b3 .dot.d28 {
+  transform: translateX(-50%) rotate(336deg);
+}
+.box.b3 .dot.d29 {
+  transform: translateX(-50%) rotate(348deg);
+}
+.box.b3 .dot.d30 {
+  transform: translateX(-50%) rotate(360deg);
+}
+.box.b3 .dot::after {
+  animation: wave 1.5s linear infinite alternate;
+  animation-delay: 0.6s;
+}
+.box.b4 {
+  width: 144px;
+  height: 144px;
+}
+.box.b4 .dot.d1 {
+  transform: translateX(-50%) rotate(10deg);
+}
+.box.b4 .dot.d2 {
+  transform: translateX(-50%) rotate(20deg);
+}
+.box.b4 .dot.d3 {
+  transform: translateX(-50%) rotate(30deg);
+}
+.box.b4 .dot.d4 {
+  transform: translateX(-50%) rotate(40deg);
+}
+.box.b4 .dot.d5 {
+  transform: translateX(-50%) rotate(50deg);
+}
+.box.b4 .dot.d6 {
+  transform: translateX(-50%) rotate(60deg);
+}
+.box.b4 .dot.d7 {
+  transform: translateX(-50%) rotate(70deg);
+}
+.box.b4 .dot.d8 {
+  transform: translateX(-50%) rotate(80deg);
+}
+.box.b4 .dot.d9 {
+  transform: translateX(-50%) rotate(90deg);
+}
+.box.b4 .dot.d10 {
+  transform: translateX(-50%) rotate(100deg);
+}
+.box.b4 .dot.d11 {
+  transform: translateX(-50%) rotate(110deg);
+}
+.box.b4 .dot.d12 {
+  transform: translateX(-50%) rotate(120deg);
+}
+.box.b4 .dot.d13 {
+  transform: translateX(-50%) rotate(130deg);
+}
+.box.b4 .dot.d14 {
+  transform: translateX(-50%) rotate(140deg);
+}
+.box.b4 .dot.d15 {
+  transform: translateX(-50%) rotate(150deg);
+}
+.box.b4 .dot.d16 {
+  transform: translateX(-50%) rotate(160deg);
+}
+.box.b4 .dot.d17 {
+  transform: translateX(-50%) rotate(170deg);
+}
+.box.b4 .dot.d18 {
+  transform: translateX(-50%) rotate(180deg);
+}
+.box.b4 .dot.d19 {
+  transform: translateX(-50%) rotate(190deg);
+}
+.box.b4 .dot.d20 {
+  transform: translateX(-50%) rotate(200deg);
+}
+.box.b4 .dot.d21 {
+  transform: translateX(-50%) rotate(210deg);
+}
+.box.b4 .dot.d22 {
+  transform: translateX(-50%) rotate(220deg);
+}
+.box.b4 .dot.d23 {
+  transform: translateX(-50%) rotate(230deg);
+}
+.box.b4 .dot.d24 {
+  transform: translateX(-50%) rotate(240deg);
+}
+.box.b4 .dot.d25 {
+  transform: translateX(-50%) rotate(250deg);
+}
+.box.b4 .dot.d26 {
+  transform: translateX(-50%) rotate(260deg);
+}
+.box.b4 .dot.d27 {
+  transform: translateX(-50%) rotate(270deg);
+}
+.box.b4 .dot.d28 {
+  transform: translateX(-50%) rotate(280deg);
+}
+.box.b4 .dot.d29 {
+  transform: translateX(-50%) rotate(290deg);
+}
+.box.b4 .dot.d30 {
+  transform: translateX(-50%) rotate(300deg);
+}
+.box.b4 .dot.d31 {
+  transform: translateX(-50%) rotate(310deg);
+}
+.box.b4 .dot.d32 {
+  transform: translateX(-50%) rotate(320deg);
+}
+.box.b4 .dot.d33 {
+  transform: translateX(-50%) rotate(330deg);
+}
+.box.b4 .dot.d34 {
+  transform: translateX(-50%) rotate(340deg);
+}
+.box.b4 .dot.d35 {
+  transform: translateX(-50%) rotate(350deg);
+}
+.box.b4 .dot.d36 {
+  transform: translateX(-50%) rotate(360deg);
+}
+.box.b4 .dot::after {
+  animation: wave 1.5s linear infinite alternate;
+  animation-delay: 0.8s;
+}
+.box.b5 {
+  width: 165px;
+  height: 165px;
+}
+.box.b5 .dot.d1 {
+  transform: translateX(-50%) rotate(8.5714285714deg);
+}
+.box.b5 .dot.d2 {
+  transform: translateX(-50%) rotate(17.1428571429deg);
+}
+.box.b5 .dot.d3 {
+  transform: translateX(-50%) rotate(25.7142857143deg);
+}
+.box.b5 .dot.d4 {
+  transform: translateX(-50%) rotate(34.2857142857deg);
+}
+.box.b5 .dot.d5 {
+  transform: translateX(-50%) rotate(42.8571428571deg);
+}
+.box.b5 .dot.d6 {
+  transform: translateX(-50%) rotate(51.4285714286deg);
+}
+.box.b5 .dot.d7 {
+  transform: translateX(-50%) rotate(60deg);
+}
+.box.b5 .dot.d8 {
+  transform: translateX(-50%) rotate(68.5714285714deg);
+}
+.box.b5 .dot.d9 {
+  transform: translateX(-50%) rotate(77.1428571429deg);
+}
+.box.b5 .dot.d10 {
+  transform: translateX(-50%) rotate(85.7142857143deg);
+}
+.box.b5 .dot.d11 {
+  transform: translateX(-50%) rotate(94.2857142857deg);
+}
+.box.b5 .dot.d12 {
+  transform: translateX(-50%) rotate(102.8571428571deg);
+}
+.box.b5 .dot.d13 {
+  transform: translateX(-50%) rotate(111.4285714286deg);
+}
+.box.b5 .dot.d14 {
+  transform: translateX(-50%) rotate(120deg);
+}
+.box.b5 .dot.d15 {
+  transform: translateX(-50%) rotate(128.5714285714deg);
+}
+.box.b5 .dot.d16 {
+  transform: translateX(-50%) rotate(137.1428571429deg);
+}
+.box.b5 .dot.d17 {
+  transform: translateX(-50%) rotate(145.7142857143deg);
+}
+.box.b5 .dot.d18 {
+  transform: translateX(-50%) rotate(154.2857142857deg);
+}
+.box.b5 .dot.d19 {
+  transform: translateX(-50%) rotate(162.8571428571deg);
+}
+.box.b5 .dot.d20 {
+  transform: translateX(-50%) rotate(171.4285714286deg);
+}
+.box.b5 .dot.d21 {
+  transform: translateX(-50%) rotate(180deg);
+}
+.box.b5 .dot.d22 {
+  transform: translateX(-50%) rotate(188.5714285714deg);
+}
+.box.b5 .dot.d23 {
+  transform: translateX(-50%) rotate(197.1428571429deg);
+}
+.box.b5 .dot.d24 {
+  transform: translateX(-50%) rotate(205.7142857143deg);
+}
+.box.b5 .dot.d25 {
+  transform: translateX(-50%) rotate(214.2857142857deg);
+}
+.box.b5 .dot.d26 {
+  transform: translateX(-50%) rotate(222.8571428571deg);
+}
+.box.b5 .dot.d27 {
+  transform: translateX(-50%) rotate(231.4285714286deg);
+}
+.box.b5 .dot.d28 {
+  transform: translateX(-50%) rotate(240deg);
+}
+.box.b5 .dot.d29 {
+  transform: translateX(-50%) rotate(248.5714285714deg);
+}
+.box.b5 .dot.d30 {
+  transform: translateX(-50%) rotate(257.1428571429deg);
+}
+.box.b5 .dot.d31 {
+  transform: translateX(-50%) rotate(265.7142857143deg);
+}
+.box.b5 .dot.d32 {
+  transform: translateX(-50%) rotate(274.2857142857deg);
+}
+.box.b5 .dot.d33 {
+  transform: translateX(-50%) rotate(282.8571428571deg);
+}
+.box.b5 .dot.d34 {
+  transform: translateX(-50%) rotate(291.4285714286deg);
+}
+.box.b5 .dot.d35 {
+  transform: translateX(-50%) rotate(300deg);
+}
+.box.b5 .dot.d36 {
+  transform: translateX(-50%) rotate(308.5714285714deg);
+}
+.box.b5 .dot.d37 {
+  transform: translateX(-50%) rotate(317.1428571429deg);
+}
+.box.b5 .dot.d38 {
+  transform: translateX(-50%) rotate(325.7142857143deg);
+}
+.box.b5 .dot.d39 {
+  transform: translateX(-50%) rotate(334.2857142857deg);
+}
+.box.b5 .dot.d40 {
+  transform: translateX(-50%) rotate(342.8571428571deg);
+}
+.box.b5 .dot.d41 {
+  transform: translateX(-50%) rotate(351.4285714286deg);
+}
+.box.b5 .dot.d42 {
+  transform: translateX(-50%) rotate(360deg);
+}
+.box.b5 .dot::after {
+  animation: wave 1.5s linear infinite alternate;
+  animation-delay: 1s;
+}
+.box.b6 {
+  width: 186px;
+  height: 186px;
+}
+.box.b6 .dot.d1 {
+  transform: translateX(-50%) rotate(7.5deg);
+}
+.box.b6 .dot.d2 {
+  transform: translateX(-50%) rotate(15deg);
+}
+.box.b6 .dot.d3 {
+  transform: translateX(-50%) rotate(22.5deg);
+}
+.box.b6 .dot.d4 {
+  transform: translateX(-50%) rotate(30deg);
+}
+.box.b6 .dot.d5 {
+  transform: translateX(-50%) rotate(37.5deg);
+}
+.box.b6 .dot.d6 {
+  transform: translateX(-50%) rotate(45deg);
+}
+.box.b6 .dot.d7 {
+  transform: translateX(-50%) rotate(52.5deg);
+}
+.box.b6 .dot.d8 {
+  transform: translateX(-50%) rotate(60deg);
+}
+.box.b6 .dot.d9 {
+  transform: translateX(-50%) rotate(67.5deg);
+}
+.box.b6 .dot.d10 {
+  transform: translateX(-50%) rotate(75deg);
+}
+.box.b6 .dot.d11 {
+  transform: translateX(-50%) rotate(82.5deg);
+}
+.box.b6 .dot.d12 {
+  transform: translateX(-50%) rotate(90deg);
+}
+.box.b6 .dot.d13 {
+  transform: translateX(-50%) rotate(97.5deg);
+}
+.box.b6 .dot.d14 {
+  transform: translateX(-50%) rotate(105deg);
+}
+.box.b6 .dot.d15 {
+  transform: translateX(-50%) rotate(112.5deg);
+}
+.box.b6 .dot.d16 {
+  transform: translateX(-50%) rotate(120deg);
+}
+.box.b6 .dot.d17 {
+  transform: translateX(-50%) rotate(127.5deg);
+}
+.box.b6 .dot.d18 {
+  transform: translateX(-50%) rotate(135deg);
+}
+.box.b6 .dot.d19 {
+  transform: translateX(-50%) rotate(142.5deg);
+}
+.box.b6 .dot.d20 {
+  transform: translateX(-50%) rotate(150deg);
+}
+.box.b6 .dot.d21 {
+  transform: translateX(-50%) rotate(157.5deg);
+}
+.box.b6 .dot.d22 {
+  transform: translateX(-50%) rotate(165deg);
+}
+.box.b6 .dot.d23 {
+  transform: translateX(-50%) rotate(172.5deg);
+}
+.box.b6 .dot.d24 {
+  transform: translateX(-50%) rotate(180deg);
+}
+.box.b6 .dot.d25 {
+  transform: translateX(-50%) rotate(187.5deg);
+}
+.box.b6 .dot.d26 {
+  transform: translateX(-50%) rotate(195deg);
+}
+.box.b6 .dot.d27 {
+  transform: translateX(-50%) rotate(202.5deg);
+}
+.box.b6 .dot.d28 {
+  transform: translateX(-50%) rotate(210deg);
+}
+.box.b6 .dot.d29 {
+  transform: translateX(-50%) rotate(217.5deg);
+}
+.box.b6 .dot.d30 {
+  transform: translateX(-50%) rotate(225deg);
+}
+.box.b6 .dot.d31 {
+  transform: translateX(-50%) rotate(232.5deg);
+}
+.box.b6 .dot.d32 {
+  transform: translateX(-50%) rotate(240deg);
+}
+.box.b6 .dot.d33 {
+  transform: translateX(-50%) rotate(247.5deg);
+}
+.box.b6 .dot.d34 {
+  transform: translateX(-50%) rotate(255deg);
+}
+.box.b6 .dot.d35 {
+  transform: translateX(-50%) rotate(262.5deg);
+}
+.box.b6 .dot.d36 {
+  transform: translateX(-50%) rotate(270deg);
+}
+.box.b6 .dot.d37 {
+  transform: translateX(-50%) rotate(277.5deg);
+}
+.box.b6 .dot.d38 {
+  transform: translateX(-50%) rotate(285deg);
+}
+.box.b6 .dot.d39 {
+  transform: translateX(-50%) rotate(292.5deg);
+}
+.box.b6 .dot.d40 {
+  transform: translateX(-50%) rotate(300deg);
+}
+.box.b6 .dot.d41 {
+  transform: translateX(-50%) rotate(307.5deg);
+}
+.box.b6 .dot.d42 {
+  transform: translateX(-50%) rotate(315deg);
+}
+.box.b6 .dot.d43 {
+  transform: translateX(-50%) rotate(322.5deg);
+}
+.box.b6 .dot.d44 {
+  transform: translateX(-50%) rotate(330deg);
+}
+.box.b6 .dot.d45 {
+  transform: translateX(-50%) rotate(337.5deg);
+}
+.box.b6 .dot.d46 {
+  transform: translateX(-50%) rotate(345deg);
+}
+.box.b6 .dot.d47 {
+  transform: translateX(-50%) rotate(352.5deg);
+}
+.box.b6 .dot.d48 {
+  transform: translateX(-50%) rotate(360deg);
+}
+.box.b6 .dot::after {
+  animation: wave 1.5s linear infinite alternate;
+  animation-delay: 1.2s;
+}
+.box.b7 {
+  width: 207px;
+  height: 207px;
+}
+.box.b7 .dot.d1 {
+  transform: translateX(-50%) rotate(6.6666666667deg);
+}
+.box.b7 .dot.d2 {
+  transform: translateX(-50%) rotate(13.3333333333deg);
+}
+.box.b7 .dot.d3 {
+  transform: translateX(-50%) rotate(20deg);
+}
+.box.b7 .dot.d4 {
+  transform: translateX(-50%) rotate(26.6666666667deg);
+}
+.box.b7 .dot.d5 {
+  transform: translateX(-50%) rotate(33.3333333333deg);
+}
+.box.b7 .dot.d6 {
+  transform: translateX(-50%) rotate(40deg);
+}
+.box.b7 .dot.d7 {
+  transform: translateX(-50%) rotate(46.6666666667deg);
+}
+.box.b7 .dot.d8 {
+  transform: translateX(-50%) rotate(53.3333333333deg);
+}
+.box.b7 .dot.d9 {
+  transform: translateX(-50%) rotate(60deg);
+}
+.box.b7 .dot.d10 {
+  transform: translateX(-50%) rotate(66.6666666667deg);
+}
+.box.b7 .dot.d11 {
+  transform: translateX(-50%) rotate(73.3333333333deg);
+}
+.box.b7 .dot.d12 {
+  transform: translateX(-50%) rotate(80deg);
+}
+.box.b7 .dot.d13 {
+  transform: translateX(-50%) rotate(86.6666666667deg);
+}
+.box.b7 .dot.d14 {
+  transform: translateX(-50%) rotate(93.3333333333deg);
+}
+.box.b7 .dot.d15 {
+  transform: translateX(-50%) rotate(100deg);
+}
+.box.b7 .dot.d16 {
+  transform: translateX(-50%) rotate(106.6666666667deg);
+}
+.box.b7 .dot.d17 {
+  transform: translateX(-50%) rotate(113.3333333333deg);
+}
+.box.b7 .dot.d18 {
+  transform: translateX(-50%) rotate(120deg);
+}
+.box.b7 .dot.d19 {
+  transform: translateX(-50%) rotate(126.6666666667deg);
+}
+.box.b7 .dot.d20 {
+  transform: translateX(-50%) rotate(133.3333333333deg);
+}
+.box.b7 .dot.d21 {
+  transform: translateX(-50%) rotate(140deg);
+}
+.box.b7 .dot.d22 {
+  transform: translateX(-50%) rotate(146.6666666667deg);
+}
+.box.b7 .dot.d23 {
+  transform: translateX(-50%) rotate(153.3333333333deg);
+}
+.box.b7 .dot.d24 {
+  transform: translateX(-50%) rotate(160deg);
+}
+.box.b7 .dot.d25 {
+  transform: translateX(-50%) rotate(166.6666666667deg);
+}
+.box.b7 .dot.d26 {
+  transform: translateX(-50%) rotate(173.3333333333deg);
+}
+.box.b7 .dot.d27 {
+  transform: translateX(-50%) rotate(180deg);
+}
+.box.b7 .dot.d28 {
+  transform: translateX(-50%) rotate(186.6666666667deg);
+}
+.box.b7 .dot.d29 {
+  transform: translateX(-50%) rotate(193.3333333333deg);
+}
+.box.b7 .dot.d30 {
+  transform: translateX(-50%) rotate(200deg);
+}
+.box.b7 .dot.d31 {
+  transform: translateX(-50%) rotate(206.6666666667deg);
+}
+.box.b7 .dot.d32 {
+  transform: translateX(-50%) rotate(213.3333333333deg);
+}
+.box.b7 .dot.d33 {
+  transform: translateX(-50%) rotate(220deg);
+}
+.box.b7 .dot.d34 {
+  transform: translateX(-50%) rotate(226.6666666667deg);
+}
+.box.b7 .dot.d35 {
+  transform: translateX(-50%) rotate(233.3333333333deg);
+}
+.box.b7 .dot.d36 {
+  transform: translateX(-50%) rotate(240deg);
+}
+.box.b7 .dot.d37 {
+  transform: translateX(-50%) rotate(246.6666666667deg);
+}
+.box.b7 .dot.d38 {
+  transform: translateX(-50%) rotate(253.3333333333deg);
+}
+.box.b7 .dot.d39 {
+  transform: translateX(-50%) rotate(260deg);
+}
+.box.b7 .dot.d40 {
+  transform: translateX(-50%) rotate(266.6666666667deg);
+}
+.box.b7 .dot.d41 {
+  transform: translateX(-50%) rotate(273.3333333333deg);
+}
+.box.b7 .dot.d42 {
+  transform: translateX(-50%) rotate(280deg);
+}
+.box.b7 .dot.d43 {
+  transform: translateX(-50%) rotate(286.6666666667deg);
+}
+.box.b7 .dot.d44 {
+  transform: translateX(-50%) rotate(293.3333333333deg);
+}
+.box.b7 .dot.d45 {
+  transform: translateX(-50%) rotate(300deg);
+}
+.box.b7 .dot.d46 {
+  transform: translateX(-50%) rotate(306.6666666667deg);
+}
+.box.b7 .dot.d47 {
+  transform: translateX(-50%) rotate(313.3333333333deg);
+}
+.box.b7 .dot.d48 {
+  transform: translateX(-50%) rotate(320deg);
+}
+.box.b7 .dot.d49 {
+  transform: translateX(-50%) rotate(326.6666666667deg);
+}
+.box.b7 .dot.d50 {
+  transform: translateX(-50%) rotate(333.3333333333deg);
+}
+.box.b7 .dot.d51 {
+  transform: translateX(-50%) rotate(340deg);
+}
+.box.b7 .dot.d52 {
+  transform: translateX(-50%) rotate(346.6666666667deg);
+}
+.box.b7 .dot.d53 {
+  transform: translateX(-50%) rotate(353.3333333333deg);
+}
+.box.b7 .dot.d54 {
+  transform: translateX(-50%) rotate(360deg);
+}
+.box.b7 .dot::after {
+  animation: wave 1.5s linear infinite alternate;
+  animation-delay: 1.4s;
+}
+.box.b8 {
+  width: 228px;
+  height: 228px;
+}
+.box.b8 .dot.d1 {
+  transform: translateX(-50%) rotate(6deg);
+}
+.box.b8 .dot.d2 {
+  transform: translateX(-50%) rotate(12deg);
+}
+.box.b8 .dot.d3 {
+  transform: translateX(-50%) rotate(18deg);
+}
+.box.b8 .dot.d4 {
+  transform: translateX(-50%) rotate(24deg);
+}
+.box.b8 .dot.d5 {
+  transform: translateX(-50%) rotate(30deg);
+}
+.box.b8 .dot.d6 {
+  transform: translateX(-50%) rotate(36deg);
+}
+.box.b8 .dot.d7 {
+  transform: translateX(-50%) rotate(42deg);
+}
+.box.b8 .dot.d8 {
+  transform: translateX(-50%) rotate(48deg);
+}
+.box.b8 .dot.d9 {
+  transform: translateX(-50%) rotate(54deg);
+}
+.box.b8 .dot.d10 {
+  transform: translateX(-50%) rotate(60deg);
+}
+.box.b8 .dot.d11 {
+  transform: translateX(-50%) rotate(66deg);
+}
+.box.b8 .dot.d12 {
+  transform: translateX(-50%) rotate(72deg);
+}
+.box.b8 .dot.d13 {
+  transform: translateX(-50%) rotate(78deg);
+}
+.box.b8 .dot.d14 {
+  transform: translateX(-50%) rotate(84deg);
+}
+.box.b8 .dot.d15 {
+  transform: translateX(-50%) rotate(90deg);
+}
+.box.b8 .dot.d16 {
+  transform: translateX(-50%) rotate(96deg);
+}
+.box.b8 .dot.d17 {
+  transform: translateX(-50%) rotate(102deg);
+}
+.box.b8 .dot.d18 {
+  transform: translateX(-50%) rotate(108deg);
+}
+.box.b8 .dot.d19 {
+  transform: translateX(-50%) rotate(114deg);
+}
+.box.b8 .dot.d20 {
+  transform: translateX(-50%) rotate(120deg);
+}
+.box.b8 .dot.d21 {
+  transform: translateX(-50%) rotate(126deg);
+}
+.box.b8 .dot.d22 {
+  transform: translateX(-50%) rotate(132deg);
+}
+.box.b8 .dot.d23 {
+  transform: translateX(-50%) rotate(138deg);
+}
+.box.b8 .dot.d24 {
+  transform: translateX(-50%) rotate(144deg);
+}
+.box.b8 .dot.d25 {
+  transform: translateX(-50%) rotate(150deg);
+}
+.box.b8 .dot.d26 {
+  transform: translateX(-50%) rotate(156deg);
+}
+.box.b8 .dot.d27 {
+  transform: translateX(-50%) rotate(162deg);
+}
+.box.b8 .dot.d28 {
+  transform: translateX(-50%) rotate(168deg);
+}
+.box.b8 .dot.d29 {
+  transform: translateX(-50%) rotate(174deg);
+}
+.box.b8 .dot.d30 {
+  transform: translateX(-50%) rotate(180deg);
+}
+.box.b8 .dot.d31 {
+  transform: translateX(-50%) rotate(186deg);
+}
+.box.b8 .dot.d32 {
+  transform: translateX(-50%) rotate(192deg);
+}
+.box.b8 .dot.d33 {
+  transform: translateX(-50%) rotate(198deg);
+}
+.box.b8 .dot.d34 {
+  transform: translateX(-50%) rotate(204deg);
+}
+.box.b8 .dot.d35 {
+  transform: translateX(-50%) rotate(210deg);
+}
+.box.b8 .dot.d36 {
+  transform: translateX(-50%) rotate(216deg);
+}
+.box.b8 .dot.d37 {
+  transform: translateX(-50%) rotate(222deg);
+}
+.box.b8 .dot.d38 {
+  transform: translateX(-50%) rotate(228deg);
+}
+.box.b8 .dot.d39 {
+  transform: translateX(-50%) rotate(234deg);
+}
+.box.b8 .dot.d40 {
+  transform: translateX(-50%) rotate(240deg);
+}
+.box.b8 .dot.d41 {
+  transform: translateX(-50%) rotate(246deg);
+}
+.box.b8 .dot.d42 {
+  transform: translateX(-50%) rotate(252deg);
+}
+.box.b8 .dot.d43 {
+  transform: translateX(-50%) rotate(258deg);
+}
+.box.b8 .dot.d44 {
+  transform: translateX(-50%) rotate(264deg);
+}
+.box.b8 .dot.d45 {
+  transform: translateX(-50%) rotate(270deg);
+}
+.box.b8 .dot.d46 {
+  transform: translateX(-50%) rotate(276deg);
+}
+.box.b8 .dot.d47 {
+  transform: translateX(-50%) rotate(282deg);
+}
+.box.b8 .dot.d48 {
+  transform: translateX(-50%) rotate(288deg);
+}
+.box.b8 .dot.d49 {
+  transform: translateX(-50%) rotate(294deg);
+}
+.box.b8 .dot.d50 {
+  transform: translateX(-50%) rotate(300deg);
+}
+.box.b8 .dot.d51 {
+  transform: translateX(-50%) rotate(306deg);
+}
+.box.b8 .dot.d52 {
+  transform: translateX(-50%) rotate(312deg);
+}
+.box.b8 .dot.d53 {
+  transform: translateX(-50%) rotate(318deg);
+}
+.box.b8 .dot.d54 {
+  transform: translateX(-50%) rotate(324deg);
+}
+.box.b8 .dot.d55 {
+  transform: translateX(-50%) rotate(330deg);
+}
+.box.b8 .dot.d56 {
+  transform: translateX(-50%) rotate(336deg);
+}
+.box.b8 .dot.d57 {
+  transform: translateX(-50%) rotate(342deg);
+}
+.box.b8 .dot.d58 {
+  transform: translateX(-50%) rotate(348deg);
+}
+.box.b8 .dot.d59 {
+  transform: translateX(-50%) rotate(354deg);
+}
+.box.b8 .dot.d60 {
+  transform: translateX(-50%) rotate(360deg);
+}
+.box.b8 .dot::after {
+  animation: wave 1.5s linear infinite alternate;
+  animation-delay: 1.6s;
+}
+.box.b9 {
+  width: 249px;
+  height: 249px;
+}
+.box.b9 .dot.d1 {
+  transform: translateX(-50%) rotate(5.4545454545deg);
+}
+.box.b9 .dot.d2 {
+  transform: translateX(-50%) rotate(10.9090909091deg);
+}
+.box.b9 .dot.d3 {
+  transform: translateX(-50%) rotate(16.3636363636deg);
+}
+.box.b9 .dot.d4 {
+  transform: translateX(-50%) rotate(21.8181818182deg);
+}
+.box.b9 .dot.d5 {
+  transform: translateX(-50%) rotate(27.2727272727deg);
+}
+.box.b9 .dot.d6 {
+  transform: translateX(-50%) rotate(32.7272727273deg);
+}
+.box.b9 .dot.d7 {
+  transform: translateX(-50%) rotate(38.1818181818deg);
+}
+.box.b9 .dot.d8 {
+  transform: translateX(-50%) rotate(43.6363636364deg);
+}
+.box.b9 .dot.d9 {
+  transform: translateX(-50%) rotate(49.0909090909deg);
+}
+.box.b9 .dot.d10 {
+  transform: translateX(-50%) rotate(54.5454545455deg);
+}
+.box.b9 .dot.d11 {
+  transform: translateX(-50%) rotate(60deg);
+}
+.box.b9 .dot.d12 {
+  transform: translateX(-50%) rotate(65.4545454545deg);
+}
+.box.b9 .dot.d13 {
+  transform: translateX(-50%) rotate(70.9090909091deg);
+}
+.box.b9 .dot.d14 {
+  transform: translateX(-50%) rotate(76.3636363636deg);
+}
+.box.b9 .dot.d15 {
+  transform: translateX(-50%) rotate(81.8181818182deg);
+}
+.box.b9 .dot.d16 {
+  transform: translateX(-50%) rotate(87.2727272727deg);
+}
+.box.b9 .dot.d17 {
+  transform: translateX(-50%) rotate(92.7272727273deg);
+}
+.box.b9 .dot.d18 {
+  transform: translateX(-50%) rotate(98.1818181818deg);
+}
+.box.b9 .dot.d19 {
+  transform: translateX(-50%) rotate(103.6363636364deg);
+}
+.box.b9 .dot.d20 {
+  transform: translateX(-50%) rotate(109.0909090909deg);
+}
+.box.b9 .dot.d21 {
+  transform: translateX(-50%) rotate(114.5454545455deg);
+}
+.box.b9 .dot.d22 {
+  transform: translateX(-50%) rotate(120deg);
+}
+.box.b9 .dot.d23 {
+  transform: translateX(-50%) rotate(125.4545454545deg);
+}
+.box.b9 .dot.d24 {
+  transform: translateX(-50%) rotate(130.9090909091deg);
+}
+.box.b9 .dot.d25 {
+  transform: translateX(-50%) rotate(136.3636363636deg);
+}
+.box.b9 .dot.d26 {
+  transform: translateX(-50%) rotate(141.8181818182deg);
+}
+.box.b9 .dot.d27 {
+  transform: translateX(-50%) rotate(147.2727272727deg);
+}
+.box.b9 .dot.d28 {
+  transform: translateX(-50%) rotate(152.7272727273deg);
+}
+.box.b9 .dot.d29 {
+  transform: translateX(-50%) rotate(158.1818181818deg);
+}
+.box.b9 .dot.d30 {
+  transform: translateX(-50%) rotate(163.6363636364deg);
+}
+.box.b9 .dot.d31 {
+  transform: translateX(-50%) rotate(169.0909090909deg);
+}
+.box.b9 .dot.d32 {
+  transform: translateX(-50%) rotate(174.5454545455deg);
+}
+.box.b9 .dot.d33 {
+  transform: translateX(-50%) rotate(180deg);
+}
+.box.b9 .dot.d34 {
+  transform: translateX(-50%) rotate(185.4545454545deg);
+}
+.box.b9 .dot.d35 {
+  transform: translateX(-50%) rotate(190.9090909091deg);
+}
+.box.b9 .dot.d36 {
+  transform: translateX(-50%) rotate(196.3636363636deg);
+}
+.box.b9 .dot.d37 {
+  transform: translateX(-50%) rotate(201.8181818182deg);
+}
+.box.b9 .dot.d38 {
+  transform: translateX(-50%) rotate(207.2727272727deg);
+}
+.box.b9 .dot.d39 {
+  transform: translateX(-50%) rotate(212.7272727273deg);
+}
+.box.b9 .dot.d40 {
+  transform: translateX(-50%) rotate(218.1818181818deg);
+}
+.box.b9 .dot.d41 {
+  transform: translateX(-50%) rotate(223.6363636364deg);
+}
+.box.b9 .dot.d42 {
+  transform: translateX(-50%) rotate(229.0909090909deg);
+}
+.box.b9 .dot.d43 {
+  transform: translateX(-50%) rotate(234.5454545455deg);
+}
+.box.b9 .dot.d44 {
+  transform: translateX(-50%) rotate(240deg);
+}
+.box.b9 .dot.d45 {
+  transform: translateX(-50%) rotate(245.4545454545deg);
+}
+.box.b9 .dot.d46 {
+  transform: translateX(-50%) rotate(250.9090909091deg);
+}
+.box.b9 .dot.d47 {
+  transform: translateX(-50%) rotate(256.3636363636deg);
+}
+.box.b9 .dot.d48 {
+  transform: translateX(-50%) rotate(261.8181818182deg);
+}
+.box.b9 .dot.d49 {
+  transform: translateX(-50%) rotate(267.2727272727deg);
+}
+.box.b9 .dot.d50 {
+  transform: translateX(-50%) rotate(272.7272727273deg);
+}
+.box.b9 .dot.d51 {
+  transform: translateX(-50%) rotate(278.1818181818deg);
+}
+.box.b9 .dot.d52 {
+  transform: translateX(-50%) rotate(283.6363636364deg);
+}
+.box.b9 .dot.d53 {
+  transform: translateX(-50%) rotate(289.0909090909deg);
+}
+.box.b9 .dot.d54 {
+  transform: translateX(-50%) rotate(294.5454545455deg);
+}
+.box.b9 .dot.d55 {
+  transform: translateX(-50%) rotate(300deg);
+}
+.box.b9 .dot.d56 {
+  transform: translateX(-50%) rotate(305.4545454545deg);
+}
+.box.b9 .dot.d57 {
+  transform: translateX(-50%) rotate(310.9090909091deg);
+}
+.box.b9 .dot.d58 {
+  transform: translateX(-50%) rotate(316.3636363636deg);
+}
+.box.b9 .dot.d59 {
+  transform: translateX(-50%) rotate(321.8181818182deg);
+}
+.box.b9 .dot.d60 {
+  transform: translateX(-50%) rotate(327.2727272727deg);
+}
+.box.b9 .dot.d61 {
+  transform: translateX(-50%) rotate(332.7272727273deg);
+}
+.box.b9 .dot.d62 {
+  transform: translateX(-50%) rotate(338.1818181818deg);
+}
+.box.b9 .dot.d63 {
+  transform: translateX(-50%) rotate(343.6363636364deg);
+}
+.box.b9 .dot.d64 {
+  transform: translateX(-50%) rotate(349.0909090909deg);
+}
+.box.b9 .dot.d65 {
+  transform: translateX(-50%) rotate(354.5454545455deg);
+}
+.box.b9 .dot.d66 {
+  transform: translateX(-50%) rotate(360deg);
+}
+.box.b9 .dot::after {
+  animation: wave 1.5s linear infinite alternate;
+  animation-delay: 1.8s;
+}
+.box.b10 {
+  width: 270px;
+  height: 270px;
+}
+.box.b10 .dot.d1 {
+  transform: translateX(-50%) rotate(5deg);
+}
+.box.b10 .dot.d2 {
+  transform: translateX(-50%) rotate(10deg);
+}
+.box.b10 .dot.d3 {
+  transform: translateX(-50%) rotate(15deg);
+}
+.box.b10 .dot.d4 {
+  transform: translateX(-50%) rotate(20deg);
+}
+.box.b10 .dot.d5 {
+  transform: translateX(-50%) rotate(25deg);
+}
+.box.b10 .dot.d6 {
+  transform: translateX(-50%) rotate(30deg);
+}
+.box.b10 .dot.d7 {
+  transform: translateX(-50%) rotate(35deg);
+}
+.box.b10 .dot.d8 {
+  transform: translateX(-50%) rotate(40deg);
+}
+.box.b10 .dot.d9 {
+  transform: translateX(-50%) rotate(45deg);
+}
+.box.b10 .dot.d10 {
+  transform: translateX(-50%) rotate(50deg);
+}
+.box.b10 .dot.d11 {
+  transform: translateX(-50%) rotate(55deg);
+}
+.box.b10 .dot.d12 {
+  transform: translateX(-50%) rotate(60deg);
+}
+.box.b10 .dot.d13 {
+  transform: translateX(-50%) rotate(65deg);
+}
+.box.b10 .dot.d14 {
+  transform: translateX(-50%) rotate(70deg);
+}
+.box.b10 .dot.d15 {
+  transform: translateX(-50%) rotate(75deg);
+}
+.box.b10 .dot.d16 {
+  transform: translateX(-50%) rotate(80deg);
+}
+.box.b10 .dot.d17 {
+  transform: translateX(-50%) rotate(85deg);
+}
+.box.b10 .dot.d18 {
+  transform: translateX(-50%) rotate(90deg);
+}
+.box.b10 .dot.d19 {
+  transform: translateX(-50%) rotate(95deg);
+}
+.box.b10 .dot.d20 {
+  transform: translateX(-50%) rotate(100deg);
+}
+.box.b10 .dot.d21 {
+  transform: translateX(-50%) rotate(105deg);
+}
+.box.b10 .dot.d22 {
+  transform: translateX(-50%) rotate(110deg);
+}
+.box.b10 .dot.d23 {
+  transform: translateX(-50%) rotate(115deg);
+}
+.box.b10 .dot.d24 {
+  transform: translateX(-50%) rotate(120deg);
+}
+.box.b10 .dot.d25 {
+  transform: translateX(-50%) rotate(125deg);
+}
+.box.b10 .dot.d26 {
+  transform: translateX(-50%) rotate(130deg);
+}
+.box.b10 .dot.d27 {
+  transform: translateX(-50%) rotate(135deg);
+}
+.box.b10 .dot.d28 {
+  transform: translateX(-50%) rotate(140deg);
+}
+.box.b10 .dot.d29 {
+  transform: translateX(-50%) rotate(145deg);
+}
+.box.b10 .dot.d30 {
+  transform: translateX(-50%) rotate(150deg);
+}
+.box.b10 .dot.d31 {
+  transform: translateX(-50%) rotate(155deg);
+}
+.box.b10 .dot.d32 {
+  transform: translateX(-50%) rotate(160deg);
+}
+.box.b10 .dot.d33 {
+  transform: translateX(-50%) rotate(165deg);
+}
+.box.b10 .dot.d34 {
+  transform: translateX(-50%) rotate(170deg);
+}
+.box.b10 .dot.d35 {
+  transform: translateX(-50%) rotate(175deg);
+}
+.box.b10 .dot.d36 {
+  transform: translateX(-50%) rotate(180deg);
+}
+.box.b10 .dot.d37 {
+  transform: translateX(-50%) rotate(185deg);
+}
+.box.b10 .dot.d38 {
+  transform: translateX(-50%) rotate(190deg);
+}
+.box.b10 .dot.d39 {
+  transform: translateX(-50%) rotate(195deg);
+}
+.box.b10 .dot.d40 {
+  transform: translateX(-50%) rotate(200deg);
+}
+.box.b10 .dot.d41 {
+  transform: translateX(-50%) rotate(205deg);
+}
+.box.b10 .dot.d42 {
+  transform: translateX(-50%) rotate(210deg);
+}
+.box.b10 .dot.d43 {
+  transform: translateX(-50%) rotate(215deg);
+}
+.box.b10 .dot.d44 {
+  transform: translateX(-50%) rotate(220deg);
+}
+.box.b10 .dot.d45 {
+  transform: translateX(-50%) rotate(225deg);
+}
+.box.b10 .dot.d46 {
+  transform: translateX(-50%) rotate(230deg);
+}
+.box.b10 .dot.d47 {
+  transform: translateX(-50%) rotate(235deg);
+}
+.box.b10 .dot.d48 {
+  transform: translateX(-50%) rotate(240deg);
+}
+.box.b10 .dot.d49 {
+  transform: translateX(-50%) rotate(245deg);
+}
+.box.b10 .dot.d50 {
+  transform: translateX(-50%) rotate(250deg);
+}
+.box.b10 .dot.d51 {
+  transform: translateX(-50%) rotate(255deg);
+}
+.box.b10 .dot.d52 {
+  transform: translateX(-50%) rotate(260deg);
+}
+.box.b10 .dot.d53 {
+  transform: translateX(-50%) rotate(265deg);
+}
+.box.b10 .dot.d54 {
+  transform: translateX(-50%) rotate(270deg);
+}
+.box.b10 .dot.d55 {
+  transform: translateX(-50%) rotate(275deg);
+}
+.box.b10 .dot.d56 {
+  transform: translateX(-50%) rotate(280deg);
+}
+.box.b10 .dot.d57 {
+  transform: translateX(-50%) rotate(285deg);
+}
+.box.b10 .dot.d58 {
+  transform: translateX(-50%) rotate(290deg);
+}
+.box.b10 .dot.d59 {
+  transform: translateX(-50%) rotate(295deg);
+}
+.box.b10 .dot.d60 {
+  transform: translateX(-50%) rotate(300deg);
+}
+.box.b10 .dot.d61 {
+  transform: translateX(-50%) rotate(305deg);
+}
+.box.b10 .dot.d62 {
+  transform: translateX(-50%) rotate(310deg);
+}
+.box.b10 .dot.d63 {
+  transform: translateX(-50%) rotate(315deg);
+}
+.box.b10 .dot.d64 {
+  transform: translateX(-50%) rotate(320deg);
+}
+.box.b10 .dot.d65 {
+  transform: translateX(-50%) rotate(325deg);
+}
+.box.b10 .dot.d66 {
+  transform: translateX(-50%) rotate(330deg);
+}
+.box.b10 .dot.d67 {
+  transform: translateX(-50%) rotate(335deg);
+}
+.box.b10 .dot.d68 {
+  transform: translateX(-50%) rotate(340deg);
+}
+.box.b10 .dot.d69 {
+  transform: translateX(-50%) rotate(345deg);
+}
+.box.b10 .dot.d70 {
+  transform: translateX(-50%) rotate(350deg);
+}
+.box.b10 .dot.d71 {
+  transform: translateX(-50%) rotate(355deg);
+}
+.box.b10 .dot.d72 {
+  transform: translateX(-50%) rotate(360deg);
+}
+.box.b10 .dot::after {
+  animation: wave 1.5s linear infinite alternate;
+  animation-delay: 2s;
+}
+
+@keyframes wave {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}/*# sourceMappingURL=Day52-SCSS.css.map */

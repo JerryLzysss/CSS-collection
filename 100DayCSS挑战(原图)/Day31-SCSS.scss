@@ -1,0 +1,74 @@
+*{
+	box-sizing: border-box;
+}
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #4C4BA2;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: relative;
+	padding: 40px;
+	width: 400px;
+	height: 400px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;	
+}
+
+.dot-box{	
+	height: 100%;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;	
+	justify-content: space-between;
+}
+.dot{
+	position: relative;
+	width: 12px;
+	height: 12px;
+	border-radius: 12px;
+	background: white;	
+}
+@for $i from 0 through 19 {	
+	$time: 60 / (40 + 20 - $i);
+	.dot-#{$i}{		
+		position: relative;
+		width: 12px;
+		height: 12px;
+		border-radius: 12px;
+		background: white;	
+		/*animation: dotani ($i*.02 +1s) ease-in-out infinite both;	*/
+		animation: dotani ($time * 1000) + ms ease-in-out infinite;
+	}	
+}
+
+
+
+
+
+
+
+
+@keyframes dotani{
+	0%,100%{
+		transform: translateX(50px);
+	}
+	50%{
+		transform: translateX(-50px);
+	}
+}

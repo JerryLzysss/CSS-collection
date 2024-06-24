@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+    .frame {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 400px;
+      height: 400px;
+      margin-top: -200px;
+      margin-left: -200px;
+      border-radius: 5px;
+      box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      background: #fff;
+      font-family: 'Open Sans', Helvetica, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+  
+      .space {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 275px;
+        height: 275px;
+        border-radius: 50%;
+        background: rgb(100, 171, 186);
+        background: linear-gradient(42deg, rgba(100, 171, 186, 1) 0%, rgba(31, 70, 87, 1) 100%);
+        overflow: hidden;
+  
+        .star {
+          width: 1px;
+          height: 1px;
+          position: absolute;
+          background: #fff;
+          animation-name: star-animation;
+          animation-iteration-count: infinite;
+        }
+  
+        @keyframes star-animation {
+          0% {
+            opacity: 0.5;
+          }
+          100% {
+            opacity: 1;
+          }
+        }
+  
+        @function random_range($min, $max) {
+          $rand: random();
+          $random_range: $min + floor($rand * (($max - $min) + 1));
+          @return $random_range;
+        }
+  
+        @for $i from 1 through 300 {
+          $top: random_range(0, 275);
+          $left: random_range(0, 275);
+          $delay: random_range(1, 50);
+          $duration: random_range(1, 10);
+          .star-#{$i}{
+            top: #{$top}px;
+            left: #{$left}px;
+            animation-delay: #{$delay}s;
+            animation-duration: #{$duration}s;
+          }
+        }
+  
+        .shooting-star {
+          position: absolute;
+          top: 0px;
+          left: -50px;
+          width: 120px;
+          height: 2px;
+          background: url(https://100dayscss.com/codepen/shooting-star.png) center center no-repeat;
+          background-size: 100% 100%;
+          transform: rotate(20deg);
+        }
+  
+        
+        @for $i from 1 through 6 {
+  
+          $top: random_range(0, 275);     
+          
+          @keyframes shooting-star-animation-#{$i} {
+            0% {
+              transform: translate3d(0, #{$top}px, 0) rotate(20deg);
+            }
+            10%, 100% {
+                transform: translate3d(451px, #{$top + 164}px, 0) rotate(20deg);
+            }
+          }
+                
+          .shooting-star-#{$i}{
+            animation: shooting-star-animation-#{$i} 12s infinite;
+            animation-delay: #{$i + 5}s;
+          }
+        }
+      }
+    }
+  
+  }

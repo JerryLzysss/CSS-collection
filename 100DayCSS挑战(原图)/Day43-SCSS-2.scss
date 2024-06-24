@@ -1,0 +1,78 @@
+#frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 2px;
+      box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+      overflow: hidden;
+    background: #fff;
+    color: #333;
+      font-family: 'Open Sans', Helvetica, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      background-image: url("https://images.pexels.com/photos/2387877/pexels-photo-2387877.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+          background-size: cover;
+  }
+  
+  #transitiondiv {
+      transition: all 0.3s ease-in-out;
+  }
+  
+  #bg2{
+      z-index: 0;
+      width:400px;
+      height:400px;
+      background-size:cover;
+      opacity:0;
+      transition: 0.3s ease-in-out;
+      background-image: url("https://images.pexels.com/photos/267149/pexels-photo-267149.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+  }
+  
+  #bulb:hover ~#bg2 {
+      opacity:1;
+  }
+  
+  #bulb {
+      position: absolute;
+      top: 145px;
+      left: 162px;
+      z-index: 2;
+      cursor:pointer;
+      fill: #ebeae8;
+      transition: 0.3s ease-in-out;
+      &:hover {
+      fill: yellow;
+      }
+  }
+  
+  
+  #glow {
+      background-color: yellow;
+      height: 60px;
+      width: 60px;
+      position: absolute;
+      z-index:1;
+      top:152px;
+      left: 170px;
+      border-radius:50%;
+      box-shadow: 0 0 50px 20px yellow;
+      opacity: 0;
+      transition: 0.3s ease-in-out;
+  }
+  
+  #bulb:hover ~ #glow{
+      opacity: 100;
+  }
+  
+  
+  #base {
+      position: absolute;
+      top: 245px;
+      left: 184px;
+      fill: #aaa9ad;
+  }
+  

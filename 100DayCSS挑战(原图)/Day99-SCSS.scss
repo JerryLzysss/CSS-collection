@@ -1,0 +1,128 @@
+:root {
+	--frame-size: 400px;
+	--size: 32px;
+}
+
+.frame {
+	background-color: #24ae60;
+	border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+	height: var(--frame-size);
+	left: 50%;
+	margin-left: -200px;
+	margin-top: -200px;
+	overflow: hidden;
+	position: absolute;
+	top: 50%;
+	width: var(--frame-size);
+}
+
+label {
+	align-items: center;
+	cursor: pointer;
+	display: flex;
+	gap: 24px;
+	height: var(--frame-size);
+	justify-content: center;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: var(--frame-size);
+}
+
+input {
+	display: none;
+}
+
+input {
+	&:checked {
+		& ~ .background {
+			transform: scale(1);
+		}
+		& ~ .beams {
+			opacity: 0;
+			transform: scale(1);
+		}
+		& ~ .circle {
+			opacity: 0;
+			transform: scale(0);
+		}
+		& ~ .ring {
+			opacity: 0;
+			transform: scale(1);
+		}
+		& ~ .square {
+			opacity: 1;
+			transform: scale(1) rotate(360deg);
+		}
+	}
+}
+
+.background {
+	--background-size: calc(2 * var(--frame-size));
+	background-color: #2ecc71;
+	border-radius: var(--background-size);
+	height: var(--background-size);
+	position: absolute;
+	transform: scale(0);
+	transition: all ease 1s;
+	width: var(--background-size);
+}
+
+.beams {
+	opacity: 1;
+	position: absolute;
+	transform: scale(0);
+	transition: all ease 1s;
+
+	.beam {
+		background-color: white;
+		height: 32px;
+		left: -1px;
+		position: absolute;
+		top: -16px;
+		width: 2px;
+
+		@for $i from 1 through 18 {
+			&:nth-of-type(#{$i}) {
+				transform: rotate(20deg * $i) translateY(100px);
+			}
+		}
+	}
+}
+
+.circle {
+	background-color: white;
+	border-radius: var(--size);
+	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+	height: var(--size);
+	opacity: 1;
+	position: absolute;
+	transform: scale(1);
+	transition: all ease 1s;
+	width: var(--size);
+}
+
+.ring {
+	--border-size: calc(4 * var(--size));
+	border: 4px solid white;
+	border-radius: var(--border-size);
+	height: var(--border-size);
+	opacity: 1;
+	position: absolute;
+	transform: scale(0);
+	transition: all ease 1s;
+	width: var(--border-size);
+}
+
+.square {
+	background-color: white;
+	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+	height: var(--size);
+	opacity: 0;
+	position: absolute;
+	transform: scale(0);
+	transition: all ease 1s;
+	width: var(--size);
+}

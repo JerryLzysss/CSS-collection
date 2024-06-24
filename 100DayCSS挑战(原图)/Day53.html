@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<html>
+<head>
+    <title>TEST</title>
+    <div class="frame">
+        <div class="center">
+              <div id="container">
+                  <input type="range" min="0" max="100" value="50" />
+                  <!--<div id="line"></div>
+                  <div id="circle">
+                      <div class="line"></div>
+                      <div class="line" id="lineCenter"></div>
+                      <div class="line"></div>
+                  </div> -->
+              </div>
+        </div>
+      </div>
+    <style>
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #506172;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+#container {
+	width: 300px;
+	height: 40px;
+	background: #fff;
+	border-radius: 5px;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#line {
+	height: 4px;
+	width: 90%;
+	background: rgba(77, 214, 77, 0.8);
+	border-radius: 10px;
+	box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+#circle {
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	background: #fff;
+	border-radius: 50%;
+	border: 2px solid rgba(77, 214, 77, 0.8);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+.line {
+	width: 3px;
+	height: 8px;
+	background: blue;
+	border-radius: 5px;
+	background: #E8E8E8;
+}
+
+#lineCenter {
+	height: 12px;
+	margin: 0 2px;
+}
+
+input[type="range"] {
+	height: 4px;
+	width: 90%;
+	background: rgba(77, 214, 77, 0.8);
+	border-radius: 10px;
+	box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+input[type="range"]::-webkit-slider-thumb {
+	width: 22px;
+	height: 22px;
+	background: #fff url(https://100dayscss.com/codepen/slider-thumb.png) center center no-repeat;
+	background-size: 50% 50%;
+	border-radius: 50%;
+	border: 2px solid rgba(77, 214, 77, 0.8);
+	cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+	width: 22px;
+	height: 22px;
+	background: #fff url(https://100dayscss.com/codepen/slider-thumb.png) center center no-repeat;
+	background-size: 50% 50%;
+	border-radius: 50%;
+	border: 2px solid rgba(77, 214, 77, 0.8);
+	cursor: pointer;
+}
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+</head>
+
+
+</html>

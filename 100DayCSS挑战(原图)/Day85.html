@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<html>
+<head>
+    <title>TEST</title>
+    <body>
+      <div class="frame">
+        <div class="layer1"></div>
+        <div class="layer2"></div>
+        <div class="layer3"></div>
+        <div class="layer4"></div>
+      
+      </div>
+      
+  </body>
+    <style>
+  * {
+  box-sizing: border-box;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #663399;
+  color: #333;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.layer1 {
+  position: absolute;
+  top: -200px;
+  left: -200px;
+  width: 400px;
+  height: 400px;
+  background: #663399;
+  border-bottom: 3px dotted #fff;
+  animation: move1 4s ease-in infinite;
+}
+
+.layer2 {
+  position: absolute;
+  top: -200px;
+  right: -200px;
+  width: 400px;
+  height: 400px;
+  background: #663399;
+  border-bottom: 3px dotted #fff;
+  animation: move1 4s ease-in infinite;
+}
+
+.layer3 {
+  position: absolute;
+  bottom: -197px;
+  left: -200px;
+  width: 400px;
+  height: 400px;
+  background: #663399;
+  border-top: 3px dotted #fff;
+  animation: move2 4s ease-in infinite;
+}
+
+.layer4 {
+  position: absolute;
+  bottom: -197px;
+  right: -200px;
+  width: 400px;
+  height: 400px;
+  background: #663399;
+  border-top: 3px dotted #fff;
+  animation: move2 4s ease-in infinite;
+}
+
+
+@keyframes move1 {
+  0% {
+    opacity: 1;
+    border-radius: 2%;
+  }
+
+  25% {
+    border-radius: 40%;
+  }
+
+  50% {
+    border-radius: 0;
+    opacity: 1;
+  }
+
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes move2 {
+
+  0%,
+  49% {
+    opacity: 0;
+    border-radius: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 1;
+    border-radius: 40%;
+  }
+
+  99%, 100% {
+    border-radius: 0;
+    opacity: 0;
+  }
+}
+
+  </style>
+<script>
+ 
+  </script>
+</head>
+
+
+</html>

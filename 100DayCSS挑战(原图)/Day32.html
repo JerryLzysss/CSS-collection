@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<html>
+<head>
+    <title>TEST</title>
+   
+ 
+    <div class="frame">
+      <div class="counter">
+         <div class="minus">
+           <div class="line"></div>
+         </div>
+         <div class="number">
+           <span class="fadeIn">0</span>
+         </div>
+         <div class="plus">
+           <div class="line-h"></div>
+           <div class="line-v"></div>
+         </div>
+       </div>
+     </div>
+    
+     
+    <style>
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #fff;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background: linear-gradient(to top right, #D2592A 0%, #FDB03A 100%);
+}
+
+.counter {
+ position: absolute;
+    height: 40px;
+    width: 130px;
+    top: 180px;
+    left: 135px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 4px 8px 12px 0 rgba(0, 0, 0, 0.1);
+}
+.minus{
+	position: absolute;
+    z-index: 10;
+    width: 32px;
+    height: 32px;
+    top: 4px;
+    left: 5px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+}
+.line{
+	position: absolute;
+    height: 2px;
+    width: 18px;
+    left: 7px;
+    top: 15px;
+    background: #E26E6E;
+    transition: all 0.3s ease-in-out;
+}
+.number{
+	position: relative;
+    width: 130px;
+    height: 40px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #6A85A0;
+    line-height: 40px;
+    text-align: center;
+}
+.plus{
+	   position: absolute;
+    z-index: 10;
+    width: 32px;
+    height: 32px;
+    top: 4px;
+    right: 5px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+}
+.line-h{
+	  position: absolute;
+    height: 2px;
+    width: 18px;
+    left: 7px;
+    top: 15px;
+    background: #8ED273;
+    transition: all 0.3s ease-in-out;
+}
+.line-v{
+	position: absolute;
+    height: 18px;
+    width: 2px;
+    left: 15px;
+    top: 7px;
+    background: #8ED273;
+    transition: all 0.3s ease-in-out;
+}
+</style>
+<script>
+
+
+</script>
+</html>

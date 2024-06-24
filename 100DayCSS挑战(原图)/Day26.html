@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<html>
+<head>
+    <title>TEST</title>
+   
+    <div class="backdrop">
+      <div class="modal">
+        <div class="modal__badge"></div>
+        <div class="modal__badge-number">1</div>
+        <div class="modal__content">
+         <div class="modal-header">
+            The couch
+          </div>
+          <div class="modal-text">
+            If you want to grow, get outside
+    your comfort zone.
+          </div>
+          <button  onclick="changeContent()" type"button" class="modal-button">Ok</button>
+            
+        </div>
+      </div>
+    </div>
+    
+            
+            
+    
+     
+    <style>
+.backdrop{
+  position:fixed;
+  background:#c7d6e1;
+  width:100vw;
+  height:100vh;
+}
+.modal{
+  position:absolute;
+  top:50%;
+  left:50%;
+  z-index:100;
+  padding:20px;
+  color:#616e7d;
+  background:white;
+  margin:auto;
+ width:300px;
+  height:130px;
+  transform:translate(-50%,-50%);
+}
+.modal-button:hover{
+  background: #1171f6; 
+}
+.modal-button{
+  background:#3ca7fb;
+  width:100%;
+  position:absolute;
+  bottom:0;
+  left:0;
+  height:35px;
+  transition: all 5s ease-in-out;
+  color:white;
+}
+
+.modal__badge{
+  position:absolute;
+ top:0px;
+  right:0px;
+  width:0;
+  height:0;
+  border-left:35px solid transparent;
+  border-top:35px solid #8391A1;
+}
+.modal__badge-number{
+        position: absolute;
+    color: white;
+    top: 0px;
+    right: 4px;
+}
+.modal__content{
+  text-align:center;
+margin:5px 0;
+}
+.modal-header{
+  padding:10px;
+  font-weight:bold;
+  font-size:20px;
+}
+
+</style>
+<script>
+
+var modaltext=document.querySelector(".modal-text");
+var modalheader=document.querySelector(".modal-header");
+var badge=document.querySelector(".modal__badge-number");
+function changeContent(){
+  console.log("claling",badge.innerHTML);
+  if(badge.innerHTML === '1'){
+    badge.innerHTML='2';
+    modalheader.innerHTML='Failing is learning';
+    modaltext.innerHTML='Pick yourself up, dust yourself off,and start again.';
+  }else if(badge.innerHTML === '2'){
+     badge.innerHTML='3';
+    modalheader.innerHTML='Flowers and rainbows';
+    modaltext.innerHTML='Always be yourself,unless you can be a unicorn.';
+  }else if(badge.innerHTML === '3'){
+    badge.innerHTML='1';
+    modalheader.innerHTML='The couch';
+    modaltext.innerHTML='If you want to grow, get outside your comfort zone.';
+  }
+  }
+
+</script>
+</html>

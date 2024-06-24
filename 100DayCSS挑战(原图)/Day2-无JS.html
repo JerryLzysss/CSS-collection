@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  
+    <body>
+        <meta charset="UTF-8">
+        <div class="frame">
+            <div class="center">
+                <div class="menu-icon">
+                    <div class="bar bar-one"></div>
+                    <div class="bar bar-two"></div>
+                    <div class="bar bar-three"></div>
+
+                </div>
+            </div>
+        </div>
+    
+ <style>
+.menu {
+	display: flex; 
+	flex-direction: column;
+	gap: 13px;
+}
+.menu:hover {
+	cursor: pointer;
+}
+.frame {
+     position: absolute;
+     top: 50%;
+    left: 50%;
+     width: 400px;
+     height: 400px;
+     margin-top: -200px;
+     margin-left: -200px;
+     border-radius: 2px;
+	    box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	    overflow: hidden;
+      background: #3faf82;
+      color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+    }
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.bar
+{
+    width:80px;
+    height:8px;
+    background:white;
+    border-radius:8px;
+    box-shadow :0 3px 10px rgba(0,0,0,.3);
+}
+.menu
+{
+    display:flex;
+    flex-direction:column;
+    gap:13px;
+}
+.menu:hover
+{
+    cursor:pointer;
+}
+.no-anim{
+    animation:none !important;
+}
+.bar-one
+{
+    animation:animate-one 3s infinite;
+}
+.bar-two{
+    animation:animate-two 3s infinite;
+}
+.bar-three{
+    animation:animate-three 3s infinite;
+}
+@keyframes animate-one {
+	0% {
+		transform: translate3d(0,0,0);
+	}
+	25% {
+		transform: translate3d(0, 10px, 0) rotate(0deg);
+	}
+	50% {
+		transform: translate3d(0, 10px, 0) rotate(45deg);
+	}
+	75% {
+		transform: translate3d(0, 10px, 0) rotate(0deg);
+	}
+	100% {
+		transform: translate3d(0,0,0) rotate(0deg);
+	}
+}
+@keyframes animate-two {
+	0% {
+		transform: scale(1);
+		opacity: 1;
+	}
+	50% {
+		transform: scale(0);
+		opacity: 0;
+	}
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+@keyframes animate-three {
+	0% {
+		transform: translate3d(0,0,0);
+	}
+	25% {
+		transform: translate3d(0, -10px, 0) rotate(0deg);
+	}
+	50% {
+		transform: translate3d(0, -10px, 0) rotate(-45deg);
+	}
+	75% {
+		transform: translate3d(0, -10px, 0) rotate(0deg);
+	}
+	100% {
+		transform: translate3d(0,0,0) rotate(0deg);
+	}
+}
+
+    </style>
+    </body>
+</head>
+</html>
+

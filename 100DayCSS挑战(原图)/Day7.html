@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<meta charset='utf-8'>
+<html>
+    <head>
+        <body>
+            <head>
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            </head>
+            <div class="frame">
+              <div class="center">
+              <div class="menu">
+                    <ul>
+                        <li><span class="fa fa-dashboard"></span>Dashboard</li>
+                        <li><span class="fa fa-user"></span>Profile</li>
+                        <li><span class="fa fa-bell"></span>Notifications</li>
+                        <li><span class="fa fa-comments"></span>Messages</li>
+                        <li><span class="fa fa-gear"></span>Settings</li>
+                    </ul>
+                </div>
+                <div class="notifications">
+                    <div class="navbar">
+                        <div class="icon-menu">
+                            <div class="bar-above"></div>
+                            <div class="bar-below"></div>
+                        </div>
+                        <p>Notifications</p>
+                            <input type="text" class="input" name="search" id="search" placeholder="Search...">
+                        <div class="search">
+                            <button type="submit" name="search" class="search-btn">
+                                <div class="circle"></div>
+                                <div class="bar"></div>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="timeline"></div>
+                    <ul class="list">
+                        <li class="notification">
+                            <div class="point first"></div>
+                            <div class="text">
+                                <div class="time">9:24 AM</div>
+                                <div class="info"><b>John Walker</b> posted a photo on your wall.</div>
+                            </div>
+                        </li>
+                        <li class="notification">
+                            <div class="point"></div>
+                            <div class="text">
+                                <div class="time">8:19 AM</div>
+                                <div class="info"><b>Alice Parker</b> commented your last post.</div>
+                            </div>
+                        </li>
+                        <li class="notification">
+                            <div class="point"></div>
+                            <div class="text">
+                                <div class="time">Yesterday</div>
+                                <div class="info"><b>Luke Wayne</b> added you as friend.</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+              </div>
+            </div>
+           <style>
+   *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.frame {
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    color: #333;
+	overflow: hidden;
+    border-radius: 2px;
+    margin-top: -200px;
+    position: absolute;
+    margin-left: -200px;
+    background: #264057;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	font-family: 'Open Sans', Helvetica, sans-serif;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.notifications{
+    z-index: 2;
+    width: 320px;
+    height: 320px;
+    transition: 1s;
+    border-radius: 5px;
+    background: #fff;
+    transform: translateX(0px);
+    box-shadow: 8px 8px 10px 2px rgba(0, 0, 0, 0.3);
+}
+
+.left{
+    transition: 1s;
+    transform: translateX(150px);
+}
+
+.navbar{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    align-items: center;
+    background: #5f98cd;
+    justify-content: space-around;
+}
+
+.icon-menu{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+.bar-above
+{
+    top:22.5px;
+    width:22px;
+    height:5px;
+    position:absolute;
+    border-radius:20px;
+    background:#ccdfef;
+}
+.bar-above::after
+{
+    top:-3px;
+    left:18px;
+    width:7px;
+    height:7px;
+    content:"";
+    position:absolute;
+    border-radius:50%;
+    border:2px solid #5f98cd;
+    background:#ccdfef;
+}
+.bar-below
+{
+    top:35px;
+    width:25px;
+    height:3px;
+    position:absolute;
+    border-radius:20px;
+    background:#ccdfef;
+}
+.icon-menu:hover .bar-above, .icon-menu:hover .bar-above::after, .icon-menu:hover .bar-below{
+    transition: .5s;
+    background: #fff;
+}
+.input
+{
+    top:10px;
+    left:20px;
+    opacity:0;
+    width:230px;
+    height:40px;
+    border:none;
+    padding :3px 15px;
+    position:absolute;
+    border-radius:20px;
+    pointer-events:none;
+    transform:translate(15px);
+    transition:all .3s ease-in-out;
+}
+.input:focus
+{
+    outline:none;
+}
+.active{
+    opacity: 1;
+    pointer-events: all;
+    transform: translate(0px);
+    transition: all .3s ease-in-out;
+
+}
+
+.search-btn{
+    width: 30px;
+    border: none;
+    height: 30px;
+    cursor: pointer;
+    background: #5f98cd;
+}
+
+.circle{
+    top: 20px;
+    z-index: 1;
+    right: 43px;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: #5f98cd;
+    border: 3px solid #ccdfef;
+}
+
+.bar{
+    top: 30px;
+    right: 35px;
+    width: 20px;
+    height: 5px;
+    position: absolute;
+    border-radius: 20px;
+    transform: rotate(45deg);
+    background: #ccdfef;
+}
+
+.search:hover .circle{
+    transition: .5s;
+    border: 3px solid #fff;
+}
+
+.search:hover .bar{
+    transition: .5s;
+    background: #fff;
+}
+.timeline{
+    left:35px;
+    width:2px;
+    height:260px;
+    position:absolute;
+    background:rgba(0,0,0,0.3);
+}
+.list
+{
+    gap:15px;
+    display:flex;
+    list-style:none;
+    flex-direction:column;
+}
+.notification
+{
+    display:flex-start;
+    align-items:center;
+    justify-content:flex-start;
+    padding:20px 0 0 48px;
+}
+.notifacation .first
+{
+    top:10px;
+}
+.point
+{
+    top:11px;
+    left:-17px;
+    z-index:2;
+    width:10px;
+    height:10px;
+    position:relative;
+    border-radius:50%;
+    box-shadow:0 0 0 3px #fff;
+    background-color:#fff;
+    border:2px solid #ccdfef;
+}
+.time
+{
+    color:black;
+    font-size:12px;
+}
+.info
+{
+    color:rgba(0,0,0,0.3);
+    font-size:15px;
+}
+.text:hover .info,.text:hover .time,.point:hover .text .info,
+.point:hover .text .time
+{
+    color:#ccdfef;
+}
+.menu{
+    top: 20px;
+    width: 150px;
+    display: flex;
+    height: 280px;
+    transition: 1s;
+    padding: 15px 0px;
+    position: absolute;
+    align-items: center;
+    color: #9daab5;
+    transform: translate3d(20px,0,0);
+    background: #43627d;
+}
+.menu li{
+    gap: 5px;
+    width: 150px;
+    display: flex;
+    padding: 15px 20px;
+    align-items: center;
+}
+
+.menu li:hover{
+    background: #385269;
+}
+
+.show{
+    transition: 1s;
+    visibility: visible;
+    transform: translate3d(0,0,0);
+}
+
+            </style>
+            <script>
+            const searchBtn=document.querySelector(".search");
+            const input=document.querySelector(".input");
+            searchBtn.addEventListener("click",()=>
+            {
+                input.classList.toggle("active");
+            })
+            const menu = document.querySelector(".menu")
+const menuBtn = document.querySelector(".icon-menu")
+const notification = document.querySelector(".notifications")
+menuBtn.addEventListener("click", () => {
+    notification.classList.toggle("left")
+})
+
+menuBtn.addEventListener("click", () => {
+    menu.classList.toggle("show")
+})
+
+            </script>
+        </body>
+    </head>
+</html>

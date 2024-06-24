@@ -1,0 +1,125 @@
+@charset 'UTF-8';
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    color: inherit;
+}
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+main {
+    display: block;
+}
+img {
+    width: 100%;
+    vertical-align: middle;
+}
+a {
+    text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    line-height: 1.5;
+}
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#app {
+    width: 100%;
+    height: 400px;
+    max-width: 400px;
+    background-color: #263A4D;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+.wave {
+    width: 500px;
+    height: 60px;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    display: flex;
+    transform: translate(-50%,0);
+    .circle {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        transform: translateY(-25px);
+
+    }
+    &.w1 {
+        background-color: #7EB3E6;
+        z-index: 3;
+        animation: w1 4s linear infinite alternate;
+        .circle {
+            background-color: inherit;
+            &:nth-child(even){
+                background-color: #5D90BF;
+            }
+        }
+    }
+    &.w2 {
+        background-color: #5D90BF;
+        bottom: 60px;
+        z-index: 2;
+        animation: w2 4s linear infinite alternate;
+        .circle {
+            background-color: inherit;
+            &:nth-child(even){
+                background-color: #406384;
+            }
+        }
+    }
+    &.w3 {
+        background-color: #406384;
+        bottom: 120px;
+        z-index: 1;
+        animation: w3 4s linear infinite alternate;
+        .circle {
+            background-color: inherit;
+            &:nth-child(even){
+                background-color: #263A4D;
+            }
+        }
+    }
+
+}
+
+@keyframes w1 {
+    0% {
+        transform: translate(-300px,0);
+    }
+    100% {
+        transform: translate(-200px,0);
+    }
+}
+@keyframes w2 {
+    0% {
+        transform: translate(-240px,0);
+    }
+    100% {
+        transform: translate(-260px,0);
+    }
+}
+@keyframes w3 {
+    0% {
+        transform: translate(-275px,0);
+    }
+    100% {
+        transform: translate(-225px,0);
+    }
+}
+

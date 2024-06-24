@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<html>
+<head>
+    <title>TEST</title>
+    <Body>
+        <div class="frame">
+            <div class="container">
+                <div class="circle"></div>
+            </div>
+    
+       </div>
+      </html>
+     
+    <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+    box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+    overflow: hidden;
+  background: #2C3E50;
+  color: #333;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  width: 400px;
+  height: 400px;
+  position: relative;
+}
+
+.circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #2ECC71;
+  cursor: pointer;
+}
+
+.circle::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 2px solid #2ECC71;
+  animation: circle 1.5s ease-in-out infinite; 
+}
+
+@keyframes circle {
+  0% {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(2.5);
+  }
+  100% {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+
+
+
+
+</style>
+<script>
+  const container = document.querySelector('.container')
+        const circle = document.querySelector('.circle')
+
+
+        container.onmousemove = (e) => {
+            let left = e.offsetX;
+            let top = e.offsetY;
+
+            if (left > 385 || top > 390) {
+                setTimeout(() => {
+                    circle.style.left = "50%";
+                    circle.style.top = "50%"
+                }, 300)
+
+            } else if (left < 15 || top < 10) {
+                setTimeout(() => {
+                    circle.style.left = "50%";
+                    circle.style.top = "50%"
+                }, 500)
+            } else {
+                setTimeout(() => {
+                    circle.style.left = left + 'px';
+                    circle.style.top = top + 'px';
+                }, 500)
+            }
+        }
+
+
+
+</script>
+</body>
+</head>
+
+
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<html>
+<head>
+    <title>TEST</title>
+    <body>
+      <div class="frame">
+        <div class="background">
+          <div class="fire">
+          </div>
+          <div class="stick">
+          </div>
+          <div class="candle">
+            <div class="candle-no-shadow">
+            </div>
+          </div>
+          <div class="plate">
+          </div>
+        </div>	
+    </div>
+      
+  </body>
+    <style>
+      .frame {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 400px;
+        height: 400px;
+        margin-top: -200px;
+        margin-left: -200px;
+        border-radius: 2px;
+        box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+        overflow: hidden;
+        background: #fff;
+        color: #333;
+        font-family: 'Open Sans', Helvetica, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      
+      .background {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        background: #2C3E50;
+      }
+      
+      .candle {
+        position: relative;
+        height: 100px;
+        width: 65px;
+        border-radius: 5px;
+        background-color: #E0E5FF;
+        z-index: 1;
+        box-shadow: 0 0 16px 5px rgba(0,0,0,0.1);
+        
+        .candle-no-shadow {
+          position: absolute;
+          background-color: #fff;
+          border-radius: 5px;
+          width: 55px;
+          height: 100px;
+        }
+      }
+      
+      .plate {
+        height: 10px;
+        width: 130px;
+        background-color:#1B233E;
+        border-radius: 10px;
+        box-shadow: 0 0 16px 5px rgba(0,0,0,0.1);
+      }
+      
+      .stick {
+        width: 6px;
+        height: 10px;
+        background-color:#B79095;
+        box-shadow: 0 0 16px 5px rgba(0,0,0,0.1);
+      }
+      
+      .fire {
+        width: 16px;
+        height: 26px;
+        background: #FFAD00;
+        box-shadow: 0 0 16px 3px #FFAD00;
+        border-radius: 8px 8px 8px 8px / 20px 20px 8px 8px;
+        animation: wind 7s ease-in-out infinite, 
+            size 5s ease-in-out infinite, 
+            flickr 2s ease-in-out infinite;
+        transform-origin: 50% 100%;
+      }
+      
+      @keyframes wind {
+        0%, 50%, 100% {
+          border-radius: 2px 14px 8px 8px / 20px 20px 8px 8px;
+        }
+        25%, 75% {
+          border-radius: 14px 2px 8px 8px / 20px 20px 8px 8px;
+        }
+      }
+      
+      @keyframes size {
+        0%, 50%, 100% {
+          transform: scale(1,1);
+        }
+        25%, 75% {
+          transform: scale(0.9, 1.2);
+        }
+      }
+      
+      @keyframes flickr {
+        0%, 50%, 100% {
+          box-shadow: 0 0 20px 0 #FFAD00;
+        }
+        25%, 75% {
+          box-shadow: 0 0 20px 0 #FFAD00;
+        }
+      }
+
+  </style>
+<script>
+ 
+  </script>
+</head>
+
+
+</html>

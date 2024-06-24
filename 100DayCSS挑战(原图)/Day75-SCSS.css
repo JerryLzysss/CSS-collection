@@ -1,0 +1,77 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #d33526;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.center .ball {
+  animation: ball 7s infinite;
+  transform-style: preserve-3d;
+  width: 200px;
+  height: 200px;
+}
+.center .slice {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.25);
+  transform-style: preserve-3d;
+}
+.center .slice.slice-1 {
+  transform: rotateX(0deg);
+}
+.center .slice.slice-2 {
+  transform: rotateX(30deg);
+}
+.center .slice.slice-3 {
+  transform: rotateX(60deg);
+}
+.center .slice.slice-4 {
+  transform: rotateX(90deg);
+}
+.center .slice.slice-5 {
+  transform: rotateX(120deg);
+}
+.center .slice.slice-6 {
+  transform: rotateX(150deg);
+}
+
+@keyframes ball {
+  0% {
+    transform: rotateX(0) rotateY(0);
+  }
+  25% {
+    transform: rotateX(180deg) rotateY(25deg);
+  }
+  50% {
+    transform: rotateX(360deg) rotateY(60deg);
+  }
+  75% {
+    transform: rotateX(180deg) rotateY(40deg);
+  }
+  100% {
+    transform: rotateX(0) rotateY(0);
+  }
+}/*# sourceMappingURL=Day75-SCSS.css.map */

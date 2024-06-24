@@ -1,0 +1,128 @@
+
+// use only the available space inside the 400x400 frame
+.frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 2px;
+      box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+      overflow: hidden;
+    background: lightblue;
+    color: #333;
+      font-family: 'Open Sans', Helvetica, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .content {
+      display: flex;
+      flex-wrap: wrap;
+  }
+  
+  $animation-duration: 4s;
+  $length: 40px;
+  $width: $length / 4;
+  
+  .item {
+      width: $length;
+      height: $length;
+      position: relative;
+      
+      &::before,
+      &::after {
+          content: '';
+          display: inline-block;
+          background: white;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+      }
+      
+      &::before {			
+          animation: animation_1 $animation-duration infinite;
+      }
+      
+      &::after {
+          animation: animation_2 $animation-duration infinite;
+      }
+  }
+  
+  @keyframes animation_1 {
+      from {
+          transform: translate(-50%, -50%);
+          width: $length;
+          height: $width;
+      }
+      
+      20% {
+          transform: translate(-50%, -50%) rotate(45deg);
+          width: $length;
+          height: $width;
+      }
+      
+      40% {
+          transform: translate(-50%, -50%) rotate(45deg) translate(-50%, 0);
+          width: $length;
+          height: $width;
+      }
+      
+      60% {
+          transform: translate(-50%, -50%) rotate(45deg);
+          width: $width * 2;
+          height: $width * 2;
+      }
+      
+      80% {
+          transform: translate(-50%, -50%) rotate(45deg);
+          width: $width * 2;
+          height: $width * 2;
+      }
+      
+      to {
+          transform: translate(-50%, -50%);
+          width: $length;
+          height: $width;
+      }
+  }
+  
+  @keyframes animation_2 {
+      from {
+          transform: translate(-50%, -50%);
+          width: $width;
+          height: $length;
+      }
+      
+      20% {
+          transform: translate(-50%, -50%) rotate(45deg);
+          width: $width;
+          height: $length;
+      }
+      
+      40% {
+          transform: translate(-50%, -50%) rotate(45deg) translate(100%, 0);
+          width: $width;
+          height: $length;
+      }
+      
+      60% {
+          transform: translate(-50%, -50%) rotate(45deg);
+          width: $width * 2;
+          height: $width * 2;
+      }
+      
+      80% {
+          transform: translate(-50%, -50%) rotate(0);
+          width: $width * 2;
+          height: $width * 2;
+      }
+      
+      to {
+          transform: translate(-50%, -50%);
+          width: $width;
+          height: $length;
+      }
+  }

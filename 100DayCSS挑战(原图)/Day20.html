@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<html>
+<head>
+    <title>TEST</title>
+    <Body>
+      <!DOCTYPE html>
+      <html lang="en">
+      
+      <div class="frame">
+        <div class="center">
+              <div class="circle"></div>
+              <div class="outer"></div>
+              <div class="svg-container">
+                  <svg viewBox="0 0 173 173" xmlns="http://www.w3.org/2000/svg">
+                          <g>
+                              <g id="mail" transform="translate(-30,-15)" >
+                                  <path d="M 174,68 57,68 110,110 Z" />
+                                  <path d="m 55.5,68 0,68 117,0 1,-68" />
+                              </g>
+                              <g id="plain">
+                                  <path d="M 166,158 45,201 127,217 Z"/>
+                                  <path d="m 166,158 -82,51 8,38 19,-33" />
+                              </g>
+                          </g>
+                      </svg>
+              </div>
+              
+              <div class="button-container">
+                  <button id="btn-reset">Reset</button>
+                  <button id="btn-send" class="hidden">Send Mail</button>
+              </div>
+        </div>
+      </div>
+      
+      </html>
+     
+    <style>
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #2c3e50;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+	display:flex;
+	justify-content:center;
+	flex-direction:column;
+}
+.svg-container{
+	height:190px;
+	width:190px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+svg{
+	height:170px;
+	width:170px;
+	stroke:#fff;
+	fill:none;
+	stroke-width:2px;
+	position:relative;
+	z-index:1;
+	overflow:visible !important;
+}
+#mail{
+	stroke-dasharray: 273;
+	stroke-dashoffset: 0;
+	
+}
+#plain{
+	stroke-dasharray: 283;
+	stroke-dashoffset: 283;
+	transition-delay:0s;
+	opacity:0;
+}
+
+.circle, .outer{
+	position:absolute;
+	margin-top:-4.5rem;
+	box-sizing:border-box;
+}
+.circle{
+	height:190px;
+	width:190px;
+	background:#354A5F;
+	border-radius:50%;
+	transition:all .0s ease-in-out;
+}
+.outer{
+	height:194px;
+	width:194px;
+	border: 4px solid #354A5F;
+	border-radius:50%;
+	transition:all .0s linear;
+}
+
+.button-container{
+	margin-top: 2rem;
+	height:40px;
+	display:flex;
+	justify-content:center;
+}
+button{
+	height:40px;
+	width:200px;
+	display:block;
+	text-transform:uppercase;
+	padding:.7rem;
+	border-radius:20px;
+	border:0;
+	cursor:pointer;
+	color:#2c3e50;
+	font-size:15px;
+	position:absolute;
+}
+button:hover{
+	color:white;
+	background:#1abc9c;
+}
+.send #btn-send{
+	animation: anim_button_send .7s ease both; 
+	animation-delay: 3s;
+	overflow:hidden;
+}
+.send #btn-reset{
+	animation: anim_button_reset .7s ease both; 
+	animation-delay: 3.7s;
+}
+@keyframes anim_button_send {
+	0% {
+		color:white;
+		background:#1abc9c;
+	}
+	10%{
+		color:#1abc9c;
+	}
+
+	70%{
+		opacity:1;
+		color:#1abc9c;
+		width:40px;
+		background:#1abc9c;
+	}
+	99%{
+		color:#1abc9c;
+		background:#1abc9c;
+		width:40px;
+		opacity:0;
+		transform:scale(1);
+	}
+	100%{
+		opacity:0;
+		transform:scale(.1)
+	}
+}
+
+.send #mail{
+	stroke-dashoffset: -273;
+	animation: mail 1s ease-in-out;
+}
+.send #plain{
+	transition: stroke-dashoffset 1s ease-in-out;
+	stroke-dashoffset: 0;
+	animation: plainMove .7s ease-out both;
+	animation-delay: 2s;
+	transition-delay:1s;
+	opacity:1;
+}
+@keyframes mail {
+	0% {
+		stroke-dasharray: 273;
+		stroke-dashoffset: 0;
+	}
+}
+.send .circle, .send .outer{
+	transition-duration: .6s;
+	transform:scale(0);
+}
+.send .outer {
+	transition-delay:.3s;
+}
+@keyframes plainMove{
+	0%{
+		transform: translate(-23px,-105px) scale(1);
+	}
+	80%{
+		opacity:1;
+	}
+	100%{
+		transform: translate(251px, -72px) scale(.1);
+		opacity:0;
+	}
+}
+@keyframes anim_button_reset {
+	0%{opacity:0;}
+}</style>
+<script>
+    document.getElementById("btn-send").addEventListener('click',(e)=>{
+	document.querySelector('.center').classList.add('send');	
+})
+
+document.getElementById("btn-reset").addEventListener('click',(e)=> {
+	document.querySelector('.center').classList.remove('send');
+})
+
+</script>
+</head>
+
+
+</html>

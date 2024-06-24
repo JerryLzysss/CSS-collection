@@ -1,0 +1,102 @@
+@charset 'UTF-8';
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    color: inherit;
+}
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+main {
+    display: block;
+}
+img {
+    width: 100%;
+    vertical-align: middle;
+}
+a {
+    text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    line-height: 1.5;
+}
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#app {
+    width: 100%;
+    height: 400px;
+    max-width: 400px;
+    background-color: #27ae60;
+    border-radius: 8px;
+    position: relative;
+}
+.box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    .dot {
+        width: 1px;
+        height: 50%;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        transform-origin: bottom center;
+        &::after {
+            content: "";
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background-color: #fff;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translate(-50%, -50%) scale(0);
+        }
+    }
+    @for $i from 1 through 10 {
+        &.b#{$i} {
+            width: #{($i * 21) + 60}px;
+            height: #{($i * 21) + 60}px;
+            .dot {
+                @for $j from 1 through (12 + $i * 6) {
+                    $deg: (360 / (12 + $i * 6));
+                    &.d#{$j} {
+                        transform: translateX(-50%) rotate(#{$deg * $j}deg);
+                    }
+                }
+                &::after {
+                    animation: wave 1.5s linear infinite alternate;
+                    animation-delay: #{($i / 5)}s;
+                }
+            }
+        }
+    }
+}
+
+@keyframes wave {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}

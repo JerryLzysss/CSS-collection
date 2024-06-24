@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<html>
+<head>
+    <title>TEST</title>
+    <div class="frame">
+        <div class="card">
+            <div class="card-content">
+            <p class="card-header">Friday</p>
+            <p class="card-day">15</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+            <p class="card-header">Saturday</p>
+            <p class="card-day">16</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+            <p class="card-header">Sunday</p>
+            <p class="card-day">17</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+            <p class="card-header">Monday</p>
+            <p class="card-day">18</p>
+            </div>
+        </div>
+    </div>
+    <style>
+   // delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 4px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #pink;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.card {
+	background-color: #E27474;
+	color: white;
+	display: inline-grid;
+	grid-template-rows: 1fr 1fr;
+	max-height: 200px;
+	max-width: 200px;
+	padding: 0;
+	margin: 0;
+	border: 5px solid transparent;
+	transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+	border: 5px solid black;
+	box-shadow: 2px 2px 4px rgba(0,0,0,0.25) inset;
+}
+
+.card p {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0;
+	margin: 0;
+}
+
+.card-content {
+	grid-row: span 2;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	transition: scale 0.3s;
+}
+
+.card-content:hover {
+	scale: 0.9;
+	cursor: pointer;
+}
+
+.card-day {
+	font-weight: bold;
+	font-size: 4em;
+}
+  </style>
+<script>
+ 
+  </script>
+</head>
+
+
+</html>

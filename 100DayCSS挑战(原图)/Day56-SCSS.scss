@@ -1,0 +1,136 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  
+    .frame {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 400px;
+      height: 400px;
+      margin-top: -200px;
+      margin-left: -200px;
+      border-radius: 2px;
+      box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      background: #16A078;
+      color: #333;
+      font-family: "Open Sans", Helvetica, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+  
+      .container {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        top: 175px;
+        left: 175px;
+        transition: all 0.5s ease-in-out;
+        animation: container 7s ease infinite;
+  
+        @keyframes container {
+          0% {
+            transform: rotate(0);
+          }
+  
+          60% {
+            transform: rotate(180deg);
+          }
+  
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+  
+        .leaf {
+          position: absolute;
+          z-index: 1;
+          width: 50px;
+          height: 50px;
+          background: #fff;
+          border-radius: 2px 50px;
+          opacity: 0.8;
+          transition: all 0.5s ease-in-out;
+          box-shadow: 0 0 0 0 rgb(0 0 0 / 0%);
+        }
+  
+        .dot {
+          position: absolute;
+          z-index: 5;
+          width: 50px;
+          height: 50px;
+          top: 0;
+          left: 0;
+          background: #f1c40f;
+          border-radius: 50%;
+          opacity: 0.8;
+          transform: scale(0);
+          transition: opacity 0.5s ease-in-out;
+          -webkit-animation: dot 7s ease-in-out infinite;
+          animation: dot 7s ease-in-out infinite;
+        }
+  
+        @keyframes dot {
+          12% {
+            transform: scale(0);
+          }
+        
+          20% {
+            transform: scale(1.1);
+          }
+        
+          25% {
+            transform: scale(0.95);
+          }
+        
+          30%,
+          55% {
+            transform: scale(1);
+          }
+        
+          57.9% {
+            transform: scale(1.1);
+          }
+        
+          70% {
+            transform: scale(0);
+          }
+        }
+  
+        @for $i from 0 through 15 {
+          .leaf-#{$i} {
+            transform: rotate(#{($i * 22.5)}deg) translateY(0);
+            animation: leaf-#{$i} 7s ease infinite;
+          }
+  
+          @keyframes leaf-#{$i} {
+  
+            0%,
+            100% {
+              transform: rotate(#{($i * 22.5)}deg) translateY(0);
+            }
+  
+            10% {
+              transform: rotate(#{($i * 22.5)}deg) translate(-35px, -35px) scale(2);
+              box-shadow: -5px -5px 1px 0 rgb(0 0 0 / 6%);
+            }
+  
+            60% {
+              transform: rotate(#{($i * 22.5)}deg) translate(-35px, -35px) scale(2);
+              box-shadow: -5px -5px 1px 0 rgb(0 0 0 / 6%);
+            }
+  
+            75% {
+              transform: rotate(#{($i * 22.5)}deg) translate(-35px, -35px) scale(2);
+              box-shadow: -5px -5px 1px 0 rgb(0 0 0 / 6%);
+            }
+          }
+        }
+  
+  
+      }
+    }
+  
+  
+  }

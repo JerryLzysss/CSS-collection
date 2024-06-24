@@ -1,0 +1,143 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 10px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+$bg: rgb(255, 165, 0);
+$rows: 19;
+$columns: 20;
+
+body {
+  @include center;
+  min-height: 100vh;
+}
+
+.frame {
+  position: relative;
+  height: 40rem;
+  width: 40rem;
+  background: $bg;
+  overflow: hidden;
+
+  &::before {
+    position: absolute;
+    text-align: center;
+    content: "DAY 90 - MOUSE TRAP";
+    background: $bg;
+    width: 100%;
+    padding: 1rem 0;
+    letter-spacing: 0.1rem;
+    color: #fff;
+    top: 2rem;
+    z-index: 2;
+    font-size: 1.5rem;
+    white-space: nowrap;
+    text-shadow: 0.1rem 0.1rem 0.3rem rgb(0, 0, 0);
+  }
+}
+
+.space {
+  height: 1rem;
+}
+
+.trigger {
+  position: relative;
+  z-index: 10;
+  box-sizing: border-box;
+  float: left;
+  width: 2rem;
+  height: 2rem;
+}
+
+.lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  .line {
+    margin: 1.9rem 0px;
+    height: .1rem;
+    width: 40rem;
+
+    .left,
+    .right {
+      float: left;
+      height: .1rem;
+      width: 20rem;
+      background: #fff;
+      transform-origin: 0 50%;
+      transition: all 0.3s linear;
+      transform: scaleX(0);
+    }
+
+    .right {
+      transform-origin: 100% 50%;
+    }
+  }
+}
+
+$row: 1;
+$column: 1;
+@for $i from 1 through ($rows * $columns) {
+  // update row
+  @if ($row * $columns) < $i {
+    $row: $row + 1;
+  }
+
+  // update column
+  $column: $i - (($row - 1) * $columns);
+
+  .trigger-#{$i}:hover {
+    & ~ .lines .line-#{$row} {
+      $scale: ($column - 3) / 10;
+      .left {
+        transform: scaleX($scale);
+      }
+      $scale: ($columns - ($column + 2)) / 10;
+      .right {
+        transform: scaleX($scale);
+      }
+    }
+
+    & ~ .lines .line-#{$row - 1},
+    & ~ .lines .line-#{$row + 1} {
+      $scale: ($column - 2) / 10;
+      .left {
+        transform: scaleX($scale);
+      }
+      $scale: ($columns - ($column + 1)) / 10;
+      .right {
+        transform: scaleX($scale);
+      }
+    }
+
+    & ~ .lines .line-#{$row - 2},
+    & ~ .lines .line-#{$row + 2} {
+      $scale: ($column - 1) / 10;
+      .left {
+        transform: scaleX($scale);
+      }
+      $scale: ($columns - $column) / 10;
+      .right {
+        transform: scaleX($scale);
+      }
+    }
+  }
+}

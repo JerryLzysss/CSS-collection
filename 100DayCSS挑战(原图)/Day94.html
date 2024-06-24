@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<html>
+<head>
+    <title>TEST</title>
+    <body>
+        <div class="frame">
+            <div class="container">
+                <div class="leaf">
+                    <div class="left"></div>
+                    <div class="right"></div>
+                </div>
+                <div class="trunk">
+                    <div class="trunks trunk-2"></div>
+                    <div class="trunks trunk-3"></div>
+                    <div class="trunks trunk-4"></div>
+                    <div class="trunks trunk-5"></div>
+                    <div class="trunks trunk-6"></div>
+                    <div class="trunks trunk-7"></div>
+                </div>
+                <div class="trunk-basis"></div>
+    
+            </div>
+        </div>
+  </body>
+    <style>* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      .frame {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 400px;
+        height: 400px;
+        margin-top: -200px;
+        margin-left: -200px;
+        border-radius: 5px;
+        box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        background: #E0F0E5;
+        color: #333;
+        font-family: 'Open Sans', Helvetica, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      
+      }
+      
+      .container {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 175px;
+        height: 250px;
+      }
+      
+      .leaf {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 200px;
+      
+      }
+      
+      .right {
+        position: absolute;
+        top: 50%;
+        left: 75%;
+        transform: translate(-50%, -50%);
+        width: 50%;
+        height: 200px;
+        background: #E84624;
+        clip-path: polygon(0 0, 0% 100%, 100% 100%);
+        animation: right 2s forwards linear;
+      }
+      
+      @keyframes right {
+        0% {
+          clip-path: polygon(0 0, 0% 100%, 0% 100%);
+        }
+      
+        60% {
+          clip-path: polygon(0 0, 0% 100%, 0% 100%);
+        }
+      
+        100% {
+          clip-path: polygon(0 0, 0% 100%, 100% 100%);
+        }
+      }
+      
+      .left {
+        position: absolute;
+        top: 50%;
+        left: 25%;
+        transform: translate(-50%, -50%);
+        width: 50%;
+        height: 200px;
+        background: #BA381D;
+        clip-path: polygon(100% 0, 100% 100%, 100% 100%);
+        animation: left 2s forwards linear;
+      }
+      
+      @keyframes left {
+        0% {
+          clip-path: polygon(100% 0, 100% 100%, 100% 100%);
+        }
+      
+        60% {
+          clip-path: polygon(100% 0, 100% 100%, 100% 100%);
+        }
+      
+        100% {
+          clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+        }
+      }
+      
+      .trunk {
+        position: relative;
+        top: 59%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80px;
+        height: 200px;
+        animation: trunk 2s forwards ease-in-out;
+        transform-origin: bottom center;
+      }
+      
+      @keyframes trunk {
+        0% {
+          transform: translate(-50%, -50%) scaleX(0) scale(0);
+          animation-timing-function: ease-in-out;
+        }
+      
+        20% {
+          transform: translate(-50%, -50%) scaleX(1.2) scale(1.2);
+          animation-timing-function: ease-in-out;
+        }
+      
+        30% {
+          transform: translate(-50%, -50%) scaleX(0.7) scale(1);
+          animation-timing-function: ease-in-out;
+        }
+      
+        40% {
+          transform: translate(-50%, -50%) scaleX(1) scale(1);
+        }
+      
+        100% {
+          transform: translate(-50%, -50%) scaleX(1) scale(1);
+        }
+      }
+      
+      .trunks {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #E8C87E;
+        border-radius: 5px;
+        width: 5px;
+        transform-origin: bottom left;
+      }
+      
+      
+      
+      .trunk-basis {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 100%;
+        height: 5px;
+        width: 80px;
+        border-radius: 5px;
+        background: #B9D6C2;
+        z-index: 3;
+        animation: trunk-basis 2s forwards linear;
+      }
+      
+      @keyframes trunk-basis {
+        0% {
+          width: 0px;
+        }
+      
+        40% {
+          width: 80px;
+        }
+      
+        100% {
+          width: 80px;
+        }
+      }
+      
+      
+      .trunk-2 {
+        height: 200px;
+        z-index: 2;
+      }
+      
+      .trunk-3 {
+        top: 60%;
+        height: 60px;
+        transform: translate(-50%, -50%) rotate(-40deg);
+      }
+      
+      .trunk-4 {
+        top: 45%;
+        height: 55px;
+        transform: translate(-50%, -50%) rotate(40deg);
+      }
+      
+      .trunk-5 {
+        top: 35%;
+        height: 45px;
+        transform: translate(-50%, -50%) rotate(-40deg);
+      }
+      
+      .trunk-6 {
+        top: 20%;
+        height: 40px;
+        transform: translate(-50%, -50%) rotate(40deg);
+      }
+      
+      .trunk-7 {
+        top: 5%;
+        height: 25px;
+        transform: translate(-50%, -50%) rotate(-40deg);
+      }
+ 
+  </style>
+<script>
+
+  </script>
+</head>
+
+
+</html>

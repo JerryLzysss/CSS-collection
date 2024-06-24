@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  
+    <body>
+        <meta charset="UTF-8">
+        <div class="frame">
+            <div class="center">
+                <button class="btn center">
+                    <div class="icon-wrapper">
+                        <div class="bar bar-1 no-animation"></div>
+                        <div class="bar bar-2 no-animation"></div>
+                        <div class="bar bar-3 no-animation"></div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    
+     <style>
+    
+    .frame {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 400px;
+	height: 400px;
+	margin-top: -200px;
+	margin-left: -200px;
+	border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	background: #fff;
+	color: #333;
+	font-family: "Open Sans", Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background-color: #1abc9c;
+	border-radius: 6px;
+}
+
+.btn {
+	background: none;
+	border: none;
+	cursor: pointer;
+}
+
+.center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.btn .bar-1 {
+	animation: rev-bar1-animate 0.7s ease-in-out;
+}
+
+.btn .bar-2 {
+	margin: 15px 0;
+	animation: rev-bar2-animate 0.7s ease-in-out;
+}
+
+.btn .bar-3 {
+	animation: rev-bar3-animate 0.7s ease-in-out;
+}
+
+.btn.active .bar-1 {
+	animation: show-bar1-animate 0.7s  forwards;
+}
+
+.btn.active .bar-2 {
+	animation: show-bar2-animate 0.7s  forwards;
+}
+
+.btn.active .bar-3 {
+	animation: show-bar3-animate 0.7s forwards;
+}
+
+.icon-wrapper {
+	height: 54px;
+	width: 90px;
+}
+
+.icon-wrapper .bar {
+	background-color: #fff;
+	width: 90px;
+	height: 8px;
+	border-radius: 5px;
+	box-shadow: 0px 4px 8px 6px rgba(0, 0, 0, 0.2);
+}
+
+.no-animation {
+	-webkit-animation: none !important;
+	animation: none !important;
+}
+
+@keyframes show-bar1-animate {
+	0% {
+		transform: translateY(0) rotate(0deg);
+	}
+
+	50% {
+		transform: translateY(23px) rotate(0deg);
+	}
+
+	100% {
+		transform: translateY(23px) rotate(45deg);
+	}
+}
+
+@keyframes show-bar2-animate {
+	0% {
+		transform: scale(1);
+		opacity: 1;
+	}
+
+	100% {
+		transform: scale(0);
+		opacity: 0;
+	}
+}
+
+@keyframes show-bar3-animate {
+	0% {
+		transform: translateY(0) rotate(0deg);
+	}
+
+	50% {
+		transform: translateY(-23px) rotate(0deg);
+	}
+
+	100% {
+		transform: translateY(-23px) rotate(135deg);
+	}
+}
+
+@keyframes rev-bar1-animate {
+	0% {
+		transform: translateY(23px) rotate(45deg);
+	}
+
+	50% {
+		transform: translateY(23px) rotate(0deg);
+	}
+
+	100% {
+		transform: translateY(0) rotate(0deg);
+	}
+}
+
+@keyframes rev-bar2-animate {
+	from {
+		opactiy: 0;
+		transform: scale(0);
+	}
+
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+@keyframes rev-bar3-animate {
+	0% {
+		transform: translateY(-23px) rotate(135deg);
+	}
+
+	50% {
+		transform: translateY(-23px) rotate(0deg);
+	}
+
+	100% {
+		transform: translateY(0) rotate(0deg);
+	}
+}
+
+
+    </style>
+    <script>
+        window.addEventListener("load",function()
+        {
+            const btn = document.querySelector(".btn");
+            const bars = document.querySelectorAll(".bar");
+            btn.addEventListener("click", function () {
+	        this.classList.toggle("active");
+	        bars.forEach((bar) => bar.classList.remove("no-animation"));
+            });
+        });
+    </script>
+    </body>
+</head>
+</html>
+
+        

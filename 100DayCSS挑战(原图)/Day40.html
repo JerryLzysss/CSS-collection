@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<html>
+<head>
+    <title>TEST</title>
+    <body>
+        <div class="frame">
+            <div class="center">		
+                  <div class= "row">
+                      <div class="square i0" onclick="grow(this)">
+                          <img src="https://100dayscss.com/codepen/40-1.jpg" alt="">
+                      </div>
+                      <div class="square i1" onclick="grow(this)">
+                          <img src="https://100dayscss.com/codepen/40-2.jpg" alt="">
+                      </div>
+                      <div class="square i2" onclick="grow(this)">
+                          <img src="https://100dayscss.com/codepen/40-3.jpg" alt="">
+                      </div>
+                  </div>
+                  <div class= "row">
+                      <div class="square i3" onclick="grow(this)">
+                          <img src="https://100dayscss.com/codepen/40-4.jpg" alt="">
+                      </div>
+                      <div class="square i4" onclick="grow(this)">
+                          <img src="https://100dayscss.com/codepen/40-5.jpg" alt="">
+                      </div>
+                      <div class="square i5" onclick="grow(this)">
+                          <img src="https://100dayscss.com/codepen/40-6.jpg" alt="">
+                      </div>
+                  </div>
+                  <div class= "row">
+                      <div class="square i6" onclick="grow(this)" >
+                          <img src="https://100dayscss.com/codepen/40-7.jpg" alt="">
+                      </div>
+                      <div class="square i7" onclick="grow(this)">
+                          <img src="https://100dayscss.com/codepen/40-8.jpg" alt="">
+                      </div>
+                      <div class="square i8" onclick="grow(this)">
+                          <img src="https://100dayscss.com/codepen/40-9.jpg" alt="">
+                      </div>
+                  </div>
+            </div>
+          </div>
+    </body>
+    <style>
+* {
+  box-sizing: border-box;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #fff;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: relative;
+  left: 4px;
+  top: 4px;
+  width: 392px;
+  height: 392px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.center .row {
+  position: relative;
+  width: 392px;
+  height: 128px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.center .row .square {
+  width: 128px;
+  height: 128px;
+  background: #000;
+  cursor: pointer;
+  animation: small 0.5s ease-in-out both;
+  /*transition: .5s ease-in-out;*/
+}
+.center .row .square img {
+  width: 100%;
+  height: auto;
+  transition: opacity 0.5s ease-in-out;
+}
+.center .row .square.dark img {
+  opacity: 0;
+}
+
+.grown {
+  animation: big 0.5s ease-in-out both !important;
+}
+
+@keyframes big {
+  0%, 1% {
+    transform: scale(1);
+    z-index: 2;
+  }
+  100% {
+    z-index: 2;
+    transform: scale(3.0625);
+  }
+}
+@keyframes small {
+  0% {
+    transform: scale(3.0625);
+    z-index: 2;
+  }
+  99% {
+    z-index: 2;
+    transform: scale(1);
+  }
+  100% {
+    z-index: 1;
+  }
+}
+.i0 {
+  transform-origin: top left;
+}
+
+.i1 {
+  transform-origin: top center;
+}
+
+.i2 {
+  transform-origin: top right;
+}
+
+.i3 {
+  transform-origin: center left;
+}
+
+.i4 {
+  transform-origin: center center;
+}
+
+.i5 {
+  transform-origin: center right;
+}
+
+.i6 {
+  transform-origin: bottom left;
+}
+
+.i7 {
+  transform-origin: bottom center;
+}
+
+.i8 {
+  transform-origin: bottom right;
+}
+    </style>
+    <script>
+    let open = false;
+
+const elements = document.querySelectorAll('.square');
+
+
+
+
+
+function grow(inc){
+	if(open)
+		{
+			//inc.style.animationDuration=".5s";
+			inc.classList.remove("grown");
+			elements.forEach((element) => {
+  		element.classList.remove('dark');
+			});
+			open = false;
+			return;
+		}	
+	
+	elements.forEach((element) => {
+  element.classList.add('dark');
+	});
+	inc.classList.remove("dark");
+	inc.classList.add("grown");
+	open = true;
+}
+
+
+    </script>
+</head>
+
+
+</html>
