@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<head>
+    
+</head>
+<body>
+    <div class="frame">
+        <div class="center">
+            <div class="title">
+            <div class="left">
+               <div>WEEKLY REPORT</div> 
+               <div>01.Feb - 07. Feb</div> 
+            </div>
+            <div class="right">
+                <div style="margin-left:10px;font-size:14px">Revenue</div> 
+                <div>$3621.79</div> 
+             </div>
+            </div>
+            <div class="content">
+                  <div class="legends">
+                     <div class="redexp"></div>
+                     <span>Views</span>
+                     <div class="blueexp"></div>
+                     <span>Purchases</span>
+                  </div>
+                  <div class="line line-1"></div>
+                  <div class="line line-2"></div>
+                  <div class="line line-3"></div>
+                  <div class="round redround-1"></div>
+                  <svg>
+                     <polyline 
+                     points="22,134 68,82 112,102 158,52 192,134 228,97 278,77 " 
+                     stroke="red" 
+                     stroke-width="2" 
+                     fill="none" 
+                     
+                     ></polyline>
+                     <polyline 
+                     points="22,123 68,113 112,132 158,118 192,124 228,143 278,132 " 
+                     stroke="blue" 
+                     stroke-width="2" 
+                     fill="none" 
+                     
+                     ></polyline>
+                  </svg>
+                  <div class="round redround-2"></div>
+                  <div class="round redround-3"></div>
+                  <div class="round redround-4"></div>
+                  <div class="round redround-5"></div>
+                  <div class="round redround-6"></div>
+                  <div class="round redround-7"></div>
+                  <div class="round blueround-1"></div>
+                  <div class="round blueround-2"></div>
+                  <div class="round blueround-3"></div>
+                  <div class="round blueround-4"></div>
+                  <div class="round blueround-5"></div>
+                  <div class="round blueround-6"></div>
+                  <div class="round blueround-7"></div>
+                  <div class="day">
+                     <div>MON</div>
+                     <div>TUE</div>
+                     <div>WED</div>
+                     <div>THU</div>
+                     <div>FRI</div>
+                     <div>SAT</div>
+                     <div>SUN</div>
+                  </div>
+                  <!-- 弹出框 -->
+                  <div class="framework">
+                     <div class="Square"></div>
+                     <div class="rect"></div>
+                  </div>
+            </div>
+           
+           
+        </div>
+      </div>
+    <style>
+        .frame {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 400px;
+        height: 400px;
+        margin-top: -200px;
+        margin-left: -200px;
+        border-radius: 2px;
+        box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+     
+        background-color:#42A7A1;
+        color: #333;
+        font-family: 'Open Sans', Helvetica, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        }
+        .center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+            
+        }
+        .title{
+            position:absolute;
+            width:300px;
+            height:80px;
+            top:-110px;
+            left:-150px;
+            background-color:orange;
+            box-shadow:4px 4px 15px 5px;
+        }
+        .content{
+            position:absolute;
+            width:300px;
+            height:200px;
+            top:-30px;
+            left:-150px;
+            background-color:white;
+            box-shadow:4px 8px 15px 5px;
+        }
+        .left{
+            position:absolute;
+            top:20px;
+            left:20px;
+            color:white;  
+         }
+         .right{
+            position:absolute;
+            top:20px;
+            left:200px;
+            color:white;
+         }
+         .legends{
+            position:absolute;
+            top:15px;
+            left:160px;
+            font-size:12px;
+         }
+         .redexp{
+            width:12px;
+            height:3px;
+            background-color:red;
+            display:inline-block;
+            vertical-align:middle;
+            
+         }
+         .blueexp{
+            width:12px;
+            height:3px;
+            background-color:blue;
+            display:inline-block;
+            vertical-align:middle;
+            margin-left:10px;
+         }
+         .line{
+            position:absolute;
+           
+            width:250px;
+            height:1px;
+            background-color:rgb(230, 230, 230);
+         }
+         .line-1{
+            left:25px;
+            top:50px;
+         }
+         .line-2{
+            left:25px;
+            top:100px;
+         }
+         .line-3{
+            left:25px;
+            top:150px;
+         }
+         .day{
+            position:absolute;
+            display:flex;
+            justify-content:space-around;
+            font-size:10px;
+            width:100%;
+            top:160px;
+         }
+         .round{
+            position:absolute;
+            width:5px;
+            height:5px;
+            border-radius:50%;
+         }
+         .redround-1{
+            top:130px;
+            left:20px;
+            background-color:red;
+            
+         }
+         .redround-2{
+            top:80px;
+            left:65px;
+            background-color:red;
+         }
+         .redround-3{
+            top:100px;
+            left:110px;
+            background-color:red;
+         }
+         .redround-4{
+            top:50px;
+            left:155px;
+            background-color:red;
+         }
+         .redround-5{
+            top:130px;
+            left:190px;
+            background-color:red;
+         }
+         .redround-6{
+            top:95px;
+            left:225px;
+            background-color:red;
+         }
+         .redround-7{
+            top:75px;
+            left:275px;
+            background-color:red;
+         }
+         .blueround-1{
+            top:120px;
+            left:20px;
+            background-color:blue;
+            
+         }
+         .blueround-2{
+            top:110px;
+            left:65px;
+            background-color:blue;
+         }
+         .blueround-3{
+            top:130px;
+            left:110px;
+            background-color:blue;
+         }
+         .blueround-4{
+            top:115px;
+            left:155px;
+            background-color:blue;
+         }
+         .blueround-5{
+            top:122px;
+            left:190px;
+            background-color:blue;
+         }
+         .blueround-6{
+            top:140px;
+            left:225px;
+            background-color:blue;
+         }
+         .blueround-7{
+            top:130px;
+            left:275px;
+            background-color:blue;
+         }
+         .framework{
+            position:absolute;
+            top:0px;
+            left:0px;
+            width:30px;
+            height:30px;
+           
+         }
+         .Square{
+            position:absolute;
+            width:50px;
+            height:30px;
+            top:0px;
+            left:0px;
+            background-color:lightblue;
+            border-radius:20%;
+            text-align:center;
+            font-size:20px;
+            opacity:0;
+         }
+         .rect{
+            position:absolute;
+            width:30px;
+            height:30px;
+            background-color:lightblue;
+            clip-path:polygon(0% 0%,50% 50%,100% 0%);
+            opacity:0;
+         }
+         @keyframes opa{
+            0%{
+               opacity:0;
+            }
+           
+            100%{
+               opacity:1;
+            }
+         }
+    </style>
+    <script>
+       const round=document.getElementsByClassName("round")
+       const square=document.getElementsByClassName("Square")[0]
+       const rect=document.getElementsByClassName("rect")[0]
+     
+       for(let i=0;i<round.length;i++)
+       {
+         round[i].addEventListener('mouseover',function(e){
+           
+            const X=parseInt(window.getComputedStyle(round[i]).left)-21
+            const Y=parseInt(window.getComputedStyle(round[i]).top)-47
+            square.style.opacity=1
+            rect.style.opacity=1
+            console.log(X,Y)
+            square.style.left=X+"px"
+            square.style.top=Y+"px"
+            rect.style.left=(X+10)+"px"
+            rect.style.top=(Y+30)+"px"
+            square.style.animation="opa 1s 1"
+            rect.style.animation="opa 1s 1"
+            square.innerHTML=(parseInt(window.getComputedStyle(round[i]).top))
+            if(i>=0&&i<7)
+            {
+               square.style.backgroundColor="lightcoral"
+                rect.style.backgroundColor="lightcoral"
+            }
+            else{
+                square.style.backgroundColor="lightblue"
+                rect.style.backgroundColor="lightblue"
+            }
+         })
+         round[i].addEventListener('mouseout',function(){
+            square.style.opacity=0
+            rect.style.opacity=0
+            square.style.animation=""
+            rect.style.animation=""
+         })
+       }
+    </script>
+</body>
