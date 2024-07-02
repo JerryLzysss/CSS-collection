@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<head>
+    
+</head>
+<body>
+    <div class="frame">
+        <div class="center">
+            <div class="back">
+               <div class="left">
+                  <div class="round1"></div>
+                  <div class="round">
+                     <img src="https://100dayscss.com/codepen/jessica-potter.jpg" width="70" height="70" alt="Jessica Potter">
+                  </div>
+                  <div class="round2"></div>
+                  <div class="Font">
+                  <div class="Author">Jessica Potter</div>
+                  <div class="job">Virtual Artist</div>
+                  <div><button class="btn">Follow</button></div>
+                  <div><button class="btn">Message</button></div>
+                  </div>
+               </div>
+               <div class="right">
+                  <div class="rb rb1">
+                     <div>523</div>
+                     <div>Posts</div>
+                  </div>
+                  <div class="rb rb2">
+                     <div>1387</div>
+                     <div>Likes</div>
+                  </div>
+                  <div class="rb rb3">
+                     <div>146</div>
+                     <div>Follower</div>
+                  </div>
+               </div>
+            </div>
+        </div>
+      </div>
+    <style>
+        .frame {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 400px;
+        height: 400px;
+        margin-top: -200px;
+        margin-left: -200px;
+        border-radius: 2px;
+        box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+        color: #333;
+        background-color:orange;
+        font-family: 'Open Sans', Helvetica, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        }
+        .center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        }
+        .back{
+         position:relative;
+         background-color:white;
+         width:300px;
+         height:300px;
+         border-radius:5px;
+         box-shadow:10px 10px 20px 3px grey;
+        }
+        .round{
+         position:relative;
+         background-color:red;
+         top:60px;
+         left:70px;
+         width:70px;
+         height:70px;
+         border-radius:50%;
+         overflow:hidden;
+        }
+        .round1{
+         position:absolute;
+         top:56px;
+         left:68px;
+         border-radius:50%;
+         width:75px;
+         height:75px;
+         border :1px solid;
+         border-color:brown brown brown transparent;
+       
+        }
+   
+
+        .round2{
+         position:absolute;
+         border-radius:50%;
+         top:51px;
+         left:63px;
+         width:85px;
+         height:85px;
+         border :1px solid;
+         border-color:brown transparent brown brown;
+         
+        }
+         .left:hover .round1 {
+            animation:spin1 2s 1;
+         }
+         .left:hover .round2 {
+            animation:spin2 2s 1;
+         }
+          
+        @keyframes spin1{
+            0%{
+              transform:rotate(0deg)
+            }
+            100%{
+              transform:rotate(360deg)
+            }
+        }
+        @keyframes spin2{
+            0%{
+              transform:rotate(0deg)
+            }
+            100%{
+              transform:rotate(-360deg)
+            }
+        }
+
+        .Font{
+         position:relative;
+         top:80px;
+         left:50px;
+        }
+        .Author{
+         font-size:20px;
+         color:brown;
+        }
+        .job{
+         position:relative;
+          left:16px;
+          font-size:14px;
+          color:brown;
+        }
+        .btn{
+         position:relative;
+         top:10px;
+         margin-top:15px;
+         left:5px;
+         border-radius:5px;
+         border-color:brown;
+         width:100px;
+         height:25px;
+         background-color:white;
+         font-size:10px;
+         transition:0.5s ease;
+      }
+      .btn:hover{
+         background-color:black;
+         color:white;
+      }
+      .rb{
+         position:absolute;
+         top:0px;
+         left:200px;
+         background-color:blanchedalmond;
+         width:100px;
+         height:98px;
+         text-align: center;
+         align-content:center;
+         display:grid;
+         border-bottom:white 1px;
+         transition:0.5s ease;
+      }
+      .rb:hover{
+         background-color:grey;
+      }
+      .rb2{
+         top:100px;
+      }
+      .rb3{
+         top:200px;
+         
+      }
+      
+    </style>
+    <script>
+    </script>
+</body>
