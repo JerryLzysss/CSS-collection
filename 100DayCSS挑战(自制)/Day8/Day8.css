@@ -40,26 +40,25 @@
 }
 #r {
   position: absolute;
-  background-color: white;
-  width: 140px;
-  height: 140px;
+  top: -100px;
+  left: -100px;
   transform: translate(-50%, -50%);
   border-radius: 50%;
 }
 #r .r-1 {
   position: absolute;
-  width: 210px;
-  height: 210px;
+  width: 320px;
+  height: 320px;
   left: 50px;
   transform: translate(0%, 0%);
   top: 50px;
-  animation: rot 4s 0.5s infinite;
+  animation: rot 4s 1s infinite;
   filter: blur(15px);
 }
 #r .r-1:after {
   content: '';
-  width: 8px;
-  height: 8px;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
   background-color: white;
   position: absolute;
@@ -67,18 +66,18 @@
 }
 #r .r-2 {
   position: absolute;
-  width: 180px;
-  height: 180px;
+  width: 280px;
+  height: 280px;
   left: 50px;
   transform: translate(0%, 0%);
   top: 50px;
-  animation: rot 4s 1s infinite;
+  animation: rot 4s 2s infinite;
   filter: blur(15px);
 }
 #r .r-2:after {
   content: '';
-  width: 16px;
-  height: 16px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   background-color: white;
   position: absolute;
@@ -86,18 +85,18 @@
 }
 #r .r-3 {
   position: absolute;
-  width: 150px;
-  height: 150px;
+  width: 240px;
+  height: 240px;
   left: 50px;
   transform: translate(0%, 0%);
   top: 50px;
-  animation: rot 4s 1.5s infinite;
+  animation: rot 4s 3s infinite;
   filter: blur(15px);
 }
 #r .r-3:after {
   content: '';
-  width: 24px;
-  height: 24px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
   background-color: white;
   position: absolute;
@@ -105,18 +104,18 @@
 }
 #r .r-4 {
   position: absolute;
-  width: 120px;
-  height: 120px;
+  width: 200px;
+  height: 200px;
   left: 50px;
   transform: translate(0%, 0%);
   top: 50px;
-  animation: rot 4s 2s infinite;
+  animation: rot 4s 4s infinite;
   filter: blur(15px);
 }
 #r .r-4:after {
   content: '';
-  width: 32px;
-  height: 32px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   background-color: white;
   position: absolute;
@@ -124,18 +123,18 @@
 }
 #r .r-5 {
   position: absolute;
-  width: 90px;
-  height: 90px;
+  width: 160px;
+  height: 160px;
   left: 50px;
   transform: translate(0%, 0%);
   top: 50px;
-  animation: rot 4s 2.5s infinite;
+  animation: rot 4s 5s infinite;
   filter: blur(15px);
 }
 #r .r-5:after {
   content: '';
-  width: 40px;
-  height: 40px;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
   background-color: white;
   position: absolute;
@@ -143,18 +142,18 @@
 }
 #r .r-6 {
   position: absolute;
-  width: 60px;
-  height: 60px;
+  width: 120px;
+  height: 120px;
   left: 50px;
   transform: translate(0%, 0%);
   top: 50px;
-  animation: rot 4s 3s infinite;
+  animation: rot 4s 6s infinite;
   filter: blur(15px);
 }
 #r .r-6:after {
   content: '';
-  width: 48px;
-  height: 48px;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
   background-color: white;
   position: absolute;
@@ -162,18 +161,18 @@
 }
 #r .r-7 {
   position: absolute;
-  width: 30px;
-  height: 30px;
+  width: 80px;
+  height: 80px;
   left: 50px;
   transform: translate(0%, 0%);
   top: 50px;
-  animation: rot 4s 3.5s infinite;
+  animation: rot 4s 7s infinite;
   filter: blur(15px);
 }
 #r .r-7:after {
   content: '';
-  width: 56px;
-  height: 56px;
+  width: 105px;
+  height: 105px;
   border-radius: 50%;
   background-color: white;
   position: absolute;
@@ -181,18 +180,18 @@
 }
 #r .r-8 {
   position: absolute;
-  width: 0px;
-  height: 0px;
+  width: 40px;
+  height: 40px;
   left: 50px;
   transform: translate(0%, 0%);
   top: 50px;
-  animation: rot 4s 4s infinite;
+  animation: rot 4s 8s infinite;
   filter: blur(15px);
 }
 #r .r-8:after {
   content: '';
-  width: 64px;
-  height: 64px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   background-color: white;
   position: absolute;

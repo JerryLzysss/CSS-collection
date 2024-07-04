@@ -6,9 +6,7 @@
 <body>
     <div class="frame">
         <div class="center">
-            <div id="r">
-
-            </div>
+           <div id="r"></div>
         </div>
       </div>
     <script>
@@ -17,9 +15,13 @@
         {
         const ball=document.createElement('div')
         ball.className="r-"+i
+        ball.style.animationDuration=i*2+"s"
         if(i%2==0)
         {
             ball.style.animationName="rot2"
+        }
+        else{
+            ball.style.animationName="rot"
         }
         r.appendChild(ball)
         }

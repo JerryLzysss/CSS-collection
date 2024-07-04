@@ -28,9 +28,8 @@
 }
 #r{
     position:absolute;
-    background-color:white;
-    width:140px;
-    height:140px;
+   top:-100px;
+   left:-100px;
     transform:translate(-50%,-50%);
     border-radius:50%;
     .fun(1,8);
@@ -38,28 +37,27 @@
       
       .r-@{i}{
         position:absolute;
-        width:30px*(8-@i);
-        height:30px*(8-@i);
+        width:40px*(9-@i);
+        height:40px*(9-@i);
         left:50px;
       
         transform:translate(0%,0%);
         top:50px;
-        animation:rot 4s unit(@i*0.5,s) infinite;
+        animation:rot 4s unit(@i,s) infinite;
         filter: blur(15px);   
             &:after{
                 content:'';
-                width:8px*@i;
-                height:8px*@i;
+                width:15px*@i;
+                height:15px*@i;
                 border-radius:50%;
                 background-color:white;
                 position:absolute;
                 filter: blur(3px);
             }
-        
-
         }
         .fun(@i+1,@n);
     }
+    
 }
 @keyframes rot
         {
