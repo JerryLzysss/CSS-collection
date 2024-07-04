@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="Day8.css" />
+</head>
+<body>
+    <div class="frame">
+        <div class="center">
+            <div id="r">
+
+            </div>
+        </div>
+      </div>
+    <script>
+        const r=document.getElementById("r")
+        for(let i=1;i<=8;i++)
+        {
+        const ball=document.createElement('div')
+        ball.className="r-"+i
+        if(i%2==0)
+        {
+            ball.style.animationName="rot2"
+        }
+        r.appendChild(ball)
+        }
+    </script>
+
+</body>

@@ -1,0 +1,216 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+  src: url(https://fonts.gstatic.com/s/opensans/v40/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4gaVc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: normal;
+  src: url(https://fonts.gstatic.com/s/opensans/v40/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsgH1x4gaVc.ttf) format('truetype');
+}
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #000;
+  color: #333;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  filter: contrast(25);
+}
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-style: preserve-3d;
+  filter: contrast(25);
+}
+#r {
+  position: absolute;
+  background-color: white;
+  width: 140px;
+  height: 140px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+#r .r-1 {
+  position: absolute;
+  width: 210px;
+  height: 210px;
+  left: 50px;
+  transform: translate(0%, 0%);
+  top: 50px;
+  animation: rot 4s 0.5s infinite;
+  filter: blur(15px);
+}
+#r .r-1:after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  filter: blur(3px);
+}
+#r .r-2 {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  left: 50px;
+  transform: translate(0%, 0%);
+  top: 50px;
+  animation: rot 4s 1s infinite;
+  filter: blur(15px);
+}
+#r .r-2:after {
+  content: '';
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  filter: blur(3px);
+}
+#r .r-3 {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  left: 50px;
+  transform: translate(0%, 0%);
+  top: 50px;
+  animation: rot 4s 1.5s infinite;
+  filter: blur(15px);
+}
+#r .r-3:after {
+  content: '';
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  filter: blur(3px);
+}
+#r .r-4 {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  left: 50px;
+  transform: translate(0%, 0%);
+  top: 50px;
+  animation: rot 4s 2s infinite;
+  filter: blur(15px);
+}
+#r .r-4:after {
+  content: '';
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  filter: blur(3px);
+}
+#r .r-5 {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  left: 50px;
+  transform: translate(0%, 0%);
+  top: 50px;
+  animation: rot 4s 2.5s infinite;
+  filter: blur(15px);
+}
+#r .r-5:after {
+  content: '';
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  filter: blur(3px);
+}
+#r .r-6 {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  left: 50px;
+  transform: translate(0%, 0%);
+  top: 50px;
+  animation: rot 4s 3s infinite;
+  filter: blur(15px);
+}
+#r .r-6:after {
+  content: '';
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  filter: blur(3px);
+}
+#r .r-7 {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: 50px;
+  transform: translate(0%, 0%);
+  top: 50px;
+  animation: rot 4s 3.5s infinite;
+  filter: blur(15px);
+}
+#r .r-7:after {
+  content: '';
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  filter: blur(3px);
+}
+#r .r-8 {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  left: 50px;
+  transform: translate(0%, 0%);
+  top: 50px;
+  animation: rot 4s 4s infinite;
+  filter: blur(15px);
+}
+#r .r-8:after {
+  content: '';
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  filter: blur(3px);
+}
+@keyframes rot {
+  0% {
+    transform: translate(0%, 0%) rotate(0deg);
+  }
+  100% {
+    transform: translate(0%, 0%) rotate(360deg);
+  }
+}
+@keyframes rot2 {
+  0% {
+    transform: translate(0%, 0%) rotate(0deg);
+  }
+  100% {
+    transform: translate(0%, 0%) rotate(-360deg);
+  }
+}

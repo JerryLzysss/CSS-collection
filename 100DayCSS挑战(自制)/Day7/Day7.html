@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="Day7.css" />
+</head>
+<body>
+    <div class="frame">
+        <div class="center">
+            <div class="background">
+                <div class="search">
+                    <span class="fa fa-bars" style="zoom:2.0"></span>
+                    <span class="content">Notifications</span>
+                    <span class="fa fa-search"></span>
+                </div>
+                <input class="btn" placeholder="Search...">
+                <div class="round">
+                    <div class="round1"></div>
+                    <div class="round2"></div>
+                    <div class="round3"></div>
+                </div>
+                <div class="toggle"></div>
+                <div class="date">
+                    <div class="title">9:24 AM</div>
+                    <div class="inf">John Walker posted a photo on your wall.</div>
+                    <div class="title">8:19 AM</div>
+                    <div class="inf">Alice Parker commented your last post.</div>
+                    <div class="title">Yesterday</div>
+                    <div class="inf">Luke Wayne added you as friend.</div>
+                </div>
+            </div>
+            <div class="sidebar">
+                <span class="fa fa-dashboard">Dashboard</span>
+                <span class="fa fa-user">Profile</span>
+                <span class="fa fa-bell">Notifications</span>
+                <span class="fa fa-comments">Messages</span>
+                <span class="fa fa-gear">Settings</span>
+            </div>
+        </div>
+      </div>
+    <script>
+        const sh=document.getElementsByClassName("fa")[1];
+        const sh0=document.getElementsByClassName("fa")[0];
+        const btn=document.getElementsByClassName("btn")[0];
+        const bg=document.getElementsByClassName("background")[0];
+        const sb=document.getElementsByClassName("sidebar")[0];
+        let op=1;
+        let op0=1;
+        sh0.addEventListener('click',function(){
+            if(op0==1)
+            {
+            sb.setAttribute('style','visibility:visible;left:-159px');
+            bg.setAttribute('style','left:140px')
+           
+            }
+            else{
+            sb.setAttribute('style','visibility:hidden;left:-139px');
+            bg.setAttribute('style','left:0px')
+            }
+            op0^=1;
+        })
+        sh.addEventListener('click',function(){
+          
+           if(op==0)
+           {
+           btn.setAttribute('style','opacity:0;left:30px;visibility:hidden');
+           
+           } 
+           else
+           {
+            btn.setAttribute('style','opacity:1;left:20px;visibility:visible');
+           
+        }
+            op=op^1
+            
+        })
+
+    </script>
+
+</body>

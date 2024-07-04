@@ -1,0 +1,81 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600,400);
+
+.frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 2px;
+    box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+    overflow: hidden;
+    background: #000;
+    color: #333;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    filter: contrast(25);
+}
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  transform-style:preserve-3d;
+  filter:contrast(25);
+}
+#r{
+    position:absolute;
+    background-color:white;
+    width:140px;
+    height:140px;
+    transform:translate(-50%,-50%);
+    border-radius:50%;
+    .fun(1,8);
+    .fun(@i,@n) when(@i<=@n){
+      
+      .r-@{i}{
+        position:absolute;
+        width:30px*(8-@i);
+        height:30px*(8-@i);
+        left:50px;
+      
+        transform:translate(0%,0%);
+        top:50px;
+        animation:rot 4s unit(@i*0.5,s) infinite;
+        filter: blur(15px);   
+            &:after{
+                content:'';
+                width:8px*@i;
+                height:8px*@i;
+                border-radius:50%;
+                background-color:white;
+                position:absolute;
+                filter: blur(3px);
+            }
+        
+
+        }
+        .fun(@i+1,@n);
+    }
+}
+@keyframes rot
+        {
+            0%{
+                transform:translate(0%,0%) rotate(0deg);
+            }
+            100%{
+                transform:translate(0%,0%) rotate(360deg);
+            }
+        }
+        @keyframes rot2
+        {
+            0%{
+                transform:translate(0%,0%) rotate(0deg);
+            }
+            100%{
+                transform:translate(0%,0%) rotate(-360deg);
+            }
+        }

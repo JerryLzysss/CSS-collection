@@ -1,0 +1,166 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+  src: url(https://fonts.gstatic.com/s/opensans/v40/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4gaVc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: normal;
+  src: url(https://fonts.gstatic.com/s/opensans/v40/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsgH1x4gaVc.ttf) format('truetype');
+}
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #fff;
+  color: #333;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #264057;
+}
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.sidebar {
+  position: absolute;
+  top: -100px;
+  left: -139px;
+  background-color: #B2DAFF;
+  visibility: hidden;
+  top: -120px;
+  transition: all 0.5s ease-in-out;
+}
+.sidebar .fa {
+  height: 50px;
+  line-height: 50px;
+  vertical-align: middle;
+  width: 100%;
+}
+.sidebar .fa:hover {
+  color: white;
+  transition: 1s ease;
+  background-color: grey;
+  cursor: pointer;
+}
+.sidebar .fa:before {
+  margin-right: 5px;
+  margin-left: 10px;
+}
+.background {
+  position: absolute;
+  background-color: white;
+  width: 300px;
+  height: 300px;
+  transform: translate(-50%, -50%);
+  left: 0px;
+  transition: all 0.5s ease-in-out;
+  z-index: 1;
+  box-shadow: 5px 5px 10px black ;
+}
+.background .search {
+  position: absolute;
+  width: 100%;
+  background-color: #5F98CD;
+  height: 80px;
+  line-height: 80px;
+  font-size: 20px;
+}
+.background .search .content {
+  margin-left: 45px;
+}
+.background .search .fa-search:before {
+  zoom: 0.8;
+  margin-left: 60px;
+}
+.background .search .fa-search:hover {
+  cursor: pointer;
+}
+.background .search .fa-bars:before {
+  zoom: 0.4;
+  margin-left: 30px;
+}
+.background .search .fa-bars:hover {
+  cursor: pointer;
+}
+.background .toggle {
+  background-color: lightgrey;
+  width: 5px;
+  height: 220px;
+  left: 40px;
+  top: 80px;
+  position: absolute;
+}
+.background .round {
+  position: absolute;
+  width: 30px;
+  height: 220px;
+  left: 37px;
+  top: 80px;
+  z-index: 1;
+  background-color: transparent;
+}
+.background .round .round1 {
+  border: 1px solid #264057;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 18px;
+}
+.background .round .round2 {
+  border: 1px solid #264057;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 84px;
+}
+.background .round .round3 {
+  border: 1px solid #264057;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 148px;
+}
+.background .btn {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  width: 200px;
+  height: 40px;
+  z-index: 1;
+  border-radius: 20px;
+  font-size: 15px;
+  padding-left: 15px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease-out;
+}
+.background .date {
+  position: absolute;
+  top: 90px;
+  left: 60px;
+}
+.background .date .title {
+  font-size: 12px;
+  margin-top: 5px;
+}
+.background .date .inf {
+  font-size: 16px;
+}
