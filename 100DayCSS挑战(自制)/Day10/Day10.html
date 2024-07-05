@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="Day10.css" />
+  
+</head>
+<body>
+    <div class="frame">
+        <div class="center">
+            <div class="bg">
+                
+                <svg
+                    class="round"
+                    viewbox="0 0 310 310"
+                    xlmns="https://www.w3.org/2000/svg"
+                >
+                <circle cx="151" cy="161" r="147"></circle>
+                </svg>
+                <div class="Days">
+
+                </div>
+                <div class="timer">
+
+                </div>
+                <div class="Fav">
+                    <span><div class="fa fa-heart"></div>81</span>
+                    <span>1248 KCAL</span>
+                </div>
+            </div>
+        </div>
+      </div>
+    <script>
+        function time()
+        {
+        const datetime=new Date();
+        let week=datetime.getDay();
+        let year=datetime.getFullYear();
+        let month=datetime.getMonth()+1;
+        let day=datetime.getDate();
+        const hours=datetime.getHours();
+        const minutes=datetime.getMinutes();
+        const seconds=datetime.getSeconds();
+        
+        console.log(week,year,month,day)
+        const Days=document.getElementsByClassName("Days");
+        const timer=document.getElementsByClassName("timer");
+        
+        if(month<10)
+        month="0"+month
+        if(day<10)
+        day="0"+day
+        switch(week)
+        {
+            case 0:week="SUN";break;
+            case 1:week='MON';break;
+            case 2:week='TUE';break;
+            case 3:week='WED';break;
+            case 4:week='THU';break;
+            case 5:week='FRI';break;
+            case 6:week='SAT';break;
+        }
+        Days[0].innerHTML=year+"/"+month+"/"+day+"   "+week;
+        timer[0].innerHTML=hours+":"+minutes+":"+seconds;
+        }
+        time()
+        function round()
+        {
+            let rounds=document.getElementsByClassName("rounds")[0];
+            let bg=document.getElementsByClassName("bg")[0];
+            for(let j=0;j<4;j++)
+            {
+                
+                let round=document.createElement("div");
+                round.className="rounds";
+                switch(j)
+                {
+                    case 0:round.style.transform="rotate(90deg)";round.style.top="60px";round.style.left="62px";break;
+                    case 1:round.style.transform="rotate(180deg)";round.style.top="16px";round.style.left="19px";break;
+                    case 2:round.style.transform="rotate(270deg)";round.style.top="-24px";round.style.left="59px";break;
+                    case 3:round.style.transform="rotate(0deg)";break;
+                }
+                for(let i=0;i<87.5;i+=8.75)
+                {
+                    let round2=document.createElement("div");
+                    round2.className="round2";
+                    round2.style.top=82.5+i+"px";
+                    let a=82;
+                    let b=84.5;
+                    round2.style.left=Math.sqrt((a*a/b/b)*(b*b-i*i))+"px";
+                    round.appendChild(round2);
+                }
+                    bg.appendChild(round);
+            }
+          
+        }
+        round()
+    </script>
+
+</body>

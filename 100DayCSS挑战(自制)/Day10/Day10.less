@@ -1,0 +1,115 @@
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+.frame{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #333;
+  color: #fff;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    .rounds{
+        position:absolute;
+        width:82px;
+        height:165px;
+        top:17px;
+        left:101px;
+        
+        .round2{
+            position:absolute;
+            width:3px;
+            height:3px;
+            background-color:white;
+            border-radius:50%;
+        }
+    }
+
+    .round{
+        position:absolute;
+        width:194px;
+        height:194px;
+        background-color:transparent;
+        border-radius:50%;
+        fill:none;
+        stroke:red;
+        stroke-width:3px;
+        stroke-dasharray: 924;
+        stroke-dashoffset: 231;
+        transform:rotate(-90deg);
+        animation:stroke 10s infinite;
+    }
+    .bg{
+    background-color:black;
+    position:absolute;
+    width:200px;
+    height:200px;
+    transform:translate(-50%,-50%);
+    border-radius:50%;
+    border:10px grey solid;
+        .Days{
+            position:absolute;
+            top:50px;
+            left:30px;
+            font-size:20px;
+        }
+        .timer{
+            position:absolute;
+            top:65px;
+            left:22px;
+            font-size:40px;
+        }
+        .Fav{
+            position:absolute;
+            top:110px;
+            left:28px;
+            font-size:20px;
+        }
+    }
+    .fa{
+    color:red;
+    animation:sc 0.5s infinite;
+    }
+    @keyframes sc{
+    0%{
+        transform:scale(1.0);
+    }
+    50%{
+        transform:scale(1.2);
+    }
+    100%{
+        transform:scale(1.0);
+    }
+    }
+    @keyframes stroke{
+        from {
+            stroke-dashoffset: 924;
+          
+        }
+        50% {
+           stroke-dashoffset: 0;
+           
+        }
+       
+        to {
+            stroke-dashoffset: -924;
+           
+        }
+    }
+}
+
