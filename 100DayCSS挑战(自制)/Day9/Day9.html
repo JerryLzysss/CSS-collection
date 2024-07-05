@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="Day9.css" />
+  
+</head>
+<body>
+    <div class="frame">
+        <div class="center">
+            <div class="header">
+             
+                <div class="moon">
+                    <div class="moonP m1"></div>
+                    <div class="moonP m2"></div>
+                    <div class="moonP m3"></div>
+                    <div class="moonP m4"></div>
+                    <div class="moonP m5"></div>
+                    <div class="moonP m6"></div>
+                    <div class="moonP m7"></div>
+                </div>
+                <div id="rains">
+                    <div class="rain"></div>
+                </div>
+                <div class="hills">
+                    <div class="hill h1"></div>
+                    <div class="hill h2"></div>
+                    <div class="hill h3"></div>
+                    <div class="hill h4"></div>
+                    <div class="hill h5"></div>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="temp">12°</div>
+                <div class="info">
+                    <div class="info-1">Wind:E 7km/h</div>
+                    <div class="info-1">Humidity:87%</div>
+                    
+                </div>
+                <div class="day">
+                    <div class="day-1">TUE 21° / 9°</div>
+                    <div class="day-1">WED 23° / 10°</div>
+                </div>
+            </div>
+        </div>
+      </div>
+    <script>
+        const rains=document.getElementById("rains");
+        for(let i=0;i<10;i++)
+        {
+            const rain=document.createElement("div");
+            const rain2=document.createElement("div");
+            rain.className="rain"
+            rain2.className="rain2"
+            rain.style.top=-10+"px";
+            rain.style.left=Math.random()*500+100+"px";
+            rain.style.animationDelay=Math.random()*(0.5*i)+"s";
+            rain2.style.top=-10+"px";
+            rain2.style.left=Math.random()*500+200+"px";
+            rain2.style.opacity=0.3;
+            rain2.style.width=5+"px";
+            rain2.style.height=4.5+"px";
+           
+            rain2.style.animationDelay=Math.random()*(0.5*i)+"s";
+            rains.appendChild(rain);
+            rains.appendChild(rain2);
+            
+        }
+    </script>
+
+</body>

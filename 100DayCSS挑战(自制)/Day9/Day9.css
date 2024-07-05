@@ -1,0 +1,217 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: normal;
+  src: url(https://fonts.gstatic.com/s/opensans/v40/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsiH0B4gaVc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+  src: url(https://fonts.gstatic.com/s/opensans/v40/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsg-1x4gaVc.ttf) format('truetype');
+}
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #fff;
+  color: #333;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.center .header {
+  background-color: #152a3b;
+  width: 1000px;
+  height: 300px;
+  position: absolute;
+  top: -200px;
+  left: -200px;
+  overflow: hidden;
+}
+.center .header .moon {
+  background-color: #ebeb58;
+  position: absolute;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  top: 30px;
+  left: 30px;
+  overflow: hidden;
+  background: #F6EDBD;
+  box-shadow: 0 0 10px 0 #F6EDBD;
+  animation: rise 2s forwards;
+}
+@keyframes rise {
+  0% {
+    top: 300px;
+  }
+  100% {
+    top: 30px;
+  }
+}
+.center .header .rain {
+  background-color: #7FC1F9;
+  width: 10px;
+  height: 9px;
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  border-radius: 0% 0% 50% 50%;
+  transform: rotate(30deg);
+  animation: drop 1s infinite;
+  z-index: 1;
+}
+.center .header .rain:after {
+  content: '';
+  width: 10px;
+  height: 20px;
+  background-color: #7FC1F9;
+  position: absolute;
+  top: -20px;
+  clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+}
+.center .header .rain2 {
+  background-color: #7FC1F9;
+  width: 10px;
+  height: 9px;
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  border-radius: 0% 0% 50% 50%;
+  transform: rotate(30deg);
+  animation: drop 1s infinite;
+  z-index: 1;
+}
+.center .header .rain2:after {
+  content: '';
+  width: 10px;
+  height: 20px;
+  background-color: #7FC1F9;
+  position: absolute;
+  top: -20px;
+  clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+}
+.center .header .rain2:after {
+  content: '';
+  width: 5px;
+  height: 10px;
+  top: -10px;
+}
+@keyframes drop {
+  0% {
+    transform: translate3d(0, 0, 0) scaleX(1) scaleY(1) rotate(30deg);
+  }
+  95% {
+    transform: translate3d(-300px, 300px, 0) scaleX(1) scaleY(1) rotate(30deg);
+  }
+  100% {
+    transform: translate3d(-300px, 300px, 0) scaleX(3) scaleY(0) rotate(0deg);
+  }
+}
+.center .header .h1 {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background-color: #405364;
+  border-radius: 50%;
+  top: 250px;
+  opacity: 1;
+  left: -100px;
+}
+.center .header .h2 {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background-color: #405364;
+  border-radius: 50%;
+  top: 220px;
+  opacity: 0.5;
+  left: -50px;
+}
+.center .header .h3 {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background-color: #405364;
+  border-radius: 50%;
+  top: 250px;
+  opacity: 1;
+  left: 100px;
+}
+.center .header .h4 {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background-color: #405364;
+  border-radius: 50%;
+  top: 220px;
+  opacity: 0.5;
+  left: 190px;
+}
+.center .header .h5 {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background-color: #405364;
+  border-radius: 50%;
+  top: 250px;
+  opacity: 1;
+  left: 300px;
+}
+.center .header .h6 {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background-color: #405364;
+  border-radius: 50%;
+  top: 220px;
+  opacity: 0.5;
+  left: 430px;
+}
+.center .header .h7 {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background-color: #405364;
+  border-radius: 50%;
+  top: 250px;
+  opacity: 1;
+  left: 500px;
+}
+.center .bottom {
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  top: 100px;
+  left: -200px;
+  height: 100px;
+  width: 400px;
+}
+.center .bottom .temp {
+  font-size: 40px;
+  margin-top: 20px;
+}
+.center .bottom .info {
+  font-size: 18px;
+  margin-top: 26px;
+}
+.center .bottom .day {
+  font-size: 18px;
+  margin-top: 26px;
+}

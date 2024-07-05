@@ -1,0 +1,150 @@
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+@rain:#7FC1F9;
+@bg: #152a3b;
+@moon:rgb(235, 235, 88);
+@moonP:rgb(214, 214, 125);
+@Wind:#405364;
+.frame{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #fff;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+  .header{
+    background-color:@bg;
+    width:1000px;
+    height:300px;
+    position:absolute;
+    top:-200px;
+    left:-200px;
+    overflow:hidden;
+    .moon{
+        background-color:@moon;
+        position:absolute;
+        border-radius:50%;
+        width:100px;
+        height:100px;
+        top:30px;
+        left:30px;
+        overflow:hidden;
+        background: #F6EDBD;
+        box-shadow: 0 0 10px 0 #F6EDBD;
+        animation:rise 2s forwards;
+
+    }
+    @keyframes rise{
+        0%{
+            top:300px;
+        }
+        100%{
+            top:30px;
+        }
+    }
+    .rain{
+        background-color:@rain;
+        width:10px;
+        height:9px;
+        position:absolute;
+        top:100px;
+        left:100px;
+        border-radius:0% 0% 50% 50%;
+        transform:rotate(30deg);
+        animation:drop 1s infinite;
+        z-index:1;
+        &:after{
+            content:'';
+            width:10px;
+            height:20px;
+            background-color:@rain;
+            position:absolute;
+            top:-20px;
+            clip-path:polygon(50% 0%,100% 100%,0% 100%);
+         
+        }
+    }
+    .rain2{
+        .rain();
+       
+        &:after{
+            content:'';
+            width:5px;
+            height:10px;
+            top:-10px;
+        }
+    }
+    @keyframes drop{
+        0%{    
+           transform:translate3d(0,0,0) scaleX(1) scaleY(1) rotate(30deg);
+        }
+        95%{
+           transform:translate3d(-300px,300px,0) scaleX(1) scaleY(1) rotate(30deg);
+        }
+        100% {
+           transform:translate3d(-300px,300px,0) scaleX(3) scaleY(0) rotate(0deg);
+        }
+        
+    }
+    .hills(1,7);
+    .hills(@i,@n) when(@i<=@n){
+      
+        .h@{i}
+        {
+            position:absolute;
+            width:300px;
+            height:300px;
+          
+            background-color:@Wind;
+            border-radius:50%;
+            top:if(mod(@i,2)=0,220px,250px);
+            opacity:if(mod(@i,2)=0,0.5,1);
+            left:if(mod(@i,2)=0,unit(((@i)-2)*120-50,px),unit(((@i)-2)*100,px));
+        }
+        .hills(@i+1,@n);     
+    }
+  
+     }
+  .bottom{
+    display:flex;
+    justify-content: space-around;
+    position:absolute;
+    top:100px;
+    left:-200px;
+    height:100px;
+    width:400px;
+
+    .temp{
+        font-size:40px;
+        margin-top:20px;
+    }
+    .info{
+        font-size:18px;
+        margin-top:26px;
+    }
+    .day{
+        font-size:18px;
+        margin-top:26px;
+    }
+    }
+}
+
+
