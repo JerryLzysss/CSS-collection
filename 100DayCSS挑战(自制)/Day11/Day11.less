@@ -1,0 +1,80 @@
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+.frame{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #333;
+  color: #fff;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    .bg{
+        position:absolute;
+        background-color:bisque;
+        top:-350px;
+        left:-200px;
+        width:400px;
+        height:400px;
+        .leftShoes{
+            position:absolute;
+            background-image:url("https://100dayscss.com/codepen/doc-martens.svg");
+            background-repeat:no-repeat;
+            top:245px;
+            left:80px;
+            width:150px;
+            height:150px;
+            animation:spinL 2s infinite;
+        }
+        @keyframes spinL{
+            0%{
+                left:30px;
+                transform:rotate(45deg);
+            }
+            50%{
+                left:180px;
+                transform:rotate(-30deg);
+            }
+            100%{
+                left:30px;
+                transform:rotate(45deg);
+            }
+        }
+        .rightShoes{
+            .leftShoes();
+            animation:spinR 2s infinite;
+        }
+        @keyframes spinR{
+            0%{
+                left:180px;
+                transform:rotate(-30deg);
+               
+            }
+            50%{
+                left:30px;
+                transform:rotate(45deg);
+            }
+            100%{
+                left:180px;
+                transform:rotate(-30deg);
+      
+            }
+        }
+    }
+}
+

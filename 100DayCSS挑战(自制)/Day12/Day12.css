@@ -1,0 +1,114 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: normal;
+  src: url(https://fonts.gstatic.com/s/opensans/v40/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsiH0B4gaVc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+  src: url(https://fonts.gstatic.com/s/opensans/v40/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsg-1x4gaVc.ttf) format('truetype');
+}
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #44b7dd;
+  color: #fff;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.center .bg {
+  position: absolute;
+  background-color: bisque;
+  top: -350px;
+  left: -200px;
+  width: 400px;
+  height: 400px;
+}
+.center .Alpha {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  font-size: 22px;
+  top: 50px;
+}
+.center .Author {
+  margin-top: 40px;
+}
+.center .announce {
+  background-color: grey;
+  cursor: pointer;
+}
+.center .announce:hover .open {
+  visibility: visible;
+  opacity: 1;
+  top: -70px;
+}
+.center .announce .open {
+  position: absolute;
+  width: 270px;
+  height: 100px;
+  top: -100px;
+  left: 20px;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 1s ease;
+}
+.center .announce .open:before {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  background-color: grey;
+  width: 20px;
+  height: 20px;
+  top: 90px;
+  left: 115px;
+  clip-path: polygon(0% 0%, 100% 0%, 50% 70%);
+}
+.center .announce .open .upper {
+  background-color: white;
+  padding: 5px;
+  padding-left: 10px;
+  color: grey;
+  font-size: 10px;
+}
+.center .announce .open .lower {
+  background-color: grey;
+  padding: 10px;
+  font-size: 15px;
+}
+.center .pointer {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 0px;
+}
+.center .pointer:before {
+  color: #6AC2E3;
+  display: block;
+  position: absolute;
+  z-index: 0;
+  content: '„';
+  font-family: Arial;
+  font-size: 250px;
+  top: -170px;
+  left: -25px;
+}

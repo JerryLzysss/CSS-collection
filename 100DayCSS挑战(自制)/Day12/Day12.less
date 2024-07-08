@@ -1,0 +1,111 @@
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+.frame{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: rgb(68, 183, 221);
+  color: #fff;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    .bg{
+        position:absolute;
+        background-color:bisque;
+        top:-350px;
+        left:-200px;
+        width:400px;
+        height:400px;
+        
+    }
+    .Alpha{
+        position:relative;
+        width:300px;
+        height:300px;
+        font-size:22px;
+        top:50px;
+    }
+    .Author{
+        margin-top:40px;
+        
+    }
+    .announce{
+        background-color:grey;
+        cursor:pointer;
+       
+        &:hover .open{
+            visibility:visible;
+            opacity:1;
+            top:-70px;
+        }
+        .open{
+            position:absolute;
+            width:270px;
+            height:100px;
+            top:-100px;
+            left:20px;
+            visibility:hidden;
+            opacity:0;
+            transition:all 1s ease;
+            &:before{
+                content:'';
+               position: absolute;
+               z-index: 0;
+               background-color:grey;
+               width:20px;
+               height:20px;
+               top:90px;
+               left:115px;
+               clip-path:polygon(0% 0%,100% 0%,50% 70%);
+           }
+            .upper{
+                background-color:white;
+                padding:5px;
+                padding-left:10px;
+                color:grey;
+                font-size:10px;
+            }
+            .lower{
+                background-color:grey;
+                padding:10px;
+                font-size:15px;
+              
+            }
+        
+        }
+    }
+    .pointer{
+        position:absolute;
+        width:30px;
+        height:30px;
+        top:0px;
+        &:before{
+            color:#6AC2E3;
+            display: block;
+            position: absolute;
+            z-index: 0;
+            content: '„';
+            font-family: Arial;
+            font-size: 250px;
+            top:-170px;
+            left:-25px;
+        }
+    }
+    
+}
+
