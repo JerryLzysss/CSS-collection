@@ -1,0 +1,212 @@
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+.frame{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #fff;
+  color: #fff;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+    .pic-1{
+        cursor:pointer;
+        position:absolute;
+        background-image:url("https://100dayscss.com/codepen/13-4.jpg");
+        background-repeat: no-repeat;
+
+        width:200px;
+        height:200px;
+        .over{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width:194px;
+            height:194px;
+            background: #000;
+            opacity: 0;
+            transition: all .6s ease-in-out;
+        }
+    }
+    .pic-2{
+        .pic-1();
+        top:-200px;
+        left:-200px;
+        background-image:url("https://100dayscss.com/codepen/13-1.jpg");
+       
+    }
+    .pic-3{
+        .pic-1();
+        top:-200px;
+        left:0px;
+        background-image:url("https://100dayscss.com/codepen/13-2.jpg");
+
+    }
+    .pic-4{
+        .pic-1();
+        top:0px;
+        left:-200px;
+        background-image:url("https://100dayscss.com/codepen/13-3.jpg");
+       
+    }
+    
+    .point{
+        cursor:pointer;
+        background-color:rgb(209, 123, 123);
+        position:absolute;
+        width:100px;
+        height:100px;
+        top:-100px;
+        left:-100px;
+        border-radius:50%;
+        opacity:0;   
+        
+        .one{
+           position:absolute;
+           background-color:white;
+           width:5px;
+           height:30px;
+           top:35px;
+           left:47.5px;
+        }
+        .two{
+            position:absolute;
+            background-color:white;
+            width:30px;
+            height:5px;
+            top:47.5px;
+            left:35px;
+            
+        }
+    }
+    @keyframes scale{
+        0%{
+            opacity:0;
+            transform:scale(1.5);
+        }
+        100%{
+            opacity:1;
+          transform:scale(0.5);
+        }
+    }
+    @keyframes scale2{
+        0%{
+            opacity:1;
+            transform:scale(0.5);
+        }
+        100%{
+            opacity:0;
+          transform:scale(1.5);
+        }
+    }
+    .detail-active{
+        position:absolute;
+        width:400px;
+        height:400px;
+        top:-200px;
+        left:-200px;
+        transition: all 0.6s;
+        visibility:hidden;
+        .toper{
+            position:absolute;
+            transition: all 0.6s;
+            top:0px;
+            
+            width:400px;
+            height:200px;
+            background-image:url("https://100dayscss.com/codepen/13-1-header.jpg");
+            .close{
+                position:absolute;
+                width:50px;
+                height:50px;
+                top:10px;
+                border-radius:50%;
+                background-color:rgb(179, 124, 124);
+                left:340px;
+                cursor:pointer;
+                    .LX{
+                    position:absolute;
+                    background-color:white;
+                    width:20px;
+                    height:5px;
+                    top:22.5px;
+                    left:16px;
+                    transform:rotate(45deg)
+                    }
+                    .RX{
+                        .LX();
+                        transform:rotate(135deg)
+                    }
+                
+            }
+        }
+        .middle{
+            transition: all 0.4s;
+            position:absolute;
+            width:150px;
+            height:150px;
+            top:125px;
+            left:125px;
+            background-image:url("https://100dayscss.com/codepen/13-4.jpg");
+            background-position:center center;
+            overflow:hidden;
+            border-radius:50%;
+            z-index:1;
+        }
+        .footer{
+            transition: all 0.6s;
+            position:absolute;
+            width:400px;
+            height:200px;
+            top:200px;
+            background-color:rgb(179, 124, 124);
+            .fa{
+                position:relative;
+                width:50px;
+                height:50px;
+                font-size:30px;
+                text-align:center;
+                top:100px;
+                left:20px;
+                margin-left:50px;
+                border-radius:50%;
+                border:1px solid;
+                line-height:50px;	
+                &:hover{
+                    background-color:white;
+                    color:rgb(179, 124, 124);
+                }
+            }
+        }
+    }
+    .detail{
+        .detail-active();
+        .toper{
+            top:-200px;
+        }
+        .middle{
+            top:-150px;
+        }
+        .footer{
+            top:400px;
+        }
+    }
+}
+
+

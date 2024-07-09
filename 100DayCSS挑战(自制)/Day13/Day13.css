@@ -1,0 +1,342 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: normal;
+  src: url(https://fonts.gstatic.com/s/opensans/v40/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsiH0B4gaVc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+  src: url(https://fonts.gstatic.com/s/opensans/v40/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsg-1x4gaVc.ttf) format('truetype');
+}
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #fff;
+  color: #fff;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.center .pic-1 {
+  cursor: pointer;
+  position: absolute;
+  background-image: url("https://100dayscss.com/codepen/13-4.jpg");
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 200px;
+}
+.center .pic-1 .over {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 194px;
+  height: 194px;
+  background: #000;
+  opacity: 0;
+  transition: all 0.6s ease-in-out;
+}
+.center .pic-2 {
+  cursor: pointer;
+  position: absolute;
+  background-image: url("https://100dayscss.com/codepen/13-4.jpg");
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 200px;
+  top: -200px;
+  left: -200px;
+  background-image: url("https://100dayscss.com/codepen/13-1.jpg");
+}
+.center .pic-2 .over {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 194px;
+  height: 194px;
+  background: #000;
+  opacity: 0;
+  transition: all 0.6s ease-in-out;
+}
+.center .pic-3 {
+  cursor: pointer;
+  position: absolute;
+  background-image: url("https://100dayscss.com/codepen/13-4.jpg");
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 200px;
+  top: -200px;
+  left: 0px;
+  background-image: url("https://100dayscss.com/codepen/13-2.jpg");
+}
+.center .pic-3 .over {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 194px;
+  height: 194px;
+  background: #000;
+  opacity: 0;
+  transition: all 0.6s ease-in-out;
+}
+.center .pic-4 {
+  cursor: pointer;
+  position: absolute;
+  background-image: url("https://100dayscss.com/codepen/13-4.jpg");
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 200px;
+  top: 0px;
+  left: -200px;
+  background-image: url("https://100dayscss.com/codepen/13-3.jpg");
+}
+.center .pic-4 .over {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 194px;
+  height: 194px;
+  background: #000;
+  opacity: 0;
+  transition: all 0.6s ease-in-out;
+}
+.center .point {
+  cursor: pointer;
+  background-color: #d17b7b;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: -100px;
+  left: -100px;
+  border-radius: 50%;
+  opacity: 0;
+}
+.center .point .one {
+  position: absolute;
+  background-color: white;
+  width: 5px;
+  height: 30px;
+  top: 35px;
+  left: 47.5px;
+}
+.center .point .two {
+  position: absolute;
+  background-color: white;
+  width: 30px;
+  height: 5px;
+  top: 47.5px;
+  left: 35px;
+}
+@keyframes scale {
+  0% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(0.5);
+  }
+}
+@keyframes scale2 {
+  0% {
+    opacity: 1;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
+.center .detail-active {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  top: -200px;
+  left: -200px;
+  transition: all 0.6s;
+  visibility: hidden;
+}
+.center .detail-active .toper {
+  position: absolute;
+  transition: all 0.6s;
+  top: 0px;
+  width: 400px;
+  height: 200px;
+  background-image: url("https://100dayscss.com/codepen/13-1-header.jpg");
+}
+.center .detail-active .toper .close {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 10px;
+  border-radius: 50%;
+  background-color: #b37c7c;
+  left: 340px;
+  cursor: pointer;
+}
+.center .detail-active .toper .close .LX {
+  position: absolute;
+  background-color: white;
+  width: 20px;
+  height: 5px;
+  top: 22.5px;
+  left: 16px;
+  transform: rotate(45deg);
+}
+.center .detail-active .toper .close .RX {
+  position: absolute;
+  background-color: white;
+  width: 20px;
+  height: 5px;
+  top: 22.5px;
+  left: 16px;
+  transform: rotate(45deg);
+  transform: rotate(135deg);
+}
+.center .detail-active .middle {
+  transition: all 0.4s;
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  top: 125px;
+  left: 125px;
+  background-image: url("https://100dayscss.com/codepen/13-4.jpg");
+  background-position: center center;
+  overflow: hidden;
+  border-radius: 50%;
+  z-index: 1;
+}
+.center .detail-active .footer {
+  transition: all 0.6s;
+  position: absolute;
+  width: 400px;
+  height: 200px;
+  top: 200px;
+  background-color: #b37c7c;
+}
+.center .detail-active .footer .fa {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+  text-align: center;
+  top: 100px;
+  left: 20px;
+  margin-left: 50px;
+  border-radius: 50%;
+  border: 1px solid;
+  line-height: 50px;
+}
+.center .detail-active .footer .fa:hover {
+  background-color: white;
+  color: #b37c7c;
+}
+.center .detail {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  top: -200px;
+  left: -200px;
+  transition: all 0.6s;
+  visibility: hidden;
+}
+.center .detail .toper {
+  position: absolute;
+  transition: all 0.6s;
+  top: 0px;
+  width: 400px;
+  height: 200px;
+  background-image: url("https://100dayscss.com/codepen/13-1-header.jpg");
+}
+.center .detail .toper .close {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 10px;
+  border-radius: 50%;
+  background-color: #b37c7c;
+  left: 340px;
+  cursor: pointer;
+}
+.center .detail .toper .close .LX {
+  position: absolute;
+  background-color: white;
+  width: 20px;
+  height: 5px;
+  top: 22.5px;
+  left: 16px;
+  transform: rotate(45deg);
+}
+.center .detail .toper .close .RX {
+  position: absolute;
+  background-color: white;
+  width: 20px;
+  height: 5px;
+  top: 22.5px;
+  left: 16px;
+  transform: rotate(45deg);
+  transform: rotate(135deg);
+}
+.center .detail .middle {
+  transition: all 0.4s;
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  top: 125px;
+  left: 125px;
+  background-image: url("https://100dayscss.com/codepen/13-4.jpg");
+  background-position: center center;
+  overflow: hidden;
+  border-radius: 50%;
+  z-index: 1;
+}
+.center .detail .footer {
+  transition: all 0.6s;
+  position: absolute;
+  width: 400px;
+  height: 200px;
+  top: 200px;
+  background-color: #b37c7c;
+}
+.center .detail .footer .fa {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+  text-align: center;
+  top: 100px;
+  left: 20px;
+  margin-left: 50px;
+  border-radius: 50%;
+  border: 1px solid;
+  line-height: 50px;
+}
+.center .detail .footer .fa:hover {
+  background-color: white;
+  color: #b37c7c;
+}
+.center .detail .toper {
+  top: -200px;
+}
+.center .detail .middle {
+  top: -150px;
+}
+.center .detail .footer {
+  top: 400px;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="Day13.css" />
+  
+</head>
+<body>
+    <div class="frame">
+        <div class="center">
+            <div class="pic-1 pic">
+                <div class="over"></div>
+            </div>
+            <div class="pic-2 pic">
+                <div class="over"></div>
+            </div>
+            <div class="pic-3 pic">
+                <div class="over"></div>
+            </div>
+            <div class="pic-4 pic">
+                <div class="over"></div>
+            </div>
+            <div class="point">
+                <div class="one"></div>
+                <div class="two"></div>
+            </div>
+            <div class="detail">
+                <div class="toper">
+                    <div class="close">
+                        <div class="LX"></div>
+                        <div class="RX"></div>
+                    </div>
+                </div>
+                <div class="middle"></div>
+                <div class="footer">
+                    <div class="fa fa-phone"></div>
+                    <div class="fa fa-comment"></div>
+                    <div class="fa fa-heart"></div>
+                </div>
+            </div>
+        </div>
+        
+      </div>
+    <script>
+        const pic=document.getElementsByClassName("pic")
+        const point=document.getElementsByClassName("point")[0]
+        const over=document.getElementsByClassName("over")
+        const detail=document.getElementsByClassName("detail")[0]
+        const close=document.getElementsByClassName("close")[0]
+        const middle=document.getElementsByClassName("middle")[0]
+        for(let i=0;i<pic.length;i++)
+        {   
+            
+            pic[i].addEventListener('mouseenter',function(e){
+                
+                if(e.offsetX<=200&&e.offsetX>=0&&e.offsetY<=200&&e.offsetY>=0)
+                {
+                point.style.animation="scale 1s 1 forwards"
+                let n=window.getComputedStyle(pic[i])
+                point.style.top=(parseInt(n.top)+50)+'px'
+                point.style.left=(parseInt(n.left)+50)+'px'
+             
+                    switch(i)
+                    {
+                        case 0:middle.style.backgroundImage='url(https://100dayscss.com/codepen/13-4.jpg)';break;
+                        case 1:middle.style.backgroundImage='url(https://100dayscss.com/codepen/13-1.jpg)';break;
+                        case 2:middle.style.backgroundImage='url(https://100dayscss.com/codepen/13-2.jpg)';break;
+                        case 3:middle.style.backgroundImage='url(https://100dayscss.com/codepen/13-3.jpg)';break;
+                    }
+                    console.log(window.getComputedStyle(middle).backgroundImage);
+                over[i].style.opacity='0.4'
+                }   
+                
+            })
+            point.addEventListener('click',function(e){
+                detail.className='detail-active'
+                detail.style.visibility='visible'
+            })
+            close.addEventListener('click',function(e){
+                detail.className='detail'
+                detail.style.visibility='hidden'
+            })
+            pic[i].addEventListener('mouseleave',function(e){
+                if(e.offsetX>200||e.offsetX<0||e.offsetY>200||e.offsetY<0)
+                {
+                point.style.animation="scale2 1s 1 forwards"
+                over[i].style.opacity='0'
+                }
+              
+            })
+            
+        }
+    </script>
+
+</body>
