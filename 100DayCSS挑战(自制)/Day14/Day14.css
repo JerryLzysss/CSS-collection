@@ -1,0 +1,291 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: normal;
+  src: url(https://fonts.gstatic.com/s/opensans/v40/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsiH0B4gaVc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+  src: url(https://fonts.gstatic.com/s/opensans/v40/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsg-1x4gaVc.ttf) format('truetype');
+}
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #4B4841;
+  color: #fff;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.center:hover .bg .show {
+  transform: rotateX(180deg);
+}
+.center:hover .bg .show2 {
+  transform: rotateX(360deg);
+}
+.center .bg .show {
+  transition: all 2s ease-in-out;
+  position: absolute;
+  width: 300px;
+  height: 180px;
+  transform-style: preserve-3d;
+  background-color: #FFCE4E;
+  box-shadow: 4px 8px 10px 4px black;
+  backface-visibility: hidden;
+  transform: rotateX(0deg);
+  z-index: 1;
+}
+.center .bg .box {
+  position: absolute;
+  top: 30px;
+  left: 50px;
+  height: 120px;
+  width: 200px;
+  overflow: hidden;
+}
+.center .bg .box .car {
+  position: relative;
+  top: 30px;
+  left: 30px;
+  animation: drop 0.5s infinite;
+}
+.center .bg .box .line-1 {
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  top: 105px;
+  left: 200px;
+  background-color: #4B4841;
+  animation: move 2s 0.2s infinite;
+}
+.center .bg .box .line-2 {
+  position: absolute;
+  width: 24px;
+  height: 3px;
+  top: 105px;
+  left: 200px;
+  background-color: #4B4841;
+  animation: move 2s 0.4s infinite;
+}
+.center .bg .box .line-3 {
+  position: absolute;
+  width: 18px;
+  height: 3px;
+  top: 105px;
+  left: 200px;
+  background-color: #4B4841;
+  animation: move 2s 0.6s infinite;
+}
+.center .bg .box .line-4 {
+  position: absolute;
+  width: 12px;
+  height: 3px;
+  top: 105px;
+  left: 200px;
+  background-color: #4B4841;
+  animation: move 2s 0.8s infinite;
+}
+.center .bg .box .line-5 {
+  position: absolute;
+  width: 6px;
+  height: 3px;
+  top: 105px;
+  left: 200px;
+  background-color: #4B4841;
+  animation: move 2s 1s infinite;
+}
+.center .bg .box .line-6 {
+  position: absolute;
+  width: 12px;
+  height: 3px;
+  top: 105px;
+  left: 200px;
+  background-color: #4B4841;
+  animation: move 2s 1.2s infinite;
+}
+.center .bg .box .line-7 {
+  position: absolute;
+  width: 18px;
+  height: 3px;
+  top: 105px;
+  left: 200px;
+  background-color: #4B4841;
+  animation: move 2s 1.4s infinite;
+}
+.center .bg .box .line-8 {
+  position: absolute;
+  width: 24px;
+  height: 3px;
+  top: 105px;
+  left: 200px;
+  background-color: #4B4841;
+  animation: move 2s 1.6s infinite;
+}
+.center .bg .box .line-9 {
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  top: 105px;
+  left: 200px;
+  background-color: #4B4841;
+  animation: move 2s 1.8s infinite;
+}
+.center .bg .box .helicopter {
+  position: relative;
+  top: -28px;
+  left: 70px;
+  opacity: 0;
+}
+@keyframes drop {
+  0% {
+    transform: scaleY(1);
+  }
+  100% {
+    transform: scaleY(0.95);
+  }
+}
+@keyframes move {
+  0% {
+    left: 200px;
+  }
+  100% {
+    left: -100px;
+  }
+}
+.center .bg .show2 {
+  transform: rotateX(180deg);
+  transition: all 2s ease-in-out;
+  height: 120px;
+  width: 200px;
+  overflow: hidden;
+  width: 300px;
+  height: 180px;
+  transform-style: preserve-3d;
+  background-color: #FFCE4E;
+  box-shadow: 4px 8px 10px 4px black;
+  backface-visibility: hidden;
+}
+.center .bg .box2 {
+  position: absolute;
+  top: 30px;
+  left: 50px;
+  height: 120px;
+  width: 200px;
+  overflow: hidden;
+}
+.center .bg .box2 .helicopter {
+  position: relative;
+  top: 0px;
+  left: 30px;
+  animation: drop2 1s infinite;
+}
+@keyframes drop2 {
+  0% {
+    top: 20px;
+  }
+  50% {
+    top: 30px;
+  }
+  100% {
+    top: 20px;
+  }
+}
+.center .bg .box2 .lineb-1 {
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  top: 15px;
+  left: 200px;
+  background-color: #4B4841;
+  animation: move 2.2s 0.5s infinite;
+}
+.center .bg .box2 .lineb-2 {
+  position: absolute;
+  width: 24px;
+  height: 3px;
+  top: 25px;
+  left: 200px;
+  background-color: #4B4841;
+  animation: move 1.9s 0.7s infinite;
+}
+.center .bg .box2 .lineb-3 {
+  position: absolute;
+  width: 18px;
+  height: 3px;
+  top: 35px;
+  left: 200px;
+  background-color: #4B4841;
+  animation: move 1.6s 0.9s infinite;
+}
+.center .bg .box2 .lineb-4 {
+  position: absolute;
+  width: 12px;
+  height: 3px;
+  top: 45px;
+  left: 200px;
+  background-color: #4B4841;
+  animation: move 1.3s 1.1s infinite;
+}
+.center .bg .box2 .lineb-5 {
+  position: absolute;
+  width: 6px;
+  height: 3px;
+  top: 55px;
+  left: 200px;
+  background-color: #4B4841;
+  animation: move 1s 1.3s infinite;
+}
+.center .bg .box2 .lineb-6 {
+  position: absolute;
+  width: 12px;
+  height: 3px;
+  top: 65px;
+  left: 200px;
+  background-color: #4B4841;
+  animation: move 1.3s 1.5s infinite;
+}
+.center .bg .box2 .lineb-7 {
+  position: absolute;
+  width: 18px;
+  height: 3px;
+  top: 75px;
+  left: 200px;
+  background-color: #4B4841;
+  animation: move 1.6s 1.7s infinite;
+}
+.center .bg .box2 .lineb-8 {
+  position: absolute;
+  width: 24px;
+  height: 3px;
+  top: 85px;
+  left: 200px;
+  background-color: #4B4841;
+  animation: move 1.9s 1.9s infinite;
+}
+.center .bg .box2 .lineb-9 {
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  top: 95px;
+  left: 200px;
+  background-color: #4B4841;
+  animation: move 2.2s 2.1s infinite;
+}
