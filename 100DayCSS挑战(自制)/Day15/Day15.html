@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="Day15.css" />
+  
+</head>
+<body>
+    <div class="frame">
+        <div class="center">
+            <div class="bg">
+                <div class="title">
+                    Drop file to upload
+                </div>
+                <div class="input">
+                    <input type="file">
+                </div>
+                <div class="upload">
+                    <div class="border">
+                 
+                    <img src="https://100dayscss.com/codepen/upload.svg" class="picture">
+                    </div>
+                </div>
+                <button class="btn">
+                    Upload File
+                </button>
+            </div>
+        </div>
+    </div>
+        
+    <script>
+        let on=0;
+        const file=document.getElementsByClassName('input')[0]
+        const border=document.getElementsByClassName('border')[0]
+     
+        const btn=document.getElementsByClassName('btn')[0]
+        file.addEventListener('change',function(e){
+            const files=e.target.files;
+            on=1
+            border.innerHTML=files[0].name+`<img src="https://100dayscss.com/codepen/upload.svg" class="picture">`       
+            const pic=document.getElementsByClassName('picture')[0]
+            pic.style.opacity=0
+            
+        })
+        btn.addEventListener('click',function(){
+            if(on==1)
+            {
+           
+                pic.src='https://100dayscss.com/codepen/syncing.svg'
+            }
+        })
+    </script>
+
+</body>
