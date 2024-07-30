@@ -1,0 +1,138 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: normal;
+  src: url(https://fonts.gstatic.com/s/opensans/v40/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsiH0B4gaVc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+  src: url(https://fonts.gstatic.com/s/opensans/v40/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsg-1x4gaVc.ttf) format('truetype');
+}
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #63cdf0;
+  color: #fff;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-style: preserve-3d;
+}
+.center .round {
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border-radius: 50%;
+  animation: drop 10s infinite;
+}
+@keyframes drop {
+  0% {
+    top: -500px;
+    transform: scaleY(1);
+  }
+  5% {
+    top: 0px;
+    transform: scaleY(0.7);
+  }
+  10% {
+    top: -50px;
+    transform: scaleY(1);
+  }
+  20% {
+    top: -50px;
+    transform: scaleY(1) scale(0);
+  }
+  40% {
+    top: -50px;
+    transform: scaleY(1) scale(0);
+  }
+  50% {
+    top: -50px;
+    transform: scaleY(1) scale(1);
+  }
+  70% {
+    top: 500px;
+    transform: scale(1);
+  }
+  100% {
+    top: 500px;
+    transform: scale(1);
+  }
+}
+.center .polygon {
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 100px;
+  height: 100px;
+  transform: scale(0);
+  background-color: white;
+  clip-path: polygon(0% 25%, 0 75%, 25% 100%, 75% 100%, 100% 75%, 100% 25%, 75% 0%, 25% 0%);
+  animation: show 10s infinite;
+}
+@keyframes show {
+  0% {
+    transform: scale(0);
+  }
+  10% {
+    transform: scale(0);
+  }
+  20% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+.center .triangle {
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 100px;
+  height: 100px;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  background-color: white;
+  transform: scale(0);
+  animation: show2 10s infinite;
+}
+@keyframes show2 {
+  0% {
+    transform: scale(0);
+  }
+  25% {
+    transform: scale(0);
+  }
+  35% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
