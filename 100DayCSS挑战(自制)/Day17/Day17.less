@@ -1,0 +1,92 @@
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+.frame{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #ffffff;
+
+  color: #fff;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+   
+    .bg{
+        position:absolute;
+        width:250px;
+        height:250px;
+        transform: translate(-50%,-50%);
+        background-color:black;
+        box-shadow:5px 5px 15px 0px black;
+        z-index:500;
+        .left{
+            position:absolute;
+            width:150px;
+            height:150px;
+            top:50px;
+            left:50px;
+            background-color:#eee;
+            transition: all 0.5s ease-in-out;
+           clip-path:polygon(50% 0%,0% 90%,10% 100%,50% 30%,70% 70%,85% 70%,50% 0%);
+            &:hover{
+                background-color:#aaa;
+            }
+        }
+        .middle{
+            position:absolute;
+            width:150px;
+            height:150px;
+            top:50px;
+            left:50px;
+            background-color:#aaa;
+            transition: all 0.5s ease-in-out;
+            clip-path:polygon(50% 30%, 10% 100%, 90% 100%, 100% 80%, 32% 80%, 55.1% 40%, 50% 30%);
+          
+        }
+        .right{
+            position:absolute;
+            width:150px;
+            height:150px;
+            top:50px;
+            left:50px;
+            background-color:#ccc;
+            transition: all 0.5s ease-in-out;
+           clip-path:polygon(50% 0%, 85% 70%, 37.5% 70%, 31.7% 80%, 100% 80%, 60% 0%, 50% 0%);
+            &:hover{
+            background-color:#eee;
+            }
+        }
+    }
+    .lines(@i,@n)when(@i<=@n)
+    {
+        .line-@{i}
+        {
+            position:absolute;
+            top:0px;
+            left:-300px+(25*(15-@i));
+            width:600px;
+            height:5px;
+            background-color:rgb(0, 0, 0);
+            transform:rotate(45deg)
+        }
+        .lines(@i+1,@n)
+    }
+    .lines(0,30)
+}
+
+

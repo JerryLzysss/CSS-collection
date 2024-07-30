@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="Day17.css" />
+  
+</head>
+<body>
+    <div class="frame">
+        <div class="center">
+            
+            <div class="bg">
+                <div class="left"></div>
+                <div class="middle"></div>
+                <div class="right"></div>
+            </div>
+        </div>
+    </div>
+        
+    <script>
+        const center=document.getElementsByClassName('center')[0]
+        const middle=document.getElementsByClassName('middle')[0]
+        const left=document.getElementsByClassName('left')[0]
+        const right=document.getElementsByClassName('right')[0]
+        for(let i=0;i<=30;i++)
+        {
+            const line=document.createElement('div');
+            line.className='line-'+i
+            center.appendChild(line)
+        }
+        middle.addEventListener('mouseover',function(){
+          
+            left.style.backgroundColor='#aaa'
+             right.style.backgroundColor='#eee'
+        })
+        middle.addEventListener('mouseout',function(){
+          
+             left.style.backgroundColor='#eee'
+             right.style.backgroundColor='#ccc'
+        })
+        left.addEventListener('mouseover',function(){
+          
+          left.style.backgroundColor='#aaa'
+           right.style.backgroundColor='#eee'
+      })
+      left.addEventListener('mouseout',function(){
+        
+           left.style.backgroundColor='#eee'
+           right.style.backgroundColor='#ccc'
+      })
+      right.addEventListener('mouseover',function(){
+          
+          left.style.backgroundColor='#aaa'
+           right.style.backgroundColor='#eee'
+      })
+      right.addEventListener('mouseout',function(){
+        
+           left.style.backgroundColor='#eee'
+           right.style.backgroundColor='#ccc'
+      })
+    </script>
+
+</body>
