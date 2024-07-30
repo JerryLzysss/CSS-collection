@@ -1,0 +1,93 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: normal;
+  src: url(https://fonts.gstatic.com/s/opensans/v40/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsiH0B4gaVc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+  src: url(https://fonts.gstatic.com/s/opensans/v40/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsg-1x4gaVc.ttf) format('truetype');
+}
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #ffffff;
+  color: #fff;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.frame .top {
+  top: 50%;
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  background-color: #37D493;
+}
+.frame .top .greenround {
+  position: absolute;
+  width: 150%;
+  left: -25%;
+  height: 200%;
+  background-color: #37D493;
+  border-radius: 50%;
+  top: -100%;
+  z-index: 1;
+  animation: upper 4s infinite;
+}
+@keyframes upper {
+  0% {
+    top: 0%;
+  }
+  35% {
+    top: -100%;
+  }
+  50% {
+    top: 100%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+.frame .bottom {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  background-color: #444;
+}
+.frame .bottom .blackround {
+  position: absolute;
+  width: 150%;
+  left: -25%;
+  height: 200%;
+  background-color: #444;
+  border-radius: 50%;
+  top: -100%;
+  animation: downer 4s infinite;
+}
+@keyframes downer {
+  0% {
+    top: -100%;
+  }
+  50% {
+    top: -100%;
+  }
+  85% {
+    top: 0%;
+  }
+  100% {
+    top: -100%;
+  }
+}
