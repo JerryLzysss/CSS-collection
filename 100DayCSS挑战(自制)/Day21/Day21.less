@@ -1,0 +1,94 @@
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #333;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+    .pacman{
+        position: absolute;
+        width:100px;
+        height:100px;
+        top: 150px;
+        left: 150px;
+        fill: none;
+        stroke: #F4D146;
+        stroke-width:50px;
+        stroke-linecap: butt;
+        stroke-dasharray: 160px;
+        animation:mouth 1s infinite;
+       @keyframes mouth {
+        0%, 100% {
+            stroke-dashoffset: 0;
+            transform: rotate(0deg);
+        }
+        50% {
+            stroke-dashoffset: 40px;
+            transform: rotate(45deg);
+        }
+        100%{
+            stroke-dashoffset: 0; 
+            transform: rotate(0deg);
+        }
+    }
+  
+    
+    }
+    .eye{
+        position: absolute;
+        width:24px;
+        height:24px;
+        left:190px;
+        top:165px;
+        animation:eye 1s infinite;
+        @keyframes eye{
+            0%{
+                transform:rotate(90deg)
+            }
+            50%{
+                transform:rotate(75deg)
+            }
+            100%{
+                transform:rotate(90deg)
+            }
+        }
+    }
+    .dots {
+        position: absolute;
+        height: 14px;
+        width: 240px;
+        top: 193px;
+        left: 180px;
+        stroke: #F4D146;
+        stroke-width: 14px;
+        stroke-dasharray: 0px 50px;
+        stroke-linecap: square;
+        
+        stroke-dashoffset: 34;
+        animation:move 1s infinite;
+    }
+    @keyframes move{
+        0%{
+            stroke-dashoffset:34;
+        }
+        100%{
+            stroke-dashoffset:74;
+        }
+    }
+
+    
+}
+
+
