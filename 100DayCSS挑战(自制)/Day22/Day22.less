@@ -1,0 +1,154 @@
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #28404E;
+  color: #ffffff;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+    .title{
+        position:absolute;
+        top:30px;
+        left:130px;
+        font-size:24px;
+    }
+    .subtitle{
+        position:absolute;
+        top:61px;
+        font-size:30px;
+        left:125px;
+    }
+    .round1{
+        .round1d();
+       
+        stroke-dasharray: 365px 600px;
+        z-index:1;
+        animation:r1 5s 1 forwards;
+        @keyframes r1{
+            0%{
+                stroke-dasharray: 0px 600px;
+            }
+            100%{
+                stroke-dasharray: 365px 600px;
+            }
+        }
+        
+    }
+    .round1d{
+        position:absolute;
+        top:110px;
+        left:120px;
+        stroke-dasharray: 500px 600px;
+        z-index:0;
+        transform:rotate(-91deg);
+        stroke-linecap: round;
+    }
+    .round2{
+        .round2d();
+       
+        stroke-dasharray: 239px 600px;
+        z-index:1;
+        animation:r2 5s 1 forwards;
+        @keyframes r2{
+            0%{
+                stroke-dasharray: 0px 600px;
+            }
+            100%{
+                stroke-dasharray: 239px 600px;
+            }
+        }
+       
+    }
+    .round2d{
+        position:absolute;
+        top:270px;
+        left:70px;
+        transform:rotate(-91deg);
+        stroke-linecap: round;
+        stroke-dasharray: 500px 600px;
+        z-index:0;
+    }
+    .round3{
+        .round3d();
+        
+        stroke-dasharray: 122px 600px;
+        z-index:1;
+        animation:r3 5s 1 forwards;
+        @keyframes r3{
+            0%{
+                stroke-dasharray: 0px 600px;
+            }
+            100%{
+                stroke-dasharray: 122px 600px;
+            }
+        }
+        
+    }
+    .round3d{
+        position:absolute;
+        top:270px;
+        left:220px;
+        stroke-dasharray: 500px 600px;
+        z-index:0;
+        transform:rotate(-91deg);
+        stroke-linecap: round;
+    }
+    .r1{
+        position:absolute;
+        width:100px;
+        height:100px;
+        top:145px;
+        left:150px;
+        font-size:44px;
+        &:after{
+            position:absolute;
+            content:'kcals';
+            font-size:20px;
+            top:55px;
+            left:28px;  
+        }
+    }
+    .r2{
+        position:absolute;
+        width:100px;
+        height:100px;
+        top:294px;
+        left:97px;
+        font-size:30px;
+        &:after{
+            position:absolute;
+            content:'steps';
+            font-size:20px;
+            top:42px;
+            left:10px;  
+        }
+    }
+    .r3{
+        position:absolute;
+        width:100px;
+        height:100px;
+        top:294px;
+        left:258px;
+        font-size:30px;
+        &:after{
+            position:absolute;
+            content:'km';
+            font-size:20px;
+            top:42px;
+            left:7px;  
+        }
+    }
+}
+
+

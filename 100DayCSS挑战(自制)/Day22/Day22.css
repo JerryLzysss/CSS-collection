@@ -1,0 +1,175 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: normal;
+  src: url(https://fonts.gstatic.com/s/opensans/v40/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsiH0B4gaVc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+  src: url(https://fonts.gstatic.com/s/opensans/v40/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsg-1x4gaVc.ttf) format('truetype');
+}
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #28404E;
+  color: #ffffff;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.frame .title {
+  position: absolute;
+  top: 30px;
+  left: 130px;
+  font-size: 24px;
+}
+.frame .subtitle {
+  position: absolute;
+  top: 61px;
+  font-size: 30px;
+  left: 125px;
+}
+.frame .round1 {
+  position: absolute;
+  top: 110px;
+  left: 120px;
+  stroke-dasharray: 500px 600px;
+  z-index: 0;
+  transform: rotate(-91deg);
+  stroke-linecap: round;
+  stroke-dasharray: 365px 600px;
+  z-index: 1;
+  animation: r1 5s 1 forwards;
+}
+@keyframes r1 {
+  0% {
+    stroke-dasharray: 0px 600px;
+  }
+  100% {
+    stroke-dasharray: 365px 600px;
+  }
+}
+.frame .round1d {
+  position: absolute;
+  top: 110px;
+  left: 120px;
+  stroke-dasharray: 500px 600px;
+  z-index: 0;
+  transform: rotate(-91deg);
+  stroke-linecap: round;
+}
+.frame .round2 {
+  position: absolute;
+  top: 270px;
+  left: 70px;
+  transform: rotate(-91deg);
+  stroke-linecap: round;
+  stroke-dasharray: 500px 600px;
+  z-index: 0;
+  stroke-dasharray: 239px 600px;
+  z-index: 1;
+  animation: r2 5s 1 forwards;
+}
+@keyframes r2 {
+  0% {
+    stroke-dasharray: 0px 600px;
+  }
+  100% {
+    stroke-dasharray: 239px 600px;
+  }
+}
+.frame .round2d {
+  position: absolute;
+  top: 270px;
+  left: 70px;
+  transform: rotate(-91deg);
+  stroke-linecap: round;
+  stroke-dasharray: 500px 600px;
+  z-index: 0;
+}
+.frame .round3 {
+  position: absolute;
+  top: 270px;
+  left: 220px;
+  stroke-dasharray: 500px 600px;
+  z-index: 0;
+  transform: rotate(-91deg);
+  stroke-linecap: round;
+  stroke-dasharray: 122px 600px;
+  z-index: 1;
+  animation: r3 5s 1 forwards;
+}
+@keyframes r3 {
+  0% {
+    stroke-dasharray: 0px 600px;
+  }
+  100% {
+    stroke-dasharray: 122px 600px;
+  }
+}
+.frame .round3d {
+  position: absolute;
+  top: 270px;
+  left: 220px;
+  stroke-dasharray: 500px 600px;
+  z-index: 0;
+  transform: rotate(-91deg);
+  stroke-linecap: round;
+}
+.frame .r1 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 145px;
+  left: 150px;
+  font-size: 44px;
+}
+.frame .r1:after {
+  position: absolute;
+  content: 'kcals';
+  font-size: 20px;
+  top: 55px;
+  left: 28px;
+}
+.frame .r2 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 294px;
+  left: 97px;
+  font-size: 30px;
+}
+.frame .r2:after {
+  position: absolute;
+  content: 'steps';
+  font-size: 20px;
+  top: 42px;
+  left: 10px;
+}
+.frame .r3 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 294px;
+  left: 258px;
+  font-size: 30px;
+}
+.frame .r3:after {
+  position: absolute;
+  content: 'km';
+  font-size: 20px;
+  top: 42px;
+  left: 7px;
+}
