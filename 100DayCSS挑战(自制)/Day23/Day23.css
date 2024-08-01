@@ -1,0 +1,290 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: normal;
+  src: url(https://fonts.gstatic.com/s/opensans/v40/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsiH0B4gaVc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+  src: url(https://fonts.gstatic.com/s/opensans/v40/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsg-1x4gaVc.ttf) format('truetype');
+}
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #E16D6C;
+  color: #ffffff;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.frame .round {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 150px;
+  left: 150px;
+  background-color: white;
+  border-radius: 50%;
+  animation: hide 0.8s 1 forwards;
+}
+@keyframes hide {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+.frame .LineLeft {
+  position: absolute;
+  top: 200px;
+  width: 0px;
+  height: 5px;
+  background-color: white;
+  visibility: hidden;
+  animation: LineL 2s 0.8s 1 forwards;
+}
+@keyframes LineL {
+  0% {
+    visibility: hidden;
+    width: 0px;
+    left: 200px;
+  }
+  40% {
+    visibility: visible;
+    width: 150px;
+    left: 50px;
+  }
+  100% {
+    visibility: visible;
+    width: 0px;
+    left: 50px;
+  }
+}
+.frame .LineRight {
+  position: absolute;
+  top: 200px;
+  width: 100px;
+  left: 300px;
+  height: 5px;
+  background-color: white;
+  animation: LineR 2s 0.8s 1 forwards;
+  visibility: hidden;
+}
+@keyframes LineR {
+  0% {
+    visibility: hidden;
+    width: 0px;
+    left: 200px;
+  }
+  40% {
+    visibility: visible;
+    width: 150px;
+    left: 200px;
+  }
+  100% {
+    visibility: visible;
+    width: 0px;
+    left: 350px;
+  }
+}
+.frame .LeftFrame {
+  position: absolute;
+  top: 200px;
+  width: 5px;
+  left: 50px;
+  height: 100px;
+  background-color: white;
+  visibility: hidden;
+  animation: FrameL 1s 2.6s 1 forwards;
+}
+@keyframes FrameL {
+  0% {
+    visibility: hidden;
+    height: 0px;
+    left: 50px;
+    top: 200px;
+  }
+  100% {
+    visibility: visible;
+    height: 100px;
+    left: 50px;
+    top: 150px;
+  }
+}
+.frame .RightFrame {
+  position: absolute;
+  top: 200px;
+  width: 5px;
+  left: 350px;
+  height: 100px;
+  visibility: hidden;
+  background-color: white;
+  animation: FrameR 1s 2.6s 1 forwards;
+}
+@keyframes FrameR {
+  0% {
+    visibility: hidden;
+    height: 0px;
+    left: 350px;
+    top: 200px;
+  }
+  100% {
+    visibility: visible;
+    height: 100px;
+    left: 350px;
+    top: 150px;
+  }
+}
+.frame .cTitle {
+  position: absolute;
+  top: 165px;
+  color: white;
+  font-size: 50px;
+  left: 80px;
+  opacity: 0;
+  animation: CT 1s 2.6s 1 forwards;
+}
+@keyframes CT {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.frame .dTitle {
+  position: absolute;
+  top: 220px;
+  color: white;
+  font-size: 30px;
+  left: 118px;
+  opacity: 0;
+  animation: DT 1s 3.4s 1 forwards;
+}
+@keyframes DT {
+  0% {
+    opacity: 0;
+    top: 240px;
+  }
+  100% {
+    opacity: 1;
+    top: 220px;
+  }
+}
+.frame .tTitle {
+  position: absolute;
+  top: 135px;
+  color: white;
+  font-size: 30px;
+  left: 140px;
+  opacity: 0;
+  animation: TT 1s 3.4s 1 forwards;
+}
+@keyframes TT {
+  0% {
+    opacity: 0;
+    top: 115px;
+  }
+  100% {
+    opacity: 1;
+    top: 135px;
+  }
+}
+.frame .LeftTop {
+  position: absolute;
+  top: 150px;
+  left: 50px;
+  width: 0px;
+  height: 5px;
+  visibility: hidden;
+  background-color: white;
+  animation: LT 1s 3.4s 1 forwards;
+}
+@keyframes LT {
+  0% {
+    visibility: hidden;
+    left: 50px;
+    width: 0px;
+  }
+  100% {
+    visibility: visible;
+    left: 50px;
+    width: 50px;
+  }
+}
+.frame .LeftDown {
+  position: absolute;
+  top: 250px;
+  left: 50px;
+  width: 0px;
+  height: 5px;
+  background-color: white;
+  animation: LD 1s 3.4s 1 forwards;
+}
+@keyframes LD {
+  0% {
+    visibility: hidden;
+    left: 50px;
+    width: 0px;
+  }
+  100% {
+    visibility: visible;
+    left: 50px;
+    width: 50px;
+  }
+}
+.frame .RightTop {
+  position: absolute;
+  top: 150px;
+  left: 355px;
+  width: 0px;
+  height: 5px;
+  background-color: white;
+  animation: RT 1s 3.4s 1 forwards;
+}
+@keyframes RT {
+  0% {
+    visibility: hidden;
+    left: 355px;
+    width: 0px;
+  }
+  100% {
+    visibility: visible;
+    left: 305px;
+    width: 50px;
+  }
+}
+.frame .RightDown {
+  position: absolute;
+  top: 250px;
+  left: 305px;
+  width: 0px;
+  height: 5px;
+  background-color: white;
+  animation: RD 1s 3.4s 1 forwards;
+}
+@keyframes RD {
+  0% {
+    visibility: hidden;
+    left: 355px;
+    width: 0px;
+  }
+  100% {
+    visibility: visible;
+    left: 305px;
+    width: 50px;
+  }
+}
