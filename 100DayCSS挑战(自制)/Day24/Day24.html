@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="Day24.css" />
+
+</head>
+
+<body>
+    <div class="frame">
+        <button class="btn">FINISH
+           
+        </button>
+        <svg class="circle" width="80" height="80" >
+       
+            <circle cx="40" cy="40" r="24" fill="none" stroke="green" stroke-width="4"/>
+        </svg>
+        <svg  class="circle2" width="160" height="160" >
+            
+            <circle class="circle3" cx="80" cy="80" r="24" fill="none" stroke="white" stroke-width="4"/>
+        </svg>
+    </div>
+    <script>
+        const btn=document.getElementsByClassName('btn')[0]
+        const circle=document.getElementsByClassName('circle')[0]
+        const circle3=document.getElementsByClassName('circle3')[0]
+        let number=false
+        let st=''
+        btn.addEventListener('click',function(){
+            if(number==false)
+            {
+                btn.style.animation='test 1s 1 forwards'
+               
+                circle.style.animation='test2 1s 1s 1 forwards'
+                   circle3.style.animation='test3 1.5s 2s 1 forwards'
+                btn.innerHTML=''
+                 st=setTimeout(()=>{
+                   
+                      btn.innerHTML='<img src="https://100dayscss.com/codepen/checkmark-green.svg"/>'
+                },1400)
+              
+                
+            }
+            else
+            {
+                circle.style.animation='none'
+                btn.style.animation='none'
+               circle3.style.animation='none'
+                btn.innerHTML='FINISH'
+                clearTimeout(st)
+            }
+            number=!number
+        })
+        circle.addEventListener('click',function(){
+            if(number==false)
+            {
+                btn.style.animation='test 1s 1 forwards'
+                circle.style.animation='test2 1s 1s 1 forwards'
+                circle3.style.animation='test3 1.5s 1 forwards'
+                btn.innerHTML=''
+                
+            }
+            else
+            {
+                  circle3.style.animation='none'
+                circle.style.animation='none'
+                btn.style.animation='none'
+                btn.innerHTML='FINISH'
+            }
+            number=!number
+        })
+    </script>
+</body>

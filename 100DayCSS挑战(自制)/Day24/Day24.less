@@ -1,0 +1,96 @@
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: rgb(100, 180, 100);
+  color: #ffffff;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+    .btn{
+        position:absolute;
+        top:173px;
+        left:78px;
+        font-size:40px;
+        border-radius:30px;
+        width:268px;
+        height:52px;
+        border:2px solid white;
+        background-color:transparent;
+        color:white;
+        z-index:1;
+        @keyframes test{
+            0%{
+                width:268px;
+                left:78px;
+                background-color:transparent;
+            }
+            99%{
+                background-color:transparent;
+            }
+            100%{
+                width:52px;
+                left:174px;
+                background-color:white;
+            }
+        }
+    }
+    .circle{
+        position:absolute;
+        top:159px;
+        left:160px;
+        stroke-linecap: round;
+        stroke-width:50px;
+        fill:none;
+        visibility: hidden;
+        stroke-dasharray:0px 200px;
+        transform:rotate(270deg);
+        z-index:1;
+        @keyframes test2{
+            0%{
+                stroke-dasharray:0px 200px;
+                visibility: hidden;
+            }
+            100%{
+                stroke-dasharray: 150px 200px;
+                visibility:visible;
+               
+            }
+        }
+    }
+    .circle2{
+        .circle();
+        top:120px;
+        left:120px;
+        visibility:visible;
+        stroke-dasharray: 500px 200px;
+        stroke-width:20px;
+        z-index:0;
+    }
+    .circle3{
+       z-index:0;
+       opacity:0;
+       @keyframes test3{
+            0%{
+                r:24px;
+                opacity:1;
+            }
+            100%{
+                r:70px;
+                opacity:0;
+            }
+       }
+    }
+}
+
+
