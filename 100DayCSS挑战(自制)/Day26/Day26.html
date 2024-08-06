@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="Day26.css" />
+
+</head>
+
+<body>
+    <div class="frame">
+        <div class="option">
+            <div class="badge">1</div>
+            <div class="title">The couch</div>
+            <div class="content">If you want to grow,get outside
+                your comfort zone.
+            </div>
+            <div class="button">OK</div>
+        </div>
+    </div>
+    <script>
+        const option=document.getElementsByClassName('option')[0]
+        const badge=document.getElementsByClassName('badge')[0]
+        const title=document.getElementsByClassName('title')[0]
+        const content=document.getElementsByClassName('content')[0]
+        const btn=document.getElementsByClassName('button')[0]
+        let bt
+        btn.addEventListener('click',function(){
+                clearTimeout(bt)
+                let number=badge.innerHTML
+                number=number%3+1
+                badge.innerHTML=number
+                if(number==1)
+                {
+                    title.innerHTML='The couch'
+                    content.innerHTML='If you want to grow,get outside your comfort zone.'
+                }
+                else if(number==2)
+                {
+                    title.innerHTML='Failing is learning'
+                    content.innerHTML='pick yourself up,dust yourself off,and start again.'
+                }
+                else if(number==3)
+                {
+                    title.innerHTML='Flowers and rainbows'
+                    content.innerHTML='Always be yourself,unless you can be a unicorn.'
+                }
+                option.style.animation='hide 1s 1 forwards'
+                 bt=setTimeout(function(){
+                      option.style.animation='none'
+                 },1000)
+                console.log(number)
+        })
+    </script>
+</body>
