@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="Day27.css" />
+
+</head>
+
+<body>
+    <div class="frame">
+        <div class="list">
+            <div class="list-title">Friday</div>
+            <div class="list-date">March 4,2016</div>
+            <div class="list-divider">-------------------------------</div>
+            <div class="list-todos">
+                <div class="list-todos-item-round-1 rounder"></div>
+                <div class="list-todos-item-round-2 rounder"></div>
+                <div class="list-todos-item-round-3 rounder"></div>
+                <div class="list-todos-item-round-4 rounder"></div>
+                <svg width="25px" height="10px" class="list-todos-item-check checker">
+					<polyline points="1,5 6,9 15,1" />
+				</svg>
+                <svg width="25px" height="10px" class="list-todos-item-check-check1 checker">
+					<polyline points="1,5 6,9 15,1" />
+				</svg>
+                <svg width="25px" height="10px" class="list-todos-item-check-check2 checker">
+					<polyline points="1,5 6,9 15,1" />
+				</svg>
+                <svg width="25px" height="10px" class="list-todos-item-check-check3 checker">
+					<polyline points="1,5 6,9 15,1" />
+				</svg>
+                <div class="list-todos-item item">Create a list</div>
+                <div class="list-todos-item item">Complete first task</div>
+                <div class="list-todos-item item">Write some CSS code</div>
+                <div class="list-todos-item item">Amaze the world</div>
+            </div>
+        </div>
+    </div>
+   <script>
+    const btn=document.getElementsByClassName('rounder')
+    const check=document.getElementsByClassName('checker')
+    const item=document.getElementsByClassName('item')
+    let bt=[0,0,0,0]
+    for(let i=0;i<4;i++){
+        btn[i].addEventListener('click',function(){
+            if(bt[i]==0)
+            {
+                btn[i].style.animation='op 0.5s 1 forwards';
+                 check[i].style.strokeDashoffset='30';
+                 item[i].style.color='#C8D4D9'
+            }
+            else
+            {
+                btn[i].style.animation='op2 0.5s 1 forwards';
+                check[i].style.strokeDashoffset='0';
+               item[i].style.color='black'
+            }
+            bt[i]^=1;
+            
+        })
+        check[i].addEventListener('click',function(){
+
+            if(bt[i]==0)
+            {
+                btn[i].style.animation='op 0.5s 1 forwards';
+                check[i].style.strokeDashoffset='0';
+                item[i].style.color='#C8D4D9'
+            }
+            else
+            {
+                btn[i].style.animation='op2 0.5s 1 forwards';
+                check[i].style.strokeDashoffset='30';
+                item[i].style.color='black'
+               
+            }
+            bt[i]^=1;
+           
+        })
+    }
+   </script>
+</body>
