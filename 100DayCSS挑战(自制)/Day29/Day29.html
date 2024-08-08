@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="Day29.css" />
+
+</head>
+
+<body>
+    <div class="frame">
+        <div class="search">
+            <input type="text" class="searchfield" placeholder="Start typing ..." value="" />
+            <button type="button" class="button"><span class="fa fa-search"></span></button>
+
+        </div>
+    </div>
+    <script>
+        const searchfield = document.getElementsByClassName('searchfield')[0]
+        const search=document.getElementsByClassName('search')[0]
+        let node1 = document.createElement('div')
+        let node2 = document.createElement('div')
+        let node3 = document.createElement('div')
+        searchfield.addEventListener('keyup', function () {
+            let val = searchfield.value
+            if (val.length == 0) {
+                search.removeChild(node1)
+                search.removeChild(node2)
+                search.removeChild(node3)
+            }
+            else {
+                node1.innerHTML = val
+                node2.innerHTML = val + ' bye'
+                node3.innerHTML = 'hello ' + val
+                node1.style.background='#FFF'
+                node2.style.background='#FFF'
+                node3.style.background='#FFF'
+                node1.style.padding='10px'
+                node1.style.whiteSpace='nowrap'
+                node1.style.overflow='hidden'
+                node1.style.textOverflow='ellipsis'
+                node1.style.width='190px'
+                node2.style.padding='10px'
+                node2.style.whiteSpace='nowrap'
+                node2.style.overflow='hidden'
+                node2.style.textOverflow='ellipsis'
+                node2.style.width='190px'
+                node3.style.whiteSpace='nowrap'
+                node3.style.overflow='hidden'
+                node3.style.textOverflow='ellipsis'
+                node3.style.width='190px'
+                node3.style.padding='10px'
+                search.appendChild(node1)
+                search.appendChild(node2)
+                search.appendChild(node3)
+            }
+        })
+    </script>
+</body>

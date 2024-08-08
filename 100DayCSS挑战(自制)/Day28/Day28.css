@@ -1,0 +1,401 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: normal;
+  src: url(https://fonts.gstatic.com/s/opensans/v40/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsiH0B4gaVc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+  src: url(https://fonts.gstatic.com/s/opensans/v40/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsg-1x4gaVc.ttf) format('truetype');
+}
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #DD3C54;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+}
+.frame .bell {
+  position: absolute;
+  top: 170px;
+  left: 170px;
+  fill: #fff;
+  animation: shake 1s infinite;
+}
+@keyframes shake {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  5%,
+  15%,
+  25%,
+  35%,
+  45%,
+  55%,
+  65%,
+  75%,
+  85%,
+  95% {
+    transform: rotate(6deg);
+  }
+  10%,
+  20%,
+  30%,
+  40%,
+  50%,
+  60%,
+  70%,
+  80%,
+  90% {
+    transform: rotate(-6deg);
+  }
+}
+.frame .line-1 {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2;
+  stroke-linecap: round;
+  position: absolute;
+  top: 170px;
+  left: 240px;
+  visibility: hidden;
+  animation: right 3s infinite;
+}
+@keyframes right {
+  0% {
+    visibility: hidden;
+    opacity: 1;
+    transform: scale(1);
+    left: 240px;
+  }
+  1% {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+    left: 240px;
+  }
+  33%,
+  100% {
+    opacity: 0;
+    transform: scale(2);
+    left: 280px;
+  }
+}
+.frame .line-2 {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2;
+  stroke-linecap: round;
+  position: absolute;
+  top: 170px;
+  left: 240px;
+  visibility: hidden;
+  animation: right 3s infinite;
+  animation: right2 3s infinite;
+}
+@keyframes right {
+  0% {
+    visibility: hidden;
+    opacity: 1;
+    transform: scale(1);
+    left: 240px;
+  }
+  1% {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+    left: 240px;
+  }
+  33%,
+  100% {
+    opacity: 0;
+    transform: scale(2);
+    left: 280px;
+  }
+}
+@keyframes right2 {
+  0%,
+  32% {
+    opacity: 1;
+    visibility: hidden;
+    transform: scale(1);
+    left: 240px;
+  }
+  33% {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    left: 240px;
+  }
+  66%,
+  100% {
+    opacity: 0;
+    transform: scale(2);
+    left: 280px;
+  }
+}
+.frame .line-3 {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2;
+  stroke-linecap: round;
+  position: absolute;
+  top: 170px;
+  left: 240px;
+  visibility: hidden;
+  animation: right 3s infinite;
+  animation: right3 3s infinite;
+}
+@keyframes right {
+  0% {
+    visibility: hidden;
+    opacity: 1;
+    transform: scale(1);
+    left: 240px;
+  }
+  1% {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+    left: 240px;
+  }
+  33%,
+  100% {
+    opacity: 0;
+    transform: scale(2);
+    left: 280px;
+  }
+}
+@keyframes right3 {
+  0%,
+  65% {
+    visibility: hidden;
+    opacity: 1;
+    transform: scale(1);
+    left: 240px;
+  }
+  66% {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+    left: 240px;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2);
+    left: 280px;
+  }
+}
+.frame .line-4 {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2;
+  stroke-linecap: round;
+  position: absolute;
+  top: 170px;
+  left: 240px;
+  visibility: hidden;
+  animation: right 3s infinite;
+  animation: left 3s infinite;
+}
+@keyframes right {
+  0% {
+    visibility: hidden;
+    opacity: 1;
+    transform: scale(1);
+    left: 240px;
+  }
+  1% {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+    left: 240px;
+  }
+  33%,
+  100% {
+    opacity: 0;
+    transform: scale(2);
+    left: 280px;
+  }
+}
+@keyframes left {
+  0% {
+    visibility: hidden;
+    opacity: 1;
+    transform: scale(1);
+    left: 140px;
+  }
+  1% {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+    left: 140px;
+  }
+  33%,
+  100% {
+    opacity: 0;
+    transform: scale(2);
+    left: 100px;
+  }
+}
+.frame .line-5 {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2;
+  stroke-linecap: round;
+  position: absolute;
+  top: 170px;
+  left: 240px;
+  visibility: hidden;
+  animation: right 3s infinite;
+  animation: left 3s infinite;
+  animation: left2 3s infinite;
+}
+@keyframes right {
+  0% {
+    visibility: hidden;
+    opacity: 1;
+    transform: scale(1);
+    left: 240px;
+  }
+  1% {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+    left: 240px;
+  }
+  33%,
+  100% {
+    opacity: 0;
+    transform: scale(2);
+    left: 280px;
+  }
+}
+@keyframes left {
+  0% {
+    visibility: hidden;
+    opacity: 1;
+    transform: scale(1);
+    left: 140px;
+  }
+  1% {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+    left: 140px;
+  }
+  33%,
+  100% {
+    opacity: 0;
+    transform: scale(2);
+    left: 100px;
+  }
+}
+@keyframes left2 {
+  0%,
+  32% {
+    opacity: 1;
+    visibility: hidden;
+    transform: scale(1);
+    left: 140px;
+  }
+  33% {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    left: 140px;
+  }
+  66%,
+  100% {
+    opacity: 0;
+    transform: scale(2);
+    left: 100px;
+  }
+}
+.frame .line-6 {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2;
+  stroke-linecap: round;
+  position: absolute;
+  top: 170px;
+  left: 240px;
+  visibility: hidden;
+  animation: right 3s infinite;
+  animation: left 3s infinite;
+  animation: left3 3s infinite;
+}
+@keyframes right {
+  0% {
+    visibility: hidden;
+    opacity: 1;
+    transform: scale(1);
+    left: 240px;
+  }
+  1% {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+    left: 240px;
+  }
+  33%,
+  100% {
+    opacity: 0;
+    transform: scale(2);
+    left: 280px;
+  }
+}
+@keyframes left {
+  0% {
+    visibility: hidden;
+    opacity: 1;
+    transform: scale(1);
+    left: 140px;
+  }
+  1% {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+    left: 140px;
+  }
+  33%,
+  100% {
+    opacity: 0;
+    transform: scale(2);
+    left: 100px;
+  }
+}
+@keyframes left3 {
+  0%,
+  65% {
+    visibility: hidden;
+    opacity: 1;
+    transform: scale(1);
+    left: 140px;
+  }
+  66% {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+    left: 140px;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2);
+    left: 100px;
+  }
+}

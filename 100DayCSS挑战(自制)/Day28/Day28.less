@@ -1,0 +1,198 @@
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #DD3C54;
+
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+    text-align:center;
+    .bell{
+        position:absolute;
+        top:170px;
+        left:170px;
+        fill:#fff;
+        animation:shake 1s infinite;
+        @keyframes shake{
+            0%,100%{
+                transform:rotate(0deg)
+            }
+            
+            5%,15%,25%,35%,45%,55%,65%,75%,85%,95%{
+                transform:rotate(6deg)
+            }
+            10%,20%,30%,40%,50%,60%,70%,80%,90%{
+                transform:rotate(-6deg)
+            }
+        }
+    }
+    
+        .line-1{
+            fill: none;
+            stroke: #fff;
+            stroke-width: 2;
+            stroke-linecap: round;
+            position:absolute;
+            top:170px;
+            left:240px;
+            visibility: hidden;
+          
+            animation:right 3s infinite;
+            @keyframes right{
+                0%{
+                    visibility:hidden;
+                    opacity:1;
+                    transform:scale(1.0);
+                    left:240px;
+                }
+                1%{
+                    visibility:visible;
+                    opacity:1;
+                    transform:scale(1.0);
+                    left:240px;
+                }
+                33%,100%{
+                    opacity:0;
+                    transform:scale(2.0);
+                    left:280px;
+                }
+            }
+
+        }
+        .line-2{
+            .line-1();
+            
+            animation:right2 3s infinite;
+            @keyframes right2{
+                0%,32%{
+                    opacity:1;
+                    visibility:hidden;
+                    transform:scale(1.0);
+                    left:240px;
+                }
+                33%{
+                   
+                    opacity:1;
+                    visibility:visible;
+                    transform:scale(1.0);
+                    left:240px;
+                }
+                66%,100%{
+                    opacity:0;
+                    transform:scale(2.0);
+                    left:280px;
+                }
+                
+            }
+        }
+        .line-3{
+            .line-1();
+            animation:right3 3s infinite;
+            @keyframes right3{
+                0%,65%{
+                    visibility: hidden;
+                    opacity:1;
+                    transform:scale(1.0);
+                    left:240px;
+                }
+                
+                66%{
+                    visibility:visible;
+                    opacity:1;
+                    transform:scale(1.0);
+                    left:240px;
+                }
+                100%{
+                    opacity:0;
+                    transform:scale(2.0);
+                    left:280px;
+                }
+            }
+            
+        }
+        .line-4{
+            .line-1();
+            animation:left 3s infinite;
+            @keyframes left{
+                0%{
+                    visibility:hidden;
+                    opacity:1;
+                    transform:scale(1.0);
+                    left:140px;
+                }
+                1%{
+                    visibility:visible;
+                    opacity:1;
+                    transform:scale(1.0);
+                    left:140px;
+                }
+                33%,100%{
+                    opacity:0;
+                    transform:scale(2.0);
+                    left:100px;
+                }
+            }
+        }
+        .line-5{
+            .line-4();
+            animation:left2 3s infinite;
+            @keyframes left2{
+                0%,32%{
+                    opacity:1;
+                    visibility:hidden;
+                    transform:scale(1.0);
+                    left:140px;
+                }
+                33%{
+                   
+                    opacity:1;
+                    visibility:visible;
+                    transform:scale(1.0);
+                    left:140px;
+                }
+                66%,100%{
+                    opacity:0;
+                    transform:scale(2.0);
+                    left:100px;
+                }
+                
+            }
+        }
+        .line-6{
+            .line-4();
+            animation:left3 3s infinite;
+            @keyframes left3{
+                0%,65%{
+                    visibility: hidden;
+                    opacity:1;
+                    transform:scale(1.0);
+                    left:140px;
+                }
+                
+                66%{
+                    visibility:visible;
+                    opacity:1;
+                    transform:scale(1.0);
+                    left:140px;
+                }
+                100%{
+                    opacity:0;
+                    transform:scale(2.0);
+                    left:100px;
+                }
+            }
+        }
+      
+}
+
