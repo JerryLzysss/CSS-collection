@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="Day32.css" />
+
+</head>
+
+<body>
+    <div class="frame">
+        <div class="counts">
+            <div class="left">
+                <div class="v"></div>
+            </div>
+            <div class="number">0</div>
+            <div class="right">
+                <div class="v"></div>
+                <div class="h"></div>
+            </div>
+        </div>
+    </div>
+   <script>
+    const left=document.getElementsByClassName('left')[0]
+    const right=document.getElementsByClassName('right')[0]
+    const number=document.getElementsByClassName('number')[0]
+    left.addEventListener('click',function(){
+        let now=parseInt(number.innerHTML)
+        number.style.animation='fadeOut 0.3s 1 forwards'
+      
+        now--;
+        number.innerHTML=now
+    })
+    number.addEventListener('animationend',function(){
+        number.style.animation='none'
+    })
+    right.addEventListener('click',function(){
+        let now=parseInt(number.innerHTML)
+        number.style.animation='fadeIn 0.3s 1 forwards'
+        now++;
+        number.innerHTML=now
+    })
+   </script>
+</body>

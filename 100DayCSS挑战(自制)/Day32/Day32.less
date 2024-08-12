@@ -1,0 +1,84 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0,0,0,0.3);
+	overflow: hidden;
+  background: #FDB03A;
+	
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	.counts{
+		background-color:white;
+		border-radius:10px;
+		width:200px;
+		height:50px;
+		position:absolute;
+		top:175px;
+		left:100px;
+
+		@keyframes fadeOut{
+			0%{
+				opacity:0;
+				transform:scale(0)
+			}
+			
+			100%{
+				opacity:1;
+				transform:scale(1)
+			}
+		}
+		@keyframes fadeIn{
+			0%{
+				opacity:0;
+				transform:scale(2)
+			}
+			
+			100%{
+				opacity:1;
+				transform:scale(1)
+			}
+		}
+		.left{
+			.v{
+				background-color:red;
+				width:30px;
+				height:8px;
+				position:absolute;
+				top:20px;
+				left:10px;
+			}
+		}
+		.number{
+			font-size:30px;
+			left:93px;
+			top:4px;
+			position:absolute;
+		
+		}
+		.right{
+			.v{
+				background-color:greenyellow;
+				width:30px;
+				height:8px;
+				position:absolute;
+				top:20px;
+				left:160px;
+			}
+			.h{
+				.v();
+				transform:rotate(90deg);
+			}
+		}
+	}
+}
+
+
