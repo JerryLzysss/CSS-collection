@@ -1,0 +1,281 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: normal;
+  src: url(https://fonts.gstatic.com/s/opensans/v40/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsiH0B4gaVc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+  src: url(https://fonts.gstatic.com/s/opensans/v40/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsg-1x4gaVc.ttf) format('truetype');
+}
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  background: #4C4BA2;
+  font-size: 0;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.frame .dot {
+  position: relative;
+  background-color: white;
+  border-radius: 50%;
+  top: 30px;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  margin-bottom: 5px;
+}
+.frame .dot-1 {
+  animation: move 1.01694915s infinite;
+}
+@keyframes move {
+  0%,
+  100% {
+    transform: translate(-50px);
+  }
+  50% {
+    transform: translate(50px);
+  }
+}
+.frame .dot-2 {
+  animation: move 1.03448276s infinite;
+}
+@keyframes move {
+  0%,
+  100% {
+    transform: translate(-50px);
+  }
+  50% {
+    transform: translate(50px);
+  }
+}
+.frame .dot-3 {
+  animation: move 1.05263158s infinite;
+}
+@keyframes move {
+  0%,
+  100% {
+    transform: translate(-50px);
+  }
+  50% {
+    transform: translate(50px);
+  }
+}
+.frame .dot-4 {
+  animation: move 1.07142857s infinite;
+}
+@keyframes move {
+  0%,
+  100% {
+    transform: translate(-50px);
+  }
+  50% {
+    transform: translate(50px);
+  }
+}
+.frame .dot-5 {
+  animation: move 1.09090909s infinite;
+}
+@keyframes move {
+  0%,
+  100% {
+    transform: translate(-50px);
+  }
+  50% {
+    transform: translate(50px);
+  }
+}
+.frame .dot-6 {
+  animation: move 1.11111111s infinite;
+}
+@keyframes move {
+  0%,
+  100% {
+    transform: translate(-50px);
+  }
+  50% {
+    transform: translate(50px);
+  }
+}
+.frame .dot-7 {
+  animation: move 1.13207547s infinite;
+}
+@keyframes move {
+  0%,
+  100% {
+    transform: translate(-50px);
+  }
+  50% {
+    transform: translate(50px);
+  }
+}
+.frame .dot-8 {
+  animation: move 1.15384615s infinite;
+}
+@keyframes move {
+  0%,
+  100% {
+    transform: translate(-50px);
+  }
+  50% {
+    transform: translate(50px);
+  }
+}
+.frame .dot-9 {
+  animation: move 1.17647059s infinite;
+}
+@keyframes move {
+  0%,
+  100% {
+    transform: translate(-50px);
+  }
+  50% {
+    transform: translate(50px);
+  }
+}
+.frame .dot-10 {
+  animation: move 1.2s infinite;
+}
+@keyframes move {
+  0%,
+  100% {
+    transform: translate(-50px);
+  }
+  50% {
+    transform: translate(50px);
+  }
+}
+.frame .dot-11 {
+  animation: move 1.2244898s infinite;
+}
+@keyframes move {
+  0%,
+  100% {
+    transform: translate(-50px);
+  }
+  50% {
+    transform: translate(50px);
+  }
+}
+.frame .dot-12 {
+  animation: move 1.25s infinite;
+}
+@keyframes move {
+  0%,
+  100% {
+    transform: translate(-50px);
+  }
+  50% {
+    transform: translate(50px);
+  }
+}
+.frame .dot-13 {
+  animation: move 1.27659574s infinite;
+}
+@keyframes move {
+  0%,
+  100% {
+    transform: translate(-50px);
+  }
+  50% {
+    transform: translate(50px);
+  }
+}
+.frame .dot-14 {
+  animation: move 1.30434783s infinite;
+}
+@keyframes move {
+  0%,
+  100% {
+    transform: translate(-50px);
+  }
+  50% {
+    transform: translate(50px);
+  }
+}
+.frame .dot-15 {
+  animation: move 1.33333333s infinite;
+}
+@keyframes move {
+  0%,
+  100% {
+    transform: translate(-50px);
+  }
+  50% {
+    transform: translate(50px);
+  }
+}
+.frame .dot-16 {
+  animation: move 1.36363636s infinite;
+}
+@keyframes move {
+  0%,
+  100% {
+    transform: translate(-50px);
+  }
+  50% {
+    transform: translate(50px);
+  }
+}
+.frame .dot-17 {
+  animation: move 1.39534884s infinite;
+}
+@keyframes move {
+  0%,
+  100% {
+    transform: translate(-50px);
+  }
+  50% {
+    transform: translate(50px);
+  }
+}
+.frame .dot-18 {
+  animation: move 1.42857143s infinite;
+}
+@keyframes move {
+  0%,
+  100% {
+    transform: translate(-50px);
+  }
+  50% {
+    transform: translate(50px);
+  }
+}
+.frame .dot-19 {
+  animation: move 1.46341463s infinite;
+}
+@keyframes move {
+  0%,
+  100% {
+    transform: translate(-50px);
+  }
+  50% {
+    transform: translate(50px);
+  }
+}
+.frame .dot-20 {
+  animation: move 1.5s infinite;
+}
+@keyframes move {
+  0%,
+  100% {
+    transform: translate(-50px);
+  }
+  50% {
+    transform: translate(50px);
+  }
+}
